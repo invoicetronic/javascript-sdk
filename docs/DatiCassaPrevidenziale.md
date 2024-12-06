@@ -1,32 +1,16 @@
-# Invoice_Sdk::DatiCassaPrevidenziale
+# invoiceSdk.DatiCassaPrevidenziale
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **tipo_cassa** | **String** |  | [optional] |
-| **al_cassa** | **Float** |  | [optional] |
-| **importo_contributo_cassa** | **Float** |  | [optional] |
-| **imponibile_cassa** | **Float** |  | [optional] |
-| **aliquota_iva** | **Float** |  | [optional] |
-| **ritenuta** | **String** |  | [optional] |
-| **natura** | **String** |  | [optional] |
-| **riferimento_amministrazione** | **String** |  | [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**tipoCassa** | **String** |  | [optional] 
+**alCassa** | **Number** |  | [optional] 
+**importoContributoCassa** | **Number** |  | [optional] 
+**imponibileCassa** | **Number** |  | [optional] 
+**aliquotaIva** | **Number** |  | [optional] 
+**ritenuta** | **String** |  | [optional] 
+**natura** | **String** |  | [optional] 
+**riferimentoAmministrazione** | **String** |  | [optional] 
 
-## Example
-
-```ruby
-require 'invoicetronic_invoice_sdk'
-
-instance = Invoice_Sdk::DatiCassaPrevidenziale.new(
-  tipo_cassa: null,
-  al_cassa: null,
-  importo_contributo_cassa: null,
-  imponibile_cassa: null,
-  aliquota_iva: null,
-  ritenuta: null,
-  natura: null,
-  riferimento_amministrazione: null
-)
-```
 

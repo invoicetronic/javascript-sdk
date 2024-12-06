@@ -1,22 +1,11 @@
-# Invoice_Sdk::ScontoMaggiorazione
+# invoiceSdk.ScontoMaggiorazione
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **tipo** | **String** |  | [optional] |
-| **percentuale** | **Float** |  | [optional] |
-| **importo** | **Float** |  | [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**tipo** | **String** |  | [optional] 
+**percentuale** | **Number** |  | [optional] 
+**importo** | **Number** |  | [optional] 
 
-## Example
-
-```ruby
-require 'invoicetronic_invoice_sdk'
-
-instance = Invoice_Sdk::ScontoMaggiorazione.new(
-  tipo: null,
-  percentuale: null,
-  importo: null
-)
-```
 

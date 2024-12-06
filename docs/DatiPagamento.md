@@ -1,20 +1,10 @@
-# Invoice_Sdk::DatiPagamento
+# invoiceSdk.DatiPagamento
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **condizioni_pagamento** | **String** |  | [optional] |
-| **dettaglio_pagamento** | [**Array&lt;DettaglioPagamento&gt;**](DettaglioPagamento.md) |  | [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**condizioniPagamento** | **String** |  | [optional] 
+**dettaglioPagamento** | [**[DettaglioPagamento]**](DettaglioPagamento.md) |  | [optional] 
 
-## Example
-
-```ruby
-require 'invoicetronic_invoice_sdk'
-
-instance = Invoice_Sdk::DatiPagamento.new(
-  condizioni_pagamento: null,
-  dettaglio_pagamento: null
-)
-```
 

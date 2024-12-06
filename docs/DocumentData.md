@@ -1,20 +1,10 @@
-# Invoice_Sdk::DocumentData
+# invoiceSdk.DocumentData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **number** | **String** |  | [optional] |
-| **date** | **Time** |  | [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**number** | **String** |  | [optional] 
+**date** | **Date** |  | [optional] 
 
-## Example
-
-```ruby
-require 'invoicetronic_invoice_sdk'
-
-instance = Invoice_Sdk::DocumentData.new(
-  number: null,
-  date: null
-)
-```
 

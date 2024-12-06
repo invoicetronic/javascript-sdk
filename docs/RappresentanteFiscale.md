@@ -1,18 +1,9 @@
-# Invoice_Sdk::RappresentanteFiscale
+# invoiceSdk.RappresentanteFiscale
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **dati_anagrafici** | [**DatiAnagrafici**](DatiAnagrafici.md) |  | [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**datiAnagrafici** | [**DatiAnagrafici**](DatiAnagrafici.md) |  | [optional] 
 
-## Example
-
-```ruby
-require 'invoicetronic_invoice_sdk'
-
-instance = Invoice_Sdk::RappresentanteFiscale.new(
-  dati_anagrafici: null
-)
-```
 

@@ -1,80 +1,60 @@
-# Invoice_Sdk::SendApi
+# invoiceSdk.SendApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-| ------ | ------------ | ----------- |
-| [**invoice_v1_send_files_post**](SendApi.md#invoice_v1_send_files_post) | **POST** /invoice/v1/send/files | Add a send invoice by file |
-| [**invoice_v1_send_get**](SendApi.md#invoice_v1_send_get) | **GET** /invoice/v1/send | List send invoices |
-| [**invoice_v1_send_id_get**](SendApi.md#invoice_v1_send_id_get) | **GET** /invoice/v1/send/{id} | Get a send invoice by id |
-| [**invoice_v1_send_json_post**](SendApi.md#invoice_v1_send_json_post) | **POST** /invoice/v1/send/json | Add a send invoice by json |
-| [**invoice_v1_send_post**](SendApi.md#invoice_v1_send_post) | **POST** /invoice/v1/send | Add a send invoice |
-| [**invoice_v1_send_xml_post**](SendApi.md#invoice_v1_send_xml_post) | **POST** /invoice/v1/send/xml | Add a send invoice by xml |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**invoiceV1SendFilesPost**](SendApi.md#invoiceV1SendFilesPost) | **POST** /invoice/v1/send/files | Add a send invoice by file
+[**invoiceV1SendGet**](SendApi.md#invoiceV1SendGet) | **GET** /invoice/v1/send | List send invoices
+[**invoiceV1SendIdGet**](SendApi.md#invoiceV1SendIdGet) | **GET** /invoice/v1/send/{id} | Get a send invoice by id
+[**invoiceV1SendJsonPost**](SendApi.md#invoiceV1SendJsonPost) | **POST** /invoice/v1/send/json | Add a send invoice by json
+[**invoiceV1SendPost**](SendApi.md#invoiceV1SendPost) | **POST** /invoice/v1/send | Add a send invoice
+[**invoiceV1SendXmlPost**](SendApi.md#invoiceV1SendXmlPost) | **POST** /invoice/v1/send/xml | Add a send invoice by xml
 
 
-## invoice_v1_send_files_post
 
-> <ModelSend> invoice_v1_send_files_post(files, opts)
+## invoiceV1SendFilesPost
+
+> Send invoiceV1SendFilesPost(files, opts)
 
 Add a send invoice by file
 
 Send invoices are the invoices that are sent to the SDI.
 
-### Examples
+### Example
 
-```ruby
-require 'time'
-require 'invoicetronic_invoice_sdk'
-# setup authorization
-Invoice_Sdk.configure do |config|
-  # Configure HTTP basic authorization: Basic
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
-api_instance = Invoice_Sdk::SendApi.new
-files = [File.new('/path/to/some/file')] # Array<File> | 
-opts = {
-  validate: true # Boolean | Validate the document first, and reject it on failure.
-}
+let apiInstance = new invoiceSdk.SendApi();
+let files = ["null"]; // [File] | 
+let opts = {
+  'validate': false // Boolean | Validate the document first, and reject it on failure.
+};
+apiInstance.invoiceV1SendFilesPost(files, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-begin
-  # Add a send invoice by file
-  result = api_instance.invoice_v1_send_files_post(files, opts)
-  p result
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_files_post: #{e}"
-end
-```
-
-#### Using the invoice_v1_send_files_post_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ModelSend>, Integer, Hash)> invoice_v1_send_files_post_with_http_info(files, opts)
-
-```ruby
-begin
-  # Add a send invoice by file
-  data, status_code, headers = api_instance.invoice_v1_send_files_post_with_http_info(files, opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ModelSend>
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_files_post_with_http_info: #{e}"
-end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **files** | **Array&lt;File&gt;** |  |  |
-| **validate** | **Boolean** | Validate the document first, and reject it on failure. | [optional][default to false] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | **[File]**|  | 
+ **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
 
 ### Return type
 
-[**ModelSend**](ModelSend.md)
+[**Send**](Send.md)
 
 ### Authorization
 
@@ -86,93 +66,72 @@ end
 - **Accept**: application/json
 
 
-## invoice_v1_send_get
+## invoiceV1SendGet
 
-> <Array<ModelSend>> invoice_v1_send_get(opts)
+> [Send] invoiceV1SendGet(opts)
 
 List send invoices
 
 test **markdown**.
 
-### Examples
+### Example
 
-```ruby
-require 'time'
-require 'invoicetronic_invoice_sdk'
-# setup authorization
-Invoice_Sdk.configure do |config|
-  # Configure HTTP basic authorization: Basic
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
-api_instance = Invoice_Sdk::SendApi.new
-opts = {
-  company_id: 56, # Integer | Company id.
-  identifier: 'identifier_example', # String | SDI identifier.
-  committente: 'committente_example', # String | VAT number or fiscal code.
-  prestatore: 'prestatore_example', # String | VAT number or fiscal code.
-  file_name: 'file_name_example', # String | File name.
-  last_update_from: Time.parse('2013-10-20T19:20:30+01:00'), # Time | UTC ISO 8601 (2024-11-29T12:34:56Z)
-  last_update_to: Time.parse('2013-10-20T19:20:30+01:00'), # Time | UTC ISO 8601 (2024-11-29T12:34:56Z)
-  date_sent_from: Time.parse('2013-10-20T19:20:30+01:00'), # Time | UTC ISO 8601 (2024-11-29T12:34:56Z)
-  date_sent_to: Time.parse('2013-10-20T19:20:30+01:00'), # Time | UTC ISO 8601 (2024-11-29T12:34:56Z)
-  document_date_from: Time.parse('2013-10-20T19:20:30+01:00'), # Time | UTC ISO 8601 (2024-11-29T12:34:56Z)
-  document_date_to: Time.parse('2013-10-20T19:20:30+01:00'), # Time | UTC ISO 8601 (2024-11-29T12:34:56Z)
-  document_number: 'document_number_example', # String | Document number.
-  page: 56, # Integer | Page number.
-  page_size: 56 # Integer | Items per page.
-}
+let apiInstance = new invoiceSdk.SendApi();
+let opts = {
+  'companyId': 56, // Number | Company id.
+  'identifier': "identifier_example", // String | SDI identifier.
+  'committente': "committente_example", // String | VAT number or fiscal code.
+  'prestatore': "prestatore_example", // String | VAT number or fiscal code.
+  'fileName': "fileName_example", // String | File name.
+  'lastUpdateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'lastUpdateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'dateSentFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'dateSentTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'documentDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'documentDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'documentNumber': "documentNumber_example", // String | Document number.
+  'page': 1, // Number | Page number.
+  'pageSize': 100 // Number | Items per page.
+};
+apiInstance.invoiceV1SendGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-begin
-  # List send invoices
-  result = api_instance.invoice_v1_send_get(opts)
-  p result
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_get: #{e}"
-end
-```
-
-#### Using the invoice_v1_send_get_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<Array<ModelSend>>, Integer, Hash)> invoice_v1_send_get_with_http_info(opts)
-
-```ruby
-begin
-  # List send invoices
-  data, status_code, headers = api_instance.invoice_v1_send_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <Array<ModelSend>>
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_get_with_http_info: #{e}"
-end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **company_id** | **Integer** | Company id. | [optional] |
-| **identifier** | **String** | SDI identifier. | [optional] |
-| **committente** | **String** | VAT number or fiscal code. | [optional] |
-| **prestatore** | **String** | VAT number or fiscal code. | [optional] |
-| **file_name** | **String** | File name. | [optional] |
-| **last_update_from** | **Time** | UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] |
-| **last_update_to** | **Time** | UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] |
-| **date_sent_from** | **Time** | UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] |
-| **date_sent_to** | **Time** | UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] |
-| **document_date_from** | **Time** | UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] |
-| **document_date_to** | **Time** | UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] |
-| **document_number** | **String** | Document number. | [optional] |
-| **page** | **Integer** | Page number. | [optional][default to 1] |
-| **page_size** | **Integer** | Items per page. | [optional][default to 100] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| Company id. | [optional] 
+ **identifier** | **String**| SDI identifier. | [optional] 
+ **committente** | **String**| VAT number or fiscal code. | [optional] 
+ **prestatore** | **String**| VAT number or fiscal code. | [optional] 
+ **fileName** | **String**| File name. | [optional] 
+ **lastUpdateFrom** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **lastUpdateTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **dateSentFrom** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **dateSentTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **documentDateFrom** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **documentDateTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **documentNumber** | **String**| Document number. | [optional] 
+ **page** | **Number**| Page number. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. | [optional] [default to 100]
 
 ### Return type
 
-[**Array&lt;ModelSend&gt;**](ModelSend.md)
+[**[Send]**](Send.md)
 
 ### Authorization
 
@@ -184,65 +143,44 @@ end
 - **Accept**: application/json, application/problem+json
 
 
-## invoice_v1_send_id_get
+## invoiceV1SendIdGet
 
-> <ModelSend> invoice_v1_send_id_get(id)
+> Send invoiceV1SendIdGet(id)
 
 Get a send invoice by id
 
 Send invoices are the invoices that are sent to the SDI.
 
-### Examples
+### Example
 
-```ruby
-require 'time'
-require 'invoicetronic_invoice_sdk'
-# setup authorization
-Invoice_Sdk.configure do |config|
-  # Configure HTTP basic authorization: Basic
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
-api_instance = Invoice_Sdk::SendApi.new
-id = 56 # Integer | Item id.
+let apiInstance = new invoiceSdk.SendApi();
+let id = 56; // Number | Item id.
+apiInstance.invoiceV1SendIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-begin
-  # Get a send invoice by id
-  result = api_instance.invoice_v1_send_id_get(id)
-  p result
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_id_get: #{e}"
-end
-```
-
-#### Using the invoice_v1_send_id_get_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ModelSend>, Integer, Hash)> invoice_v1_send_id_get_with_http_info(id)
-
-```ruby
-begin
-  # Get a send invoice by id
-  data, status_code, headers = api_instance.invoice_v1_send_id_get_with_http_info(id)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ModelSend>
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_id_get_with_http_info: #{e}"
-end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Item id. |  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Item id. | 
 
 ### Return type
 
-[**ModelSend**](ModelSend.md)
+[**Send**](Send.md)
 
 ### Authorization
 
@@ -254,69 +192,48 @@ end
 - **Accept**: application/json
 
 
-## invoice_v1_send_json_post
+## invoiceV1SendJsonPost
 
-> <ModelSend> invoice_v1_send_json_post(fattura_ordinaria, opts)
+> Send invoiceV1SendJsonPost(fatturaOrdinaria, opts)
 
 Add a send invoice by json
 
 Send invoices are the invoices that are sent to the SDI.
 
-### Examples
+### Example
 
-```ruby
-require 'time'
-require 'invoicetronic_invoice_sdk'
-# setup authorization
-Invoice_Sdk.configure do |config|
-  # Configure HTTP basic authorization: Basic
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
-api_instance = Invoice_Sdk::SendApi.new
-fattura_ordinaria = Invoice_Sdk::FatturaOrdinaria.new # FatturaOrdinaria | 
-opts = {
-  validate: true # Boolean | Validate the document first, and reject it on failure.
-}
+let apiInstance = new invoiceSdk.SendApi();
+let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let opts = {
+  'validate': false // Boolean | Validate the document first, and reject it on failure.
+};
+apiInstance.invoiceV1SendJsonPost(fatturaOrdinaria, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-begin
-  # Add a send invoice by json
-  result = api_instance.invoice_v1_send_json_post(fattura_ordinaria, opts)
-  p result
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_json_post: #{e}"
-end
-```
-
-#### Using the invoice_v1_send_json_post_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ModelSend>, Integer, Hash)> invoice_v1_send_json_post_with_http_info(fattura_ordinaria, opts)
-
-```ruby
-begin
-  # Add a send invoice by json
-  data, status_code, headers = api_instance.invoice_v1_send_json_post_with_http_info(fattura_ordinaria, opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ModelSend>
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_json_post_with_http_info: #{e}"
-end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **fattura_ordinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md) |  |  |
-| **validate** | **Boolean** | Validate the document first, and reject it on failure. | [optional][default to false] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+ **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
 
 ### Return type
 
-[**ModelSend**](ModelSend.md)
+[**Send**](Send.md)
 
 ### Authorization
 
@@ -328,69 +245,48 @@ end
 - **Accept**: application/json
 
 
-## invoice_v1_send_post
+## invoiceV1SendPost
 
-> <ModelSend> invoice_v1_send_post(model_send, opts)
+> Send invoiceV1SendPost(send, opts)
 
 Add a send invoice
 
 Send invoices are the invoices that are sent to the SDI.
 
-### Examples
+### Example
 
-```ruby
-require 'time'
-require 'invoicetronic_invoice_sdk'
-# setup authorization
-Invoice_Sdk.configure do |config|
-  # Configure HTTP basic authorization: Basic
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
-api_instance = Invoice_Sdk::SendApi.new
-model_send = Invoice_Sdk::ModelSend.new # ModelSend | 
-opts = {
-  validate: true # Boolean | Validate the document first, and reject it on failure.
-}
+let apiInstance = new invoiceSdk.SendApi();
+let send = new invoiceSdk.Send(); // Send | 
+let opts = {
+  'validate': false // Boolean | Validate the document first, and reject it on failure.
+};
+apiInstance.invoiceV1SendPost(send, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-begin
-  # Add a send invoice
-  result = api_instance.invoice_v1_send_post(model_send, opts)
-  p result
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_post: #{e}"
-end
-```
-
-#### Using the invoice_v1_send_post_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ModelSend>, Integer, Hash)> invoice_v1_send_post_with_http_info(model_send, opts)
-
-```ruby
-begin
-  # Add a send invoice
-  data, status_code, headers = api_instance.invoice_v1_send_post_with_http_info(model_send, opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ModelSend>
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_post_with_http_info: #{e}"
-end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **model_send** | [**ModelSend**](ModelSend.md) |  |  |
-| **validate** | **Boolean** | Validate the document first, and reject it on failure. | [optional][default to false] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **send** | [**Send**](Send.md)|  | 
+ **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
 
 ### Return type
 
-[**ModelSend**](ModelSend.md)
+[**Send**](Send.md)
 
 ### Authorization
 
@@ -402,69 +298,48 @@ end
 - **Accept**: application/json
 
 
-## invoice_v1_send_xml_post
+## invoiceV1SendXmlPost
 
-> <ModelSend> invoice_v1_send_xml_post(fattura_ordinaria, opts)
+> Send invoiceV1SendXmlPost(fatturaOrdinaria, opts)
 
 Add a send invoice by xml
 
 Send invoices are the invoices that are sent to the SDI.
 
-### Examples
+### Example
 
-```ruby
-require 'time'
-require 'invoicetronic_invoice_sdk'
-# setup authorization
-Invoice_Sdk.configure do |config|
-  # Configure HTTP basic authorization: Basic
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
-api_instance = Invoice_Sdk::SendApi.new
-fattura_ordinaria = Invoice_Sdk::FatturaOrdinaria.new # FatturaOrdinaria | 
-opts = {
-  validate: true # Boolean | Validate the document first, and reject it on failure.
-}
+let apiInstance = new invoiceSdk.SendApi();
+let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let opts = {
+  'validate': false // Boolean | Validate the document first, and reject it on failure.
+};
+apiInstance.invoiceV1SendXmlPost(fatturaOrdinaria, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-begin
-  # Add a send invoice by xml
-  result = api_instance.invoice_v1_send_xml_post(fattura_ordinaria, opts)
-  p result
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_xml_post: #{e}"
-end
-```
-
-#### Using the invoice_v1_send_xml_post_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ModelSend>, Integer, Hash)> invoice_v1_send_xml_post_with_http_info(fattura_ordinaria, opts)
-
-```ruby
-begin
-  # Add a send invoice by xml
-  data, status_code, headers = api_instance.invoice_v1_send_xml_post_with_http_info(fattura_ordinaria, opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ModelSend>
-rescue Invoice_Sdk::ApiError => e
-  puts "Error when calling SendApi->invoice_v1_send_xml_post_with_http_info: #{e}"
-end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **fattura_ordinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md) |  |  |
-| **validate** | **Boolean** | Validate the document first, and reject it on failure. | [optional][default to false] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+ **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
 
 ### Return type
 
-[**ModelSend**](ModelSend.md)
+[**Send**](Send.md)
 
 ### Authorization
 
