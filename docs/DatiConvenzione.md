@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.DatiConvenzione
+# invoiceSdk.DatiConvenzione
 
 ## Properties
 

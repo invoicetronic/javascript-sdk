@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.CompanyApi
+# invoiceSdk.CompanyApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,14 +23,14 @@ Companies are the entities that send and receive invoices. At least one company 
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.CompanyApi();
+let apiInstance = new invoiceSdk.CompanyApi();
 let opts = {
   'page': 1, // Number | Page number.
   'pageSize': 100 // Number | Items per page.
@@ -76,14 +76,14 @@ Companies are the entities that send and receive invoices. At least one company 
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.CompanyApi();
+let apiInstance = new invoiceSdk.CompanyApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1CompanyIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -125,14 +125,14 @@ Companies are the entities that send and receive invoices. At least one company 
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.CompanyApi();
+let apiInstance = new invoiceSdk.CompanyApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1CompanyIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -174,15 +174,15 @@ Companies are the entities that send and receive invoices. At least one company 
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.CompanyApi();
-let company = new invoicetronic-invoice-sdk.Company(); // Company | 
+let apiInstance = new invoiceSdk.CompanyApi();
+let company = new invoiceSdk.Company(); // Company | 
 apiInstance.invoiceV1CompanyPost(company).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -223,15 +223,15 @@ Companies are the entities that send and receive invoices. At least one company 
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.CompanyApi();
-let company = new invoicetronic-invoice-sdk.Company(); // Company | 
+let apiInstance = new invoiceSdk.CompanyApi();
+let company = new invoiceSdk.Company(); // Company | 
 apiInstance.invoiceV1CompanyPut(company).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

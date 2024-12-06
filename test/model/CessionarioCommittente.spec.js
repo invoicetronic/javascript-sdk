@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.CessionarioCommittente();
+    instance = new invoiceSdk.CessionarioCommittente();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('CessionarioCommittente', function() {
     it('should create an instance of CessionarioCommittente', function() {
       // uncomment below and update the code to test CessionarioCommittente
-      //var instance = new invoicetronic-invoice-sdk.CessionarioCommittente();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.CessionarioCommittente);
+      //var instance = new invoiceSdk.CessionarioCommittente();
+      //expect(instance).to.be.a(invoiceSdk.CessionarioCommittente);
     });
 
     it('should have the property datiAnagrafici (base name: "dati_anagrafici")', function() {
       // uncomment below and update the code to test the property datiAnagrafici
-      //var instance = new invoicetronic-invoice-sdk.CessionarioCommittente();
+      //var instance = new invoiceSdk.CessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property sede (base name: "sede")', function() {
       // uncomment below and update the code to test the property sede
-      //var instance = new invoicetronic-invoice-sdk.CessionarioCommittente();
+      //var instance = new invoiceSdk.CessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property stabileOrganizzazione (base name: "stabile_organizzazione")', function() {
       // uncomment below and update the code to test the property stabileOrganizzazione
-      //var instance = new invoicetronic-invoice-sdk.CessionarioCommittente();
+      //var instance = new invoiceSdk.CessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property rappresentanteFiscale (base name: "rappresentante_fiscale")', function() {
       // uncomment below and update the code to test the property rappresentanteFiscale
-      //var instance = new invoicetronic-invoice-sdk.CessionarioCommittente();
+      //var instance = new invoiceSdk.CessionarioCommittente();
       //expect(instance).to.be();
     });
 

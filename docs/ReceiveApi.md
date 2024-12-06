@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.ReceiveApi
+# invoiceSdk.ReceiveApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,14 +21,14 @@ Receive invoices are the invoices that are received from other companies.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.ReceiveApi();
+let apiInstance = new invoiceSdk.ReceiveApi();
 let opts = {
   'companyId': 56, // Number | Company id.
   'identifier': "identifier_example", // String | SDI identifier.
@@ -100,14 +100,14 @@ Receive invoices are the invoices that are received from other companies.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.ReceiveApi();
+let apiInstance = new invoiceSdk.ReceiveApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1ReceiveIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -149,14 +149,14 @@ Receive invoices are the invoices that are received from other companies.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.ReceiveApi();
+let apiInstance = new invoiceSdk.ReceiveApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1ReceiveIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

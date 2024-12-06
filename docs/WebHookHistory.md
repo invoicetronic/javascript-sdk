@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.WebHookHistory
+# invoiceSdk.WebHookHistory
 
 ## Properties
 

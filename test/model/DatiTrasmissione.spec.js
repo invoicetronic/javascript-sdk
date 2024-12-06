@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+    instance = new invoiceSdk.DatiTrasmissione();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('DatiTrasmissione', function() {
     it('should create an instance of DatiTrasmissione', function() {
       // uncomment below and update the code to test DatiTrasmissione
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiTrasmissione);
+      //var instance = new invoiceSdk.DatiTrasmissione();
+      //expect(instance).to.be.a(invoiceSdk.DatiTrasmissione);
     });
 
     it('should have the property idTrasmittente (base name: "id_trasmittente")', function() {
       // uncomment below and update the code to test the property idTrasmittente
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+      //var instance = new invoiceSdk.DatiTrasmissione();
       //expect(instance).to.be();
     });
 
     it('should have the property progressivoInvio (base name: "progressivo_invio")', function() {
       // uncomment below and update the code to test the property progressivoInvio
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+      //var instance = new invoiceSdk.DatiTrasmissione();
       //expect(instance).to.be();
     });
 
     it('should have the property formatoTrasmissione (base name: "formato_trasmissione")', function() {
       // uncomment below and update the code to test the property formatoTrasmissione
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+      //var instance = new invoiceSdk.DatiTrasmissione();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceDestinatario (base name: "codice_destinatario")', function() {
       // uncomment below and update the code to test the property codiceDestinatario
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+      //var instance = new invoiceSdk.DatiTrasmissione();
       //expect(instance).to.be();
     });
 
     it('should have the property contattiTrasmittente (base name: "contatti_trasmittente")', function() {
       // uncomment below and update the code to test the property contattiTrasmittente
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+      //var instance = new invoiceSdk.DatiTrasmissione();
       //expect(instance).to.be();
     });
 
     it('should have the property pecDestinatario (base name: "pec_destinatario")', function() {
       // uncomment below and update the code to test the property pecDestinatario
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasmissione();
+      //var instance = new invoiceSdk.DatiTrasmissione();
       //expect(instance).to.be();
     });
 

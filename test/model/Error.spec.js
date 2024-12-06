@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.Error();
+    instance = new invoiceSdk.Error();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('Error', function() {
     it('should create an instance of Error', function() {
       // uncomment below and update the code to test Error
-      //var instance = new invoicetronic-invoice-sdk.Error();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.Error);
+      //var instance = new invoiceSdk.Error();
+      //expect(instance).to.be.a(invoiceSdk.Error);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new invoicetronic-invoice-sdk.Error();
+      //var instance = new invoiceSdk.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new invoicetronic-invoice-sdk.Error();
+      //var instance = new invoiceSdk.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property hint (base name: "hint")', function() {
       // uncomment below and update the code to test the property hint
-      //var instance = new invoicetronic-invoice-sdk.Error();
+      //var instance = new invoiceSdk.Error();
       //expect(instance).to.be();
     });
 

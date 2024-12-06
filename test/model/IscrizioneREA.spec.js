@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.IscrizioneREA();
+    instance = new invoiceSdk.IscrizioneREA();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('IscrizioneREA', function() {
     it('should create an instance of IscrizioneREA', function() {
       // uncomment below and update the code to test IscrizioneREA
-      //var instance = new invoicetronic-invoice-sdk.IscrizioneREA();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.IscrizioneREA);
+      //var instance = new invoiceSdk.IscrizioneREA();
+      //expect(instance).to.be.a(invoiceSdk.IscrizioneREA);
     });
 
     it('should have the property ufficio (base name: "ufficio")', function() {
       // uncomment below and update the code to test the property ufficio
-      //var instance = new invoicetronic-invoice-sdk.IscrizioneREA();
+      //var instance = new invoiceSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroRea (base name: "numero_rea")', function() {
       // uncomment below and update the code to test the property numeroRea
-      //var instance = new invoicetronic-invoice-sdk.IscrizioneREA();
+      //var instance = new invoiceSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property capitaleSociale (base name: "capitale_sociale")', function() {
       // uncomment below and update the code to test the property capitaleSociale
-      //var instance = new invoicetronic-invoice-sdk.IscrizioneREA();
+      //var instance = new invoiceSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property socioUnico (base name: "socio_unico")', function() {
       // uncomment below and update the code to test the property socioUnico
-      //var instance = new invoicetronic-invoice-sdk.IscrizioneREA();
+      //var instance = new invoiceSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property statoLiquidazione (base name: "stato_liquidazione")', function() {
       // uncomment below and update the code to test the property statoLiquidazione
-      //var instance = new invoicetronic-invoice-sdk.IscrizioneREA();
+      //var instance = new invoiceSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 

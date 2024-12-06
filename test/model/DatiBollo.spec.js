@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiBollo();
+    instance = new invoiceSdk.DatiBollo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DatiBollo', function() {
     it('should create an instance of DatiBollo', function() {
       // uncomment below and update the code to test DatiBollo
-      //var instance = new invoicetronic-invoice-sdk.DatiBollo();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiBollo);
+      //var instance = new invoiceSdk.DatiBollo();
+      //expect(instance).to.be.a(invoiceSdk.DatiBollo);
     });
 
     it('should have the property bolloVirtuale (base name: "bollo_virtuale")', function() {
       // uncomment below and update the code to test the property bolloVirtuale
-      //var instance = new invoicetronic-invoice-sdk.DatiBollo();
+      //var instance = new invoiceSdk.DatiBollo();
       //expect(instance).to.be();
     });
 
     it('should have the property importoBollo (base name: "importo_bollo")', function() {
       // uncomment below and update the code to test the property importoBollo
-      //var instance = new invoicetronic-invoice-sdk.DatiBollo();
+      //var instance = new invoiceSdk.DatiBollo();
       //expect(instance).to.be();
     });
 

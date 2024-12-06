@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiPagamento();
+    instance = new invoiceSdk.DatiPagamento();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DatiPagamento', function() {
     it('should create an instance of DatiPagamento', function() {
       // uncomment below and update the code to test DatiPagamento
-      //var instance = new invoicetronic-invoice-sdk.DatiPagamento();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiPagamento);
+      //var instance = new invoiceSdk.DatiPagamento();
+      //expect(instance).to.be.a(invoiceSdk.DatiPagamento);
     });
 
     it('should have the property condizioniPagamento (base name: "condizioni_pagamento")', function() {
       // uncomment below and update the code to test the property condizioniPagamento
-      //var instance = new invoicetronic-invoice-sdk.DatiPagamento();
+      //var instance = new invoiceSdk.DatiPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dettaglioPagamento (base name: "dettaglio_pagamento")', function() {
       // uncomment below and update the code to test the property dettaglioPagamento
-      //var instance = new invoicetronic-invoice-sdk.DatiPagamento();
+      //var instance = new invoiceSdk.DatiPagamento();
       //expect(instance).to.be();
     });
 

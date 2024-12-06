@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+    instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('DatiAnagraficiCedentePrestatore', function() {
     it('should create an instance of DatiAnagraficiCedentePrestatore', function() {
       // uncomment below and update the code to test DatiAnagraficiCedentePrestatore
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore);
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //expect(instance).to.be.a(invoiceSdk.DatiAnagraficiCedentePrestatore);
     });
 
     it('should have the property idFiscaleIva (base name: "id_fiscale_iva")', function() {
       // uncomment below and update the code to test the property idFiscaleIva
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceFiscale (base name: "codice_fiscale")', function() {
       // uncomment below and update the code to test the property codiceFiscale
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property anagrafica (base name: "anagrafica")', function() {
       // uncomment below and update the code to test the property anagrafica
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property alboProfessionale (base name: "albo_professionale")', function() {
       // uncomment below and update the code to test the property alboProfessionale
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property provinciaAlbo (base name: "provincia_albo")', function() {
       // uncomment below and update the code to test the property provinciaAlbo
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroIscrizioneAlbo (base name: "numero_iscrizione_albo")', function() {
       // uncomment below and update the code to test the property numeroIscrizioneAlbo
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property dataIscrizioneAlbo (base name: "data_iscrizione_albo")', function() {
       // uncomment below and update the code to test the property dataIscrizioneAlbo
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property regimeFiscale (base name: "regime_fiscale")', function() {
       // uncomment below and update the code to test the property regimeFiscale
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 

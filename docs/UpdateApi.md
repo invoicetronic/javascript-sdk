@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.UpdateApi
+# invoiceSdk.UpdateApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,14 +20,14 @@ Updates are notifications that are sent by the SDI about the status of sent invo
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.UpdateApi();
+let apiInstance = new invoiceSdk.UpdateApi();
 let opts = {
   'companyId': 56, // Number | Company id.
   'identifier': "identifier_example", // String | SDI identifier.
@@ -91,14 +91,14 @@ Updates are notifications that are sent by the SDI about the status of sent invo
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.UpdateApi();
+let apiInstance = new invoiceSdk.UpdateApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1UpdateIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

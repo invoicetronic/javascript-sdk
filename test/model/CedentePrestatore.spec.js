@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+    instance = new invoiceSdk.CedentePrestatore();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('CedentePrestatore', function() {
     it('should create an instance of CedentePrestatore', function() {
       // uncomment below and update the code to test CedentePrestatore
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.CedentePrestatore);
+      //var instance = new invoiceSdk.CedentePrestatore();
+      //expect(instance).to.be.a(invoiceSdk.CedentePrestatore);
     });
 
     it('should have the property datiAnagrafici (base name: "dati_anagrafici")', function() {
       // uncomment below and update the code to test the property datiAnagrafici
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+      //var instance = new invoiceSdk.CedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property sede (base name: "sede")', function() {
       // uncomment below and update the code to test the property sede
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+      //var instance = new invoiceSdk.CedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property stabileOrganizzazione (base name: "stabile_organizzazione")', function() {
       // uncomment below and update the code to test the property stabileOrganizzazione
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+      //var instance = new invoiceSdk.CedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property iscrizioneRea (base name: "iscrizione_rea")', function() {
       // uncomment below and update the code to test the property iscrizioneRea
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+      //var instance = new invoiceSdk.CedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property contatti (base name: "contatti")', function() {
       // uncomment below and update the code to test the property contatti
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+      //var instance = new invoiceSdk.CedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoAmministrazione (base name: "riferimento_amministrazione")', function() {
       // uncomment below and update the code to test the property riferimentoAmministrazione
-      //var instance = new invoicetronic-invoice-sdk.CedentePrestatore();
+      //var instance = new invoiceSdk.CedentePrestatore();
       //expect(instance).to.be();
     });
 

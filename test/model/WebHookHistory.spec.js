@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.WebHookHistory();
+    instance = new invoiceSdk.WebHookHistory();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,73 +50,73 @@
   describe('WebHookHistory', function() {
     it('should create an instance of WebHookHistory', function() {
       // uncomment below and update the code to test WebHookHistory
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.WebHookHistory);
+      //var instance = new invoiceSdk.WebHookHistory();
+      //expect(instance).to.be.a(invoiceSdk.WebHookHistory);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property webHookId (base name: "web_hook_id")', function() {
       // uncomment below and update the code to test the property webHookId
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property event (base name: "event")', function() {
       // uncomment below and update the code to test the property event
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property statusCode (base name: "status_code")', function() {
       // uncomment below and update the code to test the property statusCode
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property requestBody (base name: "request_body")', function() {
       // uncomment below and update the code to test the property requestBody
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property responseBody (base name: "response_body")', function() {
       // uncomment below and update the code to test the property responseBody
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property dateTime (base name: "date_time")', function() {
       // uncomment below and update the code to test the property dateTime
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 
     it('should have the property success (base name: "success")', function() {
       // uncomment below and update the code to test the property success
-      //var instance = new invoicetronic-invoice-sdk.WebHookHistory();
+      //var instance = new invoiceSdk.WebHookHistory();
       //expect(instance).to.be();
     });
 

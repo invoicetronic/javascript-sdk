@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.CedentePrestatore
+# invoiceSdk.CedentePrestatore
 
 ## Properties
 

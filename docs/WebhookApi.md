@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.WebhookApi
+# invoiceSdk.WebhookApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,14 +25,14 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
+let apiInstance = new invoiceSdk.WebhookApi();
 let opts = {
   'page': 1, // Number | Page number.
   'pageSize': 100 // Number | Items per page.
@@ -78,14 +78,14 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
+let apiInstance = new invoiceSdk.WebhookApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1WebhookIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -127,14 +127,14 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
+let apiInstance = new invoiceSdk.WebhookApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1WebhookIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -176,15 +176,15 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
-let webHook = new invoicetronic-invoice-sdk.WebHook(); // WebHook | 
+let apiInstance = new invoiceSdk.WebhookApi();
+let webHook = new invoiceSdk.WebHook(); // WebHook | 
 apiInstance.invoiceV1WebhookPost(webHook).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -225,15 +225,15 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
-let webHook = new invoicetronic-invoice-sdk.WebHook(); // WebHook | 
+let apiInstance = new invoiceSdk.WebhookApi();
+let webHook = new invoiceSdk.WebHook(); // WebHook | 
 apiInstance.invoiceV1WebhookPut(webHook).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -272,14 +272,14 @@ List webhook history items
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
+let apiInstance = new invoiceSdk.WebhookApi();
 let opts = {
   'page': 1, // Number | Page number.
   'pageSize': 100 // Number | Items per page.
@@ -323,14 +323,14 @@ Get a webhook history item by id
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.WebhookApi();
+let apiInstance = new invoiceSdk.WebhookApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1WebhookhistoryIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.DatiBollo
+# invoiceSdk.DatiBollo
 
 ## Properties
 

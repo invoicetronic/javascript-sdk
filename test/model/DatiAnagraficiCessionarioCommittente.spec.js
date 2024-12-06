@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente();
+    instance = new invoiceSdk.DatiAnagraficiCessionarioCommittente();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('DatiAnagraficiCessionarioCommittente', function() {
     it('should create an instance of DatiAnagraficiCessionarioCommittente', function() {
       // uncomment below and update the code to test DatiAnagraficiCessionarioCommittente
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente);
+      //var instance = new invoiceSdk.DatiAnagraficiCessionarioCommittente();
+      //expect(instance).to.be.a(invoiceSdk.DatiAnagraficiCessionarioCommittente);
     });
 
     it('should have the property idFiscaleIva (base name: "id_fiscale_iva")', function() {
       // uncomment below and update the code to test the property idFiscaleIva
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente();
+      //var instance = new invoiceSdk.DatiAnagraficiCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceFiscale (base name: "codice_fiscale")', function() {
       // uncomment below and update the code to test the property codiceFiscale
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente();
+      //var instance = new invoiceSdk.DatiAnagraficiCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property anagrafica (base name: "anagrafica")', function() {
       // uncomment below and update the code to test the property anagrafica
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente();
+      //var instance = new invoiceSdk.DatiAnagraficiCessionarioCommittente();
       //expect(instance).to.be();
     });
 

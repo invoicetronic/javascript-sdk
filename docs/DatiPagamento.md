@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.DatiPagamento
+# invoiceSdk.DatiPagamento
 
 ## Properties
 

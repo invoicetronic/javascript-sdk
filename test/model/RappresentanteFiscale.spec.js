@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.RappresentanteFiscale();
+    instance = new invoiceSdk.RappresentanteFiscale();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('RappresentanteFiscale', function() {
     it('should create an instance of RappresentanteFiscale', function() {
       // uncomment below and update the code to test RappresentanteFiscale
-      //var instance = new invoicetronic-invoice-sdk.RappresentanteFiscale();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.RappresentanteFiscale);
+      //var instance = new invoiceSdk.RappresentanteFiscale();
+      //expect(instance).to.be.a(invoiceSdk.RappresentanteFiscale);
     });
 
     it('should have the property datiAnagrafici (base name: "dati_anagrafici")', function() {
       // uncomment below and update the code to test the property datiAnagrafici
-      //var instance = new invoicetronic-invoice-sdk.RappresentanteFiscale();
+      //var instance = new invoiceSdk.RappresentanteFiscale();
       //expect(instance).to.be();
     });
 

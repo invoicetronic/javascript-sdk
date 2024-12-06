@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiBeniServizi();
+    instance = new invoiceSdk.DatiBeniServizi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DatiBeniServizi', function() {
     it('should create an instance of DatiBeniServizi', function() {
       // uncomment below and update the code to test DatiBeniServizi
-      //var instance = new invoicetronic-invoice-sdk.DatiBeniServizi();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiBeniServizi);
+      //var instance = new invoiceSdk.DatiBeniServizi();
+      //expect(instance).to.be.a(invoiceSdk.DatiBeniServizi);
     });
 
     it('should have the property dettaglioLinee (base name: "dettaglio_linee")', function() {
       // uncomment below and update the code to test the property dettaglioLinee
-      //var instance = new invoicetronic-invoice-sdk.DatiBeniServizi();
+      //var instance = new invoiceSdk.DatiBeniServizi();
       //expect(instance).to.be();
     });
 
     it('should have the property datiRiepilogo (base name: "dati_riepilogo")', function() {
       // uncomment below and update the code to test the property datiRiepilogo
-      //var instance = new invoicetronic-invoice-sdk.DatiBeniServizi();
+      //var instance = new invoiceSdk.DatiBeniServizi();
       //expect(instance).to.be();
     });
 

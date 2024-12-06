@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
+    instance = new invoiceSdk.FatturaElettronicaBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('FatturaElettronicaBody', function() {
     it('should create an instance of FatturaElettronicaBody', function() {
       // uncomment below and update the code to test FatturaElettronicaBody
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.FatturaElettronicaBody);
+      //var instance = new invoiceSdk.FatturaElettronicaBody();
+      //expect(instance).to.be.a(invoiceSdk.FatturaElettronicaBody);
     });
 
     it('should have the property datiGenerali (base name: "dati_generali")', function() {
       // uncomment below and update the code to test the property datiGenerali
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
+      //var instance = new invoiceSdk.FatturaElettronicaBody();
       //expect(instance).to.be();
     });
 
     it('should have the property datiBeniServizi (base name: "dati_beni_servizi")', function() {
       // uncomment below and update the code to test the property datiBeniServizi
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
+      //var instance = new invoiceSdk.FatturaElettronicaBody();
       //expect(instance).to.be();
     });
 
     it('should have the property datiVeicoli (base name: "dati_veicoli")', function() {
       // uncomment below and update the code to test the property datiVeicoli
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
+      //var instance = new invoiceSdk.FatturaElettronicaBody();
       //expect(instance).to.be();
     });
 
     it('should have the property datiPagamento (base name: "dati_pagamento")', function() {
       // uncomment below and update the code to test the property datiPagamento
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
+      //var instance = new invoiceSdk.FatturaElettronicaBody();
       //expect(instance).to.be();
     });
 
     it('should have the property allegati (base name: "allegati")', function() {
       // uncomment below and update the code to test the property allegati
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaBody();
+      //var instance = new invoiceSdk.FatturaElettronicaBody();
       //expect(instance).to.be();
     });
 

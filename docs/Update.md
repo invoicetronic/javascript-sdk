@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.Update
+# invoiceSdk.Update
 
 ## Properties
 

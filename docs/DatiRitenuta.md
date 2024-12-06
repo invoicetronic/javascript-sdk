@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.DatiRitenuta
+# invoiceSdk.DatiRitenuta
 
 ## Properties
 

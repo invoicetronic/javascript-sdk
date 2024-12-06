@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiSAL();
+    instance = new invoiceSdk.DatiSAL();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('DatiSAL', function() {
     it('should create an instance of DatiSAL', function() {
       // uncomment below and update the code to test DatiSAL
-      //var instance = new invoicetronic-invoice-sdk.DatiSAL();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiSAL);
+      //var instance = new invoiceSdk.DatiSAL();
+      //expect(instance).to.be.a(invoiceSdk.DatiSAL);
     });
 
     it('should have the property riferimentoFase (base name: "riferimento_fase")', function() {
       // uncomment below and update the code to test the property riferimentoFase
-      //var instance = new invoicetronic-invoice-sdk.DatiSAL();
+      //var instance = new invoiceSdk.DatiSAL();
       //expect(instance).to.be();
     });
 

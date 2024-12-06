@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.AltriDatiGestionali();
+    instance = new invoiceSdk.AltriDatiGestionali();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('AltriDatiGestionali', function() {
     it('should create an instance of AltriDatiGestionali', function() {
       // uncomment below and update the code to test AltriDatiGestionali
-      //var instance = new invoicetronic-invoice-sdk.AltriDatiGestionali();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.AltriDatiGestionali);
+      //var instance = new invoiceSdk.AltriDatiGestionali();
+      //expect(instance).to.be.a(invoiceSdk.AltriDatiGestionali);
     });
 
     it('should have the property tipoDato (base name: "tipo_dato")', function() {
       // uncomment below and update the code to test the property tipoDato
-      //var instance = new invoicetronic-invoice-sdk.AltriDatiGestionali();
+      //var instance = new invoiceSdk.AltriDatiGestionali();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoTesto (base name: "riferimento_testo")', function() {
       // uncomment below and update the code to test the property riferimentoTesto
-      //var instance = new invoicetronic-invoice-sdk.AltriDatiGestionali();
+      //var instance = new invoiceSdk.AltriDatiGestionali();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoNumero (base name: "riferimento_numero")', function() {
       // uncomment below and update the code to test the property riferimentoNumero
-      //var instance = new invoicetronic-invoice-sdk.AltriDatiGestionali();
+      //var instance = new invoiceSdk.AltriDatiGestionali();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoData (base name: "riferimento_data")', function() {
       // uncomment below and update the code to test the property riferimentoData
-      //var instance = new invoicetronic-invoice-sdk.AltriDatiGestionali();
+      //var instance = new invoiceSdk.AltriDatiGestionali();
       //expect(instance).to.be();
     });
 

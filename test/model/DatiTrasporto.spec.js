@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+    instance = new invoiceSdk.DatiTrasporto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,85 +50,85 @@
   describe('DatiTrasporto', function() {
     it('should create an instance of DatiTrasporto', function() {
       // uncomment below and update the code to test DatiTrasporto
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiTrasporto);
+      //var instance = new invoiceSdk.DatiTrasporto();
+      //expect(instance).to.be.a(invoiceSdk.DatiTrasporto);
     });
 
     it('should have the property datiAnagraficiVettore (base name: "dati_anagrafici_vettore")', function() {
       // uncomment below and update the code to test the property datiAnagraficiVettore
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property mezzoTrasporto (base name: "mezzo_trasporto")', function() {
       // uncomment below and update the code to test the property mezzoTrasporto
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property causaleTrasporto (base name: "causale_trasporto")', function() {
       // uncomment below and update the code to test the property causaleTrasporto
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroColli (base name: "numero_colli")', function() {
       // uncomment below and update the code to test the property numeroColli
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property descrizione (base name: "descrizione")', function() {
       // uncomment below and update the code to test the property descrizione
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property unitaMisuraPeso (base name: "unita_misura_peso")', function() {
       // uncomment below and update the code to test the property unitaMisuraPeso
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property pesoLordo (base name: "peso_lordo")', function() {
       // uncomment below and update the code to test the property pesoLordo
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property pesoNetto (base name: "peso_netto")', function() {
       // uncomment below and update the code to test the property pesoNetto
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property dataOraRitiro (base name: "data_ora_ritiro")', function() {
       // uncomment below and update the code to test the property dataOraRitiro
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property dataInizioTrasporto (base name: "data_inizio_trasporto")', function() {
       // uncomment below and update the code to test the property dataInizioTrasporto
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property tipoResa (base name: "tipo_resa")', function() {
       // uncomment below and update the code to test the property tipoResa
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property indirizzoResa (base name: "indirizzo_resa")', function() {
       // uncomment below and update the code to test the property indirizzoResa
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property dataOraConsegna (base name: "data_ora_consegna")', function() {
       // uncomment below and update the code to test the property dataOraConsegna
-      //var instance = new invoicetronic-invoice-sdk.DatiTrasporto();
+      //var instance = new invoiceSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 

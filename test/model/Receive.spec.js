@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.Receive();
+    instance = new invoiceSdk.Receive();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,97 +50,97 @@
   describe('Receive', function() {
     it('should create an instance of Receive', function() {
       // uncomment below and update the code to test Receive
-      //var instance = new invoicetronic-invoice-sdk.Receive();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.Receive);
+      //var instance = new invoiceSdk.Receive();
+      //expect(instance).to.be.a(invoiceSdk.Receive);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property companyId (base name: "company_id")', function() {
       // uncomment below and update the code to test the property companyId
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property committente (base name: "committente")', function() {
       // uncomment below and update the code to test the property committente
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property prestatore (base name: "prestatore")', function() {
       // uncomment below and update the code to test the property prestatore
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property identifier (base name: "identifier")', function() {
       // uncomment below and update the code to test the property identifier
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property fileName (base name: "file_name")', function() {
       // uncomment below and update the code to test the property fileName
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property format (base name: "format")', function() {
       // uncomment below and update the code to test the property format
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property payload (base name: "payload")', function() {
       // uncomment below and update the code to test the property payload
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property lastUpdate (base name: "last_update")', function() {
       // uncomment below and update the code to test the property lastUpdate
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property dateSent (base name: "date_sent")', function() {
       // uncomment below and update the code to test the property dateSent
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property documents (base name: "documents")', function() {
       // uncomment below and update the code to test the property documents
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 
     it('should have the property isRead (base name: "is_read")', function() {
       // uncomment below and update the code to test the property isRead
-      //var instance = new invoicetronic-invoice-sdk.Receive();
+      //var instance = new invoiceSdk.Receive();
       //expect(instance).to.be();
     });
 

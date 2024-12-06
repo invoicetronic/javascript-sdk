@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.Anagrafica();
+    instance = new invoiceSdk.Anagrafica();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('Anagrafica', function() {
     it('should create an instance of Anagrafica', function() {
       // uncomment below and update the code to test Anagrafica
-      //var instance = new invoicetronic-invoice-sdk.Anagrafica();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.Anagrafica);
+      //var instance = new invoiceSdk.Anagrafica();
+      //expect(instance).to.be.a(invoiceSdk.Anagrafica);
     });
 
     it('should have the property denominazione (base name: "denominazione")', function() {
       // uncomment below and update the code to test the property denominazione
-      //var instance = new invoicetronic-invoice-sdk.Anagrafica();
+      //var instance = new invoiceSdk.Anagrafica();
       //expect(instance).to.be();
     });
 
     it('should have the property nome (base name: "nome")', function() {
       // uncomment below and update the code to test the property nome
-      //var instance = new invoicetronic-invoice-sdk.Anagrafica();
+      //var instance = new invoiceSdk.Anagrafica();
       //expect(instance).to.be();
     });
 
     it('should have the property cognome (base name: "cognome")', function() {
       // uncomment below and update the code to test the property cognome
-      //var instance = new invoicetronic-invoice-sdk.Anagrafica();
+      //var instance = new invoiceSdk.Anagrafica();
       //expect(instance).to.be();
     });
 
     it('should have the property titolo (base name: "titolo")', function() {
       // uncomment below and update the code to test the property titolo
-      //var instance = new invoicetronic-invoice-sdk.Anagrafica();
+      //var instance = new invoiceSdk.Anagrafica();
       //expect(instance).to.be();
     });
 
     it('should have the property codEori (base name: "cod_eori")', function() {
       // uncomment below and update the code to test the property codEori
-      //var instance = new invoicetronic-invoice-sdk.Anagrafica();
+      //var instance = new invoiceSdk.Anagrafica();
       //expect(instance).to.be();
     });
 

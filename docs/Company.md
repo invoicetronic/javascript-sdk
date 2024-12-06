@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.Company
+# invoiceSdk.Company
 
 ## Properties
 

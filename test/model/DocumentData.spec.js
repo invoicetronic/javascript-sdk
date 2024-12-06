@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DocumentData();
+    instance = new invoiceSdk.DocumentData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DocumentData', function() {
     it('should create an instance of DocumentData', function() {
       // uncomment below and update the code to test DocumentData
-      //var instance = new invoicetronic-invoice-sdk.DocumentData();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DocumentData);
+      //var instance = new invoiceSdk.DocumentData();
+      //expect(instance).to.be.a(invoiceSdk.DocumentData);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new invoicetronic-invoice-sdk.DocumentData();
+      //var instance = new invoiceSdk.DocumentData();
       //expect(instance).to.be();
     });
 
     it('should have the property date (base name: "date")', function() {
       // uncomment below and update the code to test the property date
-      //var instance = new invoicetronic-invoice-sdk.DocumentData();
+      //var instance = new invoiceSdk.DocumentData();
       //expect(instance).to.be();
     });
 

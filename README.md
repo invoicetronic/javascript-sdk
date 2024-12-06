@@ -109,15 +109,15 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var invoicetronic-invoice-sdk = require('@invoicetronic/invoice-sdk');
+var invoiceSdk = require('@invoicetronic/invoice-sdk');
 
-var defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+var defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 var Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME'
 Basic.password = 'YOUR PASSWORD'
 
-var api = new invoicetronic-invoice-sdk.CompanyApi()
+var api = new invoiceSdk.CompanyApi()
 var opts = {
   'page': 1, // {Number} Page number.
   'pageSize': 100 // {Number} Items per page.
@@ -137,92 +137,92 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*invoicetronic-invoice-sdk.CompanyApi* | [**invoiceV1CompanyGet**](docs/CompanyApi.md#invoiceV1CompanyGet) | **GET** /invoice/v1/company | List companies
-*invoicetronic-invoice-sdk.CompanyApi* | [**invoiceV1CompanyIdDelete**](docs/CompanyApi.md#invoiceV1CompanyIdDelete) | **DELETE** /invoice/v1/company/{id} | Delete a company
-*invoicetronic-invoice-sdk.CompanyApi* | [**invoiceV1CompanyIdGet**](docs/CompanyApi.md#invoiceV1CompanyIdGet) | **GET** /invoice/v1/company/{id} | Get a company by id
-*invoicetronic-invoice-sdk.CompanyApi* | [**invoiceV1CompanyPost**](docs/CompanyApi.md#invoiceV1CompanyPost) | **POST** /invoice/v1/company | Add a company
-*invoicetronic-invoice-sdk.CompanyApi* | [**invoiceV1CompanyPut**](docs/CompanyApi.md#invoiceV1CompanyPut) | **PUT** /invoice/v1/company | Update a company
-*invoicetronic-invoice-sdk.LogApi* | [**invoiceV1LogGet**](docs/LogApi.md#invoiceV1LogGet) | **GET** /invoice/v1/log | List events
-*invoicetronic-invoice-sdk.LogApi* | [**invoiceV1LogIdGet**](docs/LogApi.md#invoiceV1LogIdGet) | **GET** /invoice/v1/log/{id} | Get an event by id
-*invoicetronic-invoice-sdk.ReceiveApi* | [**invoiceV1ReceiveGet**](docs/ReceiveApi.md#invoiceV1ReceiveGet) | **GET** /invoice/v1/receive | List incoming invoices
-*invoicetronic-invoice-sdk.ReceiveApi* | [**invoiceV1ReceiveIdDelete**](docs/ReceiveApi.md#invoiceV1ReceiveIdDelete) | **DELETE** /invoice/v1/receive/{id} | Delete an incoming invoice by id
-*invoicetronic-invoice-sdk.ReceiveApi* | [**invoiceV1ReceiveIdGet**](docs/ReceiveApi.md#invoiceV1ReceiveIdGet) | **GET** /invoice/v1/receive/{id} | Get an incoming invoice by id
-*invoicetronic-invoice-sdk.SendApi* | [**invoiceV1SendFilesPost**](docs/SendApi.md#invoiceV1SendFilesPost) | **POST** /invoice/v1/send/files | Add a send invoice by file
-*invoicetronic-invoice-sdk.SendApi* | [**invoiceV1SendGet**](docs/SendApi.md#invoiceV1SendGet) | **GET** /invoice/v1/send | List send invoices
-*invoicetronic-invoice-sdk.SendApi* | [**invoiceV1SendIdGet**](docs/SendApi.md#invoiceV1SendIdGet) | **GET** /invoice/v1/send/{id} | Get a send invoice by id
-*invoicetronic-invoice-sdk.SendApi* | [**invoiceV1SendJsonPost**](docs/SendApi.md#invoiceV1SendJsonPost) | **POST** /invoice/v1/send/json | Add a send invoice by json
-*invoicetronic-invoice-sdk.SendApi* | [**invoiceV1SendPost**](docs/SendApi.md#invoiceV1SendPost) | **POST** /invoice/v1/send | Add a send invoice
-*invoicetronic-invoice-sdk.SendApi* | [**invoiceV1SendXmlPost**](docs/SendApi.md#invoiceV1SendXmlPost) | **POST** /invoice/v1/send/xml | Add a send invoice by xml
-*invoicetronic-invoice-sdk.UpdateApi* | [**invoiceV1UpdateGet**](docs/UpdateApi.md#invoiceV1UpdateGet) | **GET** /invoice/v1/update | List updates
-*invoicetronic-invoice-sdk.UpdateApi* | [**invoiceV1UpdateIdGet**](docs/UpdateApi.md#invoiceV1UpdateIdGet) | **GET** /invoice/v1/update/{id} | Get an update by id
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookGet**](docs/WebhookApi.md#invoiceV1WebhookGet) | **GET** /invoice/v1/webhook | List webhooks
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookIdDelete**](docs/WebhookApi.md#invoiceV1WebhookIdDelete) | **DELETE** /invoice/v1/webhook/{id} | Delete a webhook by id
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookIdGet**](docs/WebhookApi.md#invoiceV1WebhookIdGet) | **GET** /invoice/v1/webhook/{id} | Get a webhook by id
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookPost**](docs/WebhookApi.md#invoiceV1WebhookPost) | **POST** /invoice/v1/webhook | Add a webhook
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookPut**](docs/WebhookApi.md#invoiceV1WebhookPut) | **PUT** /invoice/v1/webhook | Update a webhook
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookhistoryGet**](docs/WebhookApi.md#invoiceV1WebhookhistoryGet) | **GET** /invoice/v1/webhookhistory | List webhook history items
-*invoicetronic-invoice-sdk.WebhookApi* | [**invoiceV1WebhookhistoryIdGet**](docs/WebhookApi.md#invoiceV1WebhookhistoryIdGet) | **GET** /invoice/v1/webhookhistory/{id} | Get a webhook history item by id
+*invoiceSdk.CompanyApi* | [**invoiceV1CompanyGet**](docs/CompanyApi.md#invoiceV1CompanyGet) | **GET** /invoice/v1/company | List companies
+*invoiceSdk.CompanyApi* | [**invoiceV1CompanyIdDelete**](docs/CompanyApi.md#invoiceV1CompanyIdDelete) | **DELETE** /invoice/v1/company/{id} | Delete a company
+*invoiceSdk.CompanyApi* | [**invoiceV1CompanyIdGet**](docs/CompanyApi.md#invoiceV1CompanyIdGet) | **GET** /invoice/v1/company/{id} | Get a company by id
+*invoiceSdk.CompanyApi* | [**invoiceV1CompanyPost**](docs/CompanyApi.md#invoiceV1CompanyPost) | **POST** /invoice/v1/company | Add a company
+*invoiceSdk.CompanyApi* | [**invoiceV1CompanyPut**](docs/CompanyApi.md#invoiceV1CompanyPut) | **PUT** /invoice/v1/company | Update a company
+*invoiceSdk.LogApi* | [**invoiceV1LogGet**](docs/LogApi.md#invoiceV1LogGet) | **GET** /invoice/v1/log | List events
+*invoiceSdk.LogApi* | [**invoiceV1LogIdGet**](docs/LogApi.md#invoiceV1LogIdGet) | **GET** /invoice/v1/log/{id} | Get an event by id
+*invoiceSdk.ReceiveApi* | [**invoiceV1ReceiveGet**](docs/ReceiveApi.md#invoiceV1ReceiveGet) | **GET** /invoice/v1/receive | List incoming invoices
+*invoiceSdk.ReceiveApi* | [**invoiceV1ReceiveIdDelete**](docs/ReceiveApi.md#invoiceV1ReceiveIdDelete) | **DELETE** /invoice/v1/receive/{id} | Delete an incoming invoice by id
+*invoiceSdk.ReceiveApi* | [**invoiceV1ReceiveIdGet**](docs/ReceiveApi.md#invoiceV1ReceiveIdGet) | **GET** /invoice/v1/receive/{id} | Get an incoming invoice by id
+*invoiceSdk.SendApi* | [**invoiceV1SendFilesPost**](docs/SendApi.md#invoiceV1SendFilesPost) | **POST** /invoice/v1/send/files | Add a send invoice by file
+*invoiceSdk.SendApi* | [**invoiceV1SendGet**](docs/SendApi.md#invoiceV1SendGet) | **GET** /invoice/v1/send | List send invoices
+*invoiceSdk.SendApi* | [**invoiceV1SendIdGet**](docs/SendApi.md#invoiceV1SendIdGet) | **GET** /invoice/v1/send/{id} | Get a send invoice by id
+*invoiceSdk.SendApi* | [**invoiceV1SendJsonPost**](docs/SendApi.md#invoiceV1SendJsonPost) | **POST** /invoice/v1/send/json | Add a send invoice by json
+*invoiceSdk.SendApi* | [**invoiceV1SendPost**](docs/SendApi.md#invoiceV1SendPost) | **POST** /invoice/v1/send | Add a send invoice
+*invoiceSdk.SendApi* | [**invoiceV1SendXmlPost**](docs/SendApi.md#invoiceV1SendXmlPost) | **POST** /invoice/v1/send/xml | Add a send invoice by xml
+*invoiceSdk.UpdateApi* | [**invoiceV1UpdateGet**](docs/UpdateApi.md#invoiceV1UpdateGet) | **GET** /invoice/v1/update | List updates
+*invoiceSdk.UpdateApi* | [**invoiceV1UpdateIdGet**](docs/UpdateApi.md#invoiceV1UpdateIdGet) | **GET** /invoice/v1/update/{id} | Get an update by id
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookGet**](docs/WebhookApi.md#invoiceV1WebhookGet) | **GET** /invoice/v1/webhook | List webhooks
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookIdDelete**](docs/WebhookApi.md#invoiceV1WebhookIdDelete) | **DELETE** /invoice/v1/webhook/{id} | Delete a webhook by id
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookIdGet**](docs/WebhookApi.md#invoiceV1WebhookIdGet) | **GET** /invoice/v1/webhook/{id} | Get a webhook by id
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookPost**](docs/WebhookApi.md#invoiceV1WebhookPost) | **POST** /invoice/v1/webhook | Add a webhook
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookPut**](docs/WebhookApi.md#invoiceV1WebhookPut) | **PUT** /invoice/v1/webhook | Update a webhook
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookhistoryGet**](docs/WebhookApi.md#invoiceV1WebhookhistoryGet) | **GET** /invoice/v1/webhookhistory | List webhook history items
+*invoiceSdk.WebhookApi* | [**invoiceV1WebhookhistoryIdGet**](docs/WebhookApi.md#invoiceV1WebhookhistoryIdGet) | **GET** /invoice/v1/webhookhistory/{id} | Get a webhook history item by id
 
 
 ## Documentation for Models
 
- - [invoicetronic-invoice-sdk.Allegati](docs/Allegati.md)
- - [invoicetronic-invoice-sdk.AltriDatiGestionali](docs/AltriDatiGestionali.md)
- - [invoicetronic-invoice-sdk.Anagrafica](docs/Anagrafica.md)
- - [invoicetronic-invoice-sdk.CedentePrestatore](docs/CedentePrestatore.md)
- - [invoicetronic-invoice-sdk.CessionarioCommittente](docs/CessionarioCommittente.md)
- - [invoicetronic-invoice-sdk.CodiceArticolo](docs/CodiceArticolo.md)
- - [invoicetronic-invoice-sdk.Company](docs/Company.md)
- - [invoicetronic-invoice-sdk.Contatti](docs/Contatti.md)
- - [invoicetronic-invoice-sdk.ContattiTrasmittente](docs/ContattiTrasmittente.md)
- - [invoicetronic-invoice-sdk.DatiAnagrafici](docs/DatiAnagrafici.md)
- - [invoicetronic-invoice-sdk.DatiAnagraficiCedentePrestatore](docs/DatiAnagraficiCedentePrestatore.md)
- - [invoicetronic-invoice-sdk.DatiAnagraficiCessionarioCommittente](docs/DatiAnagraficiCessionarioCommittente.md)
- - [invoicetronic-invoice-sdk.DatiAnagraficiVettore](docs/DatiAnagraficiVettore.md)
- - [invoicetronic-invoice-sdk.DatiBeniServizi](docs/DatiBeniServizi.md)
- - [invoicetronic-invoice-sdk.DatiBollo](docs/DatiBollo.md)
- - [invoicetronic-invoice-sdk.DatiCassaPrevidenziale](docs/DatiCassaPrevidenziale.md)
- - [invoicetronic-invoice-sdk.DatiContratto](docs/DatiContratto.md)
- - [invoicetronic-invoice-sdk.DatiConvenzione](docs/DatiConvenzione.md)
- - [invoicetronic-invoice-sdk.DatiDDT](docs/DatiDDT.md)
- - [invoicetronic-invoice-sdk.DatiFattureCollegate](docs/DatiFattureCollegate.md)
- - [invoicetronic-invoice-sdk.DatiGenerali](docs/DatiGenerali.md)
- - [invoicetronic-invoice-sdk.DatiGeneraliDocumento](docs/DatiGeneraliDocumento.md)
- - [invoicetronic-invoice-sdk.DatiOrdineAcquisto](docs/DatiOrdineAcquisto.md)
- - [invoicetronic-invoice-sdk.DatiPagamento](docs/DatiPagamento.md)
- - [invoicetronic-invoice-sdk.DatiRicezione](docs/DatiRicezione.md)
- - [invoicetronic-invoice-sdk.DatiRiepilogo](docs/DatiRiepilogo.md)
- - [invoicetronic-invoice-sdk.DatiRitenuta](docs/DatiRitenuta.md)
- - [invoicetronic-invoice-sdk.DatiSAL](docs/DatiSAL.md)
- - [invoicetronic-invoice-sdk.DatiTrasmissione](docs/DatiTrasmissione.md)
- - [invoicetronic-invoice-sdk.DatiTrasporto](docs/DatiTrasporto.md)
- - [invoicetronic-invoice-sdk.DatiVeicoli](docs/DatiVeicoli.md)
- - [invoicetronic-invoice-sdk.DettaglioLinee](docs/DettaglioLinee.md)
- - [invoicetronic-invoice-sdk.DettaglioPagamento](docs/DettaglioPagamento.md)
- - [invoicetronic-invoice-sdk.DocumentData](docs/DocumentData.md)
- - [invoicetronic-invoice-sdk.Error](docs/Error.md)
- - [invoicetronic-invoice-sdk.Event](docs/Event.md)
- - [invoicetronic-invoice-sdk.FatturaElettronicaBody](docs/FatturaElettronicaBody.md)
- - [invoicetronic-invoice-sdk.FatturaElettronicaHeader](docs/FatturaElettronicaHeader.md)
- - [invoicetronic-invoice-sdk.FatturaOrdinaria](docs/FatturaOrdinaria.md)
- - [invoicetronic-invoice-sdk.FatturaPrincipale](docs/FatturaPrincipale.md)
- - [invoicetronic-invoice-sdk.IdFiscaleIVA](docs/IdFiscaleIVA.md)
- - [invoicetronic-invoice-sdk.IdTrasmittente](docs/IdTrasmittente.md)
- - [invoicetronic-invoice-sdk.IndirizzoResa](docs/IndirizzoResa.md)
- - [invoicetronic-invoice-sdk.IscrizioneREA](docs/IscrizioneREA.md)
- - [invoicetronic-invoice-sdk.ProblemDetails](docs/ProblemDetails.md)
- - [invoicetronic-invoice-sdk.RappresentanteFiscale](docs/RappresentanteFiscale.md)
- - [invoicetronic-invoice-sdk.RappresentanteFiscaleCessionarioCommittente](docs/RappresentanteFiscaleCessionarioCommittente.md)
- - [invoicetronic-invoice-sdk.Receive](docs/Receive.md)
- - [invoicetronic-invoice-sdk.ScontoMaggiorazione](docs/ScontoMaggiorazione.md)
- - [invoicetronic-invoice-sdk.SedeCedentePrestatore](docs/SedeCedentePrestatore.md)
- - [invoicetronic-invoice-sdk.SedeCessionarioCommittente](docs/SedeCessionarioCommittente.md)
- - [invoicetronic-invoice-sdk.Send](docs/Send.md)
- - [invoicetronic-invoice-sdk.StabileOrganizzazione](docs/StabileOrganizzazione.md)
- - [invoicetronic-invoice-sdk.TerzoIntermediarioOSoggettoEmittente](docs/TerzoIntermediarioOSoggettoEmittente.md)
- - [invoicetronic-invoice-sdk.Update](docs/Update.md)
- - [invoicetronic-invoice-sdk.WebHook](docs/WebHook.md)
- - [invoicetronic-invoice-sdk.WebHookHistory](docs/WebHookHistory.md)
+ - [invoiceSdk.Allegati](docs/Allegati.md)
+ - [invoiceSdk.AltriDatiGestionali](docs/AltriDatiGestionali.md)
+ - [invoiceSdk.Anagrafica](docs/Anagrafica.md)
+ - [invoiceSdk.CedentePrestatore](docs/CedentePrestatore.md)
+ - [invoiceSdk.CessionarioCommittente](docs/CessionarioCommittente.md)
+ - [invoiceSdk.CodiceArticolo](docs/CodiceArticolo.md)
+ - [invoiceSdk.Company](docs/Company.md)
+ - [invoiceSdk.Contatti](docs/Contatti.md)
+ - [invoiceSdk.ContattiTrasmittente](docs/ContattiTrasmittente.md)
+ - [invoiceSdk.DatiAnagrafici](docs/DatiAnagrafici.md)
+ - [invoiceSdk.DatiAnagraficiCedentePrestatore](docs/DatiAnagraficiCedentePrestatore.md)
+ - [invoiceSdk.DatiAnagraficiCessionarioCommittente](docs/DatiAnagraficiCessionarioCommittente.md)
+ - [invoiceSdk.DatiAnagraficiVettore](docs/DatiAnagraficiVettore.md)
+ - [invoiceSdk.DatiBeniServizi](docs/DatiBeniServizi.md)
+ - [invoiceSdk.DatiBollo](docs/DatiBollo.md)
+ - [invoiceSdk.DatiCassaPrevidenziale](docs/DatiCassaPrevidenziale.md)
+ - [invoiceSdk.DatiContratto](docs/DatiContratto.md)
+ - [invoiceSdk.DatiConvenzione](docs/DatiConvenzione.md)
+ - [invoiceSdk.DatiDDT](docs/DatiDDT.md)
+ - [invoiceSdk.DatiFattureCollegate](docs/DatiFattureCollegate.md)
+ - [invoiceSdk.DatiGenerali](docs/DatiGenerali.md)
+ - [invoiceSdk.DatiGeneraliDocumento](docs/DatiGeneraliDocumento.md)
+ - [invoiceSdk.DatiOrdineAcquisto](docs/DatiOrdineAcquisto.md)
+ - [invoiceSdk.DatiPagamento](docs/DatiPagamento.md)
+ - [invoiceSdk.DatiRicezione](docs/DatiRicezione.md)
+ - [invoiceSdk.DatiRiepilogo](docs/DatiRiepilogo.md)
+ - [invoiceSdk.DatiRitenuta](docs/DatiRitenuta.md)
+ - [invoiceSdk.DatiSAL](docs/DatiSAL.md)
+ - [invoiceSdk.DatiTrasmissione](docs/DatiTrasmissione.md)
+ - [invoiceSdk.DatiTrasporto](docs/DatiTrasporto.md)
+ - [invoiceSdk.DatiVeicoli](docs/DatiVeicoli.md)
+ - [invoiceSdk.DettaglioLinee](docs/DettaglioLinee.md)
+ - [invoiceSdk.DettaglioPagamento](docs/DettaglioPagamento.md)
+ - [invoiceSdk.DocumentData](docs/DocumentData.md)
+ - [invoiceSdk.Error](docs/Error.md)
+ - [invoiceSdk.Event](docs/Event.md)
+ - [invoiceSdk.FatturaElettronicaBody](docs/FatturaElettronicaBody.md)
+ - [invoiceSdk.FatturaElettronicaHeader](docs/FatturaElettronicaHeader.md)
+ - [invoiceSdk.FatturaOrdinaria](docs/FatturaOrdinaria.md)
+ - [invoiceSdk.FatturaPrincipale](docs/FatturaPrincipale.md)
+ - [invoiceSdk.IdFiscaleIVA](docs/IdFiscaleIVA.md)
+ - [invoiceSdk.IdTrasmittente](docs/IdTrasmittente.md)
+ - [invoiceSdk.IndirizzoResa](docs/IndirizzoResa.md)
+ - [invoiceSdk.IscrizioneREA](docs/IscrizioneREA.md)
+ - [invoiceSdk.ProblemDetails](docs/ProblemDetails.md)
+ - [invoiceSdk.RappresentanteFiscale](docs/RappresentanteFiscale.md)
+ - [invoiceSdk.RappresentanteFiscaleCessionarioCommittente](docs/RappresentanteFiscaleCessionarioCommittente.md)
+ - [invoiceSdk.Receive](docs/Receive.md)
+ - [invoiceSdk.ScontoMaggiorazione](docs/ScontoMaggiorazione.md)
+ - [invoiceSdk.SedeCedentePrestatore](docs/SedeCedentePrestatore.md)
+ - [invoiceSdk.SedeCessionarioCommittente](docs/SedeCessionarioCommittente.md)
+ - [invoiceSdk.Send](docs/Send.md)
+ - [invoiceSdk.StabileOrganizzazione](docs/StabileOrganizzazione.md)
+ - [invoiceSdk.TerzoIntermediarioOSoggettoEmittente](docs/TerzoIntermediarioOSoggettoEmittente.md)
+ - [invoiceSdk.Update](docs/Update.md)
+ - [invoiceSdk.WebHook](docs/WebHook.md)
+ - [invoiceSdk.WebHookHistory](docs/WebHookHistory.md)
 
 
 ## Documentation for Authorization

@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.Error
+# invoiceSdk.Error
 
 ## Properties
 

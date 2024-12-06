@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiVeicoli();
+    instance = new invoiceSdk.DatiVeicoli();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DatiVeicoli', function() {
     it('should create an instance of DatiVeicoli', function() {
       // uncomment below and update the code to test DatiVeicoli
-      //var instance = new invoicetronic-invoice-sdk.DatiVeicoli();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiVeicoli);
+      //var instance = new invoiceSdk.DatiVeicoli();
+      //expect(instance).to.be.a(invoiceSdk.DatiVeicoli);
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new invoicetronic-invoice-sdk.DatiVeicoli();
+      //var instance = new invoiceSdk.DatiVeicoli();
       //expect(instance).to.be();
     });
 
     it('should have the property totalePercorso (base name: "totale_percorso")', function() {
       // uncomment below and update the code to test the property totalePercorso
-      //var instance = new invoicetronic-invoice-sdk.DatiVeicoli();
+      //var instance = new invoiceSdk.DatiVeicoli();
       //expect(instance).to.be();
     });
 

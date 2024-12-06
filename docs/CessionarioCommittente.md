@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.CessionarioCommittente
+# invoiceSdk.CessionarioCommittente
 
 ## Properties
 

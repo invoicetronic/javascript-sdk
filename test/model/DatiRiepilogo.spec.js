@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+    instance = new invoiceSdk.DatiRiepilogo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('DatiRiepilogo', function() {
     it('should create an instance of DatiRiepilogo', function() {
       // uncomment below and update the code to test DatiRiepilogo
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiRiepilogo);
+      //var instance = new invoiceSdk.DatiRiepilogo();
+      //expect(instance).to.be.a(invoiceSdk.DatiRiepilogo);
     });
 
     it('should have the property aliquotaIva (base name: "aliquota_iva")', function() {
       // uncomment below and update the code to test the property aliquotaIva
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property natura (base name: "natura")', function() {
       // uncomment below and update the code to test the property natura
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property speseAccessorie (base name: "spese_accessorie")', function() {
       // uncomment below and update the code to test the property speseAccessorie
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property arrotondamento (base name: "arrotondamento")', function() {
       // uncomment below and update the code to test the property arrotondamento
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property imponibileImporto (base name: "imponibile_importo")', function() {
       // uncomment below and update the code to test the property imponibileImporto
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property imposta (base name: "imposta")', function() {
       // uncomment below and update the code to test the property imposta
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property esigibilitaIva (base name: "esigibilita_iva")', function() {
       // uncomment below and update the code to test the property esigibilitaIva
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoNormativo (base name: "riferimento_normativo")', function() {
       // uncomment below and update the code to test the property riferimentoNormativo
-      //var instance = new invoicetronic-invoice-sdk.DatiRiepilogo();
+      //var instance = new invoiceSdk.DatiRiepilogo();
       //expect(instance).to.be();
     });
 

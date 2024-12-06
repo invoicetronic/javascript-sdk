@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+    instance = new invoiceSdk.StabileOrganizzazione();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('StabileOrganizzazione', function() {
     it('should create an instance of StabileOrganizzazione', function() {
       // uncomment below and update the code to test StabileOrganizzazione
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.StabileOrganizzazione);
+      //var instance = new invoiceSdk.StabileOrganizzazione();
+      //expect(instance).to.be.a(invoiceSdk.StabileOrganizzazione);
     });
 
     it('should have the property indirizzo (base name: "indirizzo")', function() {
       // uncomment below and update the code to test the property indirizzo
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+      //var instance = new invoiceSdk.StabileOrganizzazione();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroCivico (base name: "numero_civico")', function() {
       // uncomment below and update the code to test the property numeroCivico
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+      //var instance = new invoiceSdk.StabileOrganizzazione();
       //expect(instance).to.be();
     });
 
     it('should have the property cap (base name: "cap")', function() {
       // uncomment below and update the code to test the property cap
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+      //var instance = new invoiceSdk.StabileOrganizzazione();
       //expect(instance).to.be();
     });
 
     it('should have the property comune (base name: "comune")', function() {
       // uncomment below and update the code to test the property comune
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+      //var instance = new invoiceSdk.StabileOrganizzazione();
       //expect(instance).to.be();
     });
 
     it('should have the property provincia (base name: "provincia")', function() {
       // uncomment below and update the code to test the property provincia
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+      //var instance = new invoiceSdk.StabileOrganizzazione();
       //expect(instance).to.be();
     });
 
     it('should have the property nazione (base name: "nazione")', function() {
       // uncomment below and update the code to test the property nazione
-      //var instance = new invoicetronic-invoice-sdk.StabileOrganizzazione();
+      //var instance = new invoiceSdk.StabileOrganizzazione();
       //expect(instance).to.be();
     });
 

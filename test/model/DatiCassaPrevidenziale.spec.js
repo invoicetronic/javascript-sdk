@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+    instance = new invoiceSdk.DatiCassaPrevidenziale();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('DatiCassaPrevidenziale', function() {
     it('should create an instance of DatiCassaPrevidenziale', function() {
       // uncomment below and update the code to test DatiCassaPrevidenziale
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiCassaPrevidenziale);
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
+      //expect(instance).to.be.a(invoiceSdk.DatiCassaPrevidenziale);
     });
 
     it('should have the property tipoCassa (base name: "tipo_cassa")', function() {
       // uncomment below and update the code to test the property tipoCassa
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property alCassa (base name: "al_cassa")', function() {
       // uncomment below and update the code to test the property alCassa
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property importoContributoCassa (base name: "importo_contributo_cassa")', function() {
       // uncomment below and update the code to test the property importoContributoCassa
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property imponibileCassa (base name: "imponibile_cassa")', function() {
       // uncomment below and update the code to test the property imponibileCassa
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property aliquotaIva (base name: "aliquota_iva")', function() {
       // uncomment below and update the code to test the property aliquotaIva
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property ritenuta (base name: "ritenuta")', function() {
       // uncomment below and update the code to test the property ritenuta
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property natura (base name: "natura")', function() {
       // uncomment below and update the code to test the property natura
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoAmministrazione (base name: "riferimento_amministrazione")', function() {
       // uncomment below and update the code to test the property riferimentoAmministrazione
-      //var instance = new invoicetronic-invoice-sdk.DatiCassaPrevidenziale();
+      //var instance = new invoiceSdk.DatiCassaPrevidenziale();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+    instance = new invoiceSdk.DettaglioLinee();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,103 +50,103 @@
   describe('DettaglioLinee', function() {
     it('should create an instance of DettaglioLinee', function() {
       // uncomment below and update the code to test DettaglioLinee
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DettaglioLinee);
+      //var instance = new invoiceSdk.DettaglioLinee();
+      //expect(instance).to.be.a(invoiceSdk.DettaglioLinee);
     });
 
     it('should have the property numeroLinea (base name: "numero_linea")', function() {
       // uncomment below and update the code to test the property numeroLinea
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property tipoCessionePrestazione (base name: "tipo_cessione_prestazione")', function() {
       // uncomment below and update the code to test the property tipoCessionePrestazione
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceArticolo (base name: "codice_articolo")', function() {
       // uncomment below and update the code to test the property codiceArticolo
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property descrizione (base name: "descrizione")', function() {
       // uncomment below and update the code to test the property descrizione
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property quantita (base name: "quantita")', function() {
       // uncomment below and update the code to test the property quantita
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property unitaMisura (base name: "unita_misura")', function() {
       // uncomment below and update the code to test the property unitaMisura
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property dataInizioPeriodo (base name: "data_inizio_periodo")', function() {
       // uncomment below and update the code to test the property dataInizioPeriodo
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property dataFinePeriodo (base name: "data_fine_periodo")', function() {
       // uncomment below and update the code to test the property dataFinePeriodo
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property prezzoUnitario (base name: "prezzo_unitario")', function() {
       // uncomment below and update the code to test the property prezzoUnitario
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property scontoMaggiorazione (base name: "sconto_maggiorazione")', function() {
       // uncomment below and update the code to test the property scontoMaggiorazione
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property prezzoTotale (base name: "prezzo_totale")', function() {
       // uncomment below and update the code to test the property prezzoTotale
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property aliquotaIva (base name: "aliquota_iva")', function() {
       // uncomment below and update the code to test the property aliquotaIva
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property ritenuta (base name: "ritenuta")', function() {
       // uncomment below and update the code to test the property ritenuta
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property natura (base name: "natura")', function() {
       // uncomment below and update the code to test the property natura
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoAmministrazione (base name: "riferimento_amministrazione")', function() {
       // uncomment below and update the code to test the property riferimentoAmministrazione
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 
     it('should have the property altriDatiGestionali (base name: "altri_dati_gestionali")', function() {
       // uncomment below and update the code to test the property altriDatiGestionali
-      //var instance = new invoicetronic-invoice-sdk.DettaglioLinee();
+      //var instance = new invoiceSdk.DettaglioLinee();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.Allegati();
+    instance = new invoiceSdk.Allegati();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('Allegati', function() {
     it('should create an instance of Allegati', function() {
       // uncomment below and update the code to test Allegati
-      //var instance = new invoicetronic-invoice-sdk.Allegati();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.Allegati);
+      //var instance = new invoiceSdk.Allegati();
+      //expect(instance).to.be.a(invoiceSdk.Allegati);
     });
 
     it('should have the property nomeAttachment (base name: "nome_attachment")', function() {
       // uncomment below and update the code to test the property nomeAttachment
-      //var instance = new invoicetronic-invoice-sdk.Allegati();
+      //var instance = new invoiceSdk.Allegati();
       //expect(instance).to.be();
     });
 
     it('should have the property algoritmoCompressione (base name: "algoritmo_compressione")', function() {
       // uncomment below and update the code to test the property algoritmoCompressione
-      //var instance = new invoicetronic-invoice-sdk.Allegati();
+      //var instance = new invoiceSdk.Allegati();
       //expect(instance).to.be();
     });
 
     it('should have the property formatoAttachment (base name: "formato_attachment")', function() {
       // uncomment below and update the code to test the property formatoAttachment
-      //var instance = new invoicetronic-invoice-sdk.Allegati();
+      //var instance = new invoiceSdk.Allegati();
       //expect(instance).to.be();
     });
 
     it('should have the property descrizioneAttachment (base name: "descrizione_attachment")', function() {
       // uncomment below and update the code to test the property descrizioneAttachment
-      //var instance = new invoicetronic-invoice-sdk.Allegati();
+      //var instance = new invoiceSdk.Allegati();
       //expect(instance).to.be();
     });
 
     it('should have the property attachment (base name: "attachment")', function() {
       // uncomment below and update the code to test the property attachment
-      //var instance = new invoicetronic-invoice-sdk.Allegati();
+      //var instance = new invoiceSdk.Allegati();
       //expect(instance).to.be();
     });
 

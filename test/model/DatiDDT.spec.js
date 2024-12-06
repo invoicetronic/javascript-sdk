@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiDDT();
+    instance = new invoiceSdk.DatiDDT();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('DatiDDT', function() {
     it('should create an instance of DatiDDT', function() {
       // uncomment below and update the code to test DatiDDT
-      //var instance = new invoicetronic-invoice-sdk.DatiDDT();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiDDT);
+      //var instance = new invoiceSdk.DatiDDT();
+      //expect(instance).to.be.a(invoiceSdk.DatiDDT);
     });
 
     it('should have the property numeroDdt (base name: "numero_ddt")', function() {
       // uncomment below and update the code to test the property numeroDdt
-      //var instance = new invoicetronic-invoice-sdk.DatiDDT();
+      //var instance = new invoiceSdk.DatiDDT();
       //expect(instance).to.be();
     });
 
     it('should have the property dataDdt (base name: "data_ddt")', function() {
       // uncomment below and update the code to test the property dataDdt
-      //var instance = new invoicetronic-invoice-sdk.DatiDDT();
+      //var instance = new invoiceSdk.DatiDDT();
       //expect(instance).to.be();
     });
 
     it('should have the property riferimentoNumeroLinea (base name: "riferimento_numero_linea")', function() {
       // uncomment below and update the code to test the property riferimentoNumeroLinea
-      //var instance = new invoicetronic-invoice-sdk.DatiDDT();
+      //var instance = new invoiceSdk.DatiDDT();
       //expect(instance).to.be();
     });
 

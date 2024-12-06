@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+    instance = new invoiceSdk.DettaglioPagamento();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,133 +50,133 @@
   describe('DettaglioPagamento', function() {
     it('should create an instance of DettaglioPagamento', function() {
       // uncomment below and update the code to test DettaglioPagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DettaglioPagamento);
+      //var instance = new invoiceSdk.DettaglioPagamento();
+      //expect(instance).to.be.a(invoiceSdk.DettaglioPagamento);
     });
 
     it('should have the property beneficiario (base name: "beneficiario")', function() {
       // uncomment below and update the code to test the property beneficiario
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property modalitaPagamento (base name: "modalita_pagamento")', function() {
       // uncomment below and update the code to test the property modalitaPagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataRiferimentoTerminiPagamento (base name: "data_riferimento_termini_pagamento")', function() {
       // uncomment below and update the code to test the property dataRiferimentoTerminiPagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property giorniTerminiPagamento (base name: "giorni_termini_pagamento")', function() {
       // uncomment below and update the code to test the property giorniTerminiPagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataScadenzaPagamento (base name: "data_scadenza_pagamento")', function() {
       // uncomment below and update the code to test the property dataScadenzaPagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property importoPagamento (base name: "importo_pagamento")', function() {
       // uncomment below and update the code to test the property importoPagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property codUfficioPostale (base name: "cod_ufficio_postale")', function() {
       // uncomment below and update the code to test the property codUfficioPostale
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property cognomeQuietanzante (base name: "cognome_quietanzante")', function() {
       // uncomment below and update the code to test the property cognomeQuietanzante
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property nomeQuietanzante (base name: "nome_quietanzante")', function() {
       // uncomment below and update the code to test the property nomeQuietanzante
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property cfQuietanzante (base name: "cf_quietanzante")', function() {
       // uncomment below and update the code to test the property cfQuietanzante
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property titoloQuietanzante (base name: "titolo_quietanzante")', function() {
       // uncomment below and update the code to test the property titoloQuietanzante
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property istitutoFinanziario (base name: "istituto_finanziario")', function() {
       // uncomment below and update the code to test the property istitutoFinanziario
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property iban (base name: "iban")', function() {
       // uncomment below and update the code to test the property iban
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property abi (base name: "abi")', function() {
       // uncomment below and update the code to test the property abi
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property cab (base name: "cab")', function() {
       // uncomment below and update the code to test the property cab
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property bic (base name: "bic")', function() {
       // uncomment below and update the code to test the property bic
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property scontoPagamentoAnticipato (base name: "sconto_pagamento_anticipato")', function() {
       // uncomment below and update the code to test the property scontoPagamentoAnticipato
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataLimitePagamentoAnticipato (base name: "data_limite_pagamento_anticipato")', function() {
       // uncomment below and update the code to test the property dataLimitePagamentoAnticipato
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property penalitaPagamentiRitardati (base name: "penalita_pagamenti_ritardati")', function() {
       // uncomment below and update the code to test the property penalitaPagamentiRitardati
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataDecorrenzaPenale (base name: "data_decorrenza_penale")', function() {
       // uncomment below and update the code to test the property dataDecorrenzaPenale
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property codicePagamento (base name: "codice_pagamento")', function() {
       // uncomment below and update the code to test the property codicePagamento
-      //var instance = new invoicetronic-invoice-sdk.DettaglioPagamento();
+      //var instance = new invoiceSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 

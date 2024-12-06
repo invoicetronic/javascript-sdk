@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiRitenuta();
+    instance = new invoiceSdk.DatiRitenuta();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('DatiRitenuta', function() {
     it('should create an instance of DatiRitenuta', function() {
       // uncomment below and update the code to test DatiRitenuta
-      //var instance = new invoicetronic-invoice-sdk.DatiRitenuta();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiRitenuta);
+      //var instance = new invoiceSdk.DatiRitenuta();
+      //expect(instance).to.be.a(invoiceSdk.DatiRitenuta);
     });
 
     it('should have the property tipoRitenuta (base name: "tipo_ritenuta")', function() {
       // uncomment below and update the code to test the property tipoRitenuta
-      //var instance = new invoicetronic-invoice-sdk.DatiRitenuta();
+      //var instance = new invoiceSdk.DatiRitenuta();
       //expect(instance).to.be();
     });
 
     it('should have the property importoRitenuta (base name: "importo_ritenuta")', function() {
       // uncomment below and update the code to test the property importoRitenuta
-      //var instance = new invoicetronic-invoice-sdk.DatiRitenuta();
+      //var instance = new invoiceSdk.DatiRitenuta();
       //expect(instance).to.be();
     });
 
     it('should have the property aliquotaRitenuta (base name: "aliquota_ritenuta")', function() {
       // uncomment below and update the code to test the property aliquotaRitenuta
-      //var instance = new invoicetronic-invoice-sdk.DatiRitenuta();
+      //var instance = new invoiceSdk.DatiRitenuta();
       //expect(instance).to.be();
     });
 
     it('should have the property causalePagamento (base name: "causale_pagamento")', function() {
       // uncomment below and update the code to test the property causalePagamento
-      //var instance = new invoicetronic-invoice-sdk.DatiRitenuta();
+      //var instance = new invoiceSdk.DatiRitenuta();
       //expect(instance).to.be();
     });
 

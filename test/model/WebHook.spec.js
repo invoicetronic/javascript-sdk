@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.WebHook();
+    instance = new invoiceSdk.WebHook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('WebHook', function() {
     it('should create an instance of WebHook', function() {
       // uncomment below and update the code to test WebHook
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.WebHook);
+      //var instance = new invoiceSdk.WebHook();
+      //expect(instance).to.be.a(invoiceSdk.WebHook);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property companyId (base name: "company_id")', function() {
       // uncomment below and update the code to test the property companyId
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property enabled (base name: "enabled")', function() {
       // uncomment below and update the code to test the property enabled
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property secret (base name: "secret")', function() {
       // uncomment below and update the code to test the property secret
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instance = new invoicetronic-invoice-sdk.WebHook();
+      //var instance = new invoiceSdk.WebHook();
       //expect(instance).to.be();
     });
 

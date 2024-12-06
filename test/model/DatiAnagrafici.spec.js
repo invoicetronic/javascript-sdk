@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiAnagrafici();
+    instance = new invoiceSdk.DatiAnagrafici();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('DatiAnagrafici', function() {
     it('should create an instance of DatiAnagrafici', function() {
       // uncomment below and update the code to test DatiAnagrafici
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagrafici();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiAnagrafici);
+      //var instance = new invoiceSdk.DatiAnagrafici();
+      //expect(instance).to.be.a(invoiceSdk.DatiAnagrafici);
     });
 
     it('should have the property idFiscaleIva (base name: "id_fiscale_iva")', function() {
       // uncomment below and update the code to test the property idFiscaleIva
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagrafici();
+      //var instance = new invoiceSdk.DatiAnagrafici();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceFiscale (base name: "codice_fiscale")', function() {
       // uncomment below and update the code to test the property codiceFiscale
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagrafici();
+      //var instance = new invoiceSdk.DatiAnagrafici();
       //expect(instance).to.be();
     });
 
     it('should have the property anagrafica (base name: "anagrafica")', function() {
       // uncomment below and update the code to test the property anagrafica
-      //var instance = new invoicetronic-invoice-sdk.DatiAnagrafici();
+      //var instance = new invoiceSdk.DatiAnagrafici();
       //expect(instance).to.be();
     });
 

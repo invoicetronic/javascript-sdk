@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.IdTrasmittente();
+    instance = new invoiceSdk.IdTrasmittente();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('IdTrasmittente', function() {
     it('should create an instance of IdTrasmittente', function() {
       // uncomment below and update the code to test IdTrasmittente
-      //var instance = new invoicetronic-invoice-sdk.IdTrasmittente();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.IdTrasmittente);
+      //var instance = new invoiceSdk.IdTrasmittente();
+      //expect(instance).to.be.a(invoiceSdk.IdTrasmittente);
     });
 
     it('should have the property idPaese (base name: "id_paese")', function() {
       // uncomment below and update the code to test the property idPaese
-      //var instance = new invoicetronic-invoice-sdk.IdTrasmittente();
+      //var instance = new invoiceSdk.IdTrasmittente();
       //expect(instance).to.be();
     });
 
     it('should have the property idCodice (base name: "id_codice")', function() {
       // uncomment below and update the code to test the property idCodice
-      //var instance = new invoicetronic-invoice-sdk.IdTrasmittente();
+      //var instance = new invoiceSdk.IdTrasmittente();
       //expect(instance).to.be();
     });
 

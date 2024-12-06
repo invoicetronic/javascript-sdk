@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.Update();
+    instance = new invoiceSdk.Update();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,91 +50,91 @@
   describe('Update', function() {
     it('should create an instance of Update', function() {
       // uncomment below and update the code to test Update
-      //var instance = new invoicetronic-invoice-sdk.Update();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.Update);
+      //var instance = new invoiceSdk.Update();
+      //expect(instance).to.be.a(invoiceSdk.Update);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property companyId (base name: "company_id")', function() {
       // uncomment below and update the code to test the property companyId
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property sendId (base name: "send_id")', function() {
       // uncomment below and update the code to test the property sendId
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property dateSent (base name: "date_sent")', function() {
       // uncomment below and update the code to test the property dateSent
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property lastUpdate (base name: "last_update")', function() {
       // uncomment below and update the code to test the property lastUpdate
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property identifier (base name: "identifier")', function() {
       // uncomment below and update the code to test the property identifier
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property messageId (base name: "message_id")', function() {
       // uncomment below and update the code to test the property messageId
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 
     it('should have the property isRead (base name: "is_read")', function() {
       // uncomment below and update the code to test the property isRead
-      //var instance = new invoicetronic-invoice-sdk.Update();
+      //var instance = new invoiceSdk.Update();
       //expect(instance).to.be();
     });
 

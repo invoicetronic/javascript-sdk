@@ -84,9 +84,9 @@ import WebhookApi from './api/WebhookApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var invoicetronic-invoice-sdk = require('index'); // See note below*.
-* var xxxSvc = new invoicetronic-invoice-sdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new invoicetronic-invoice-sdk.Yyy(); // Construct a model instance.
+* var invoiceSdk = require('index'); // See note below*.
+* var xxxSvc = new invoiceSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new invoiceSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -98,8 +98,8 @@ import WebhookApi from './api/WebhookApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new invoicetronic-invoice-sdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new invoicetronic-invoice-sdk.Yyy(); // Construct a model instance.
+* var xxxSvc = new invoiceSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new invoiceSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

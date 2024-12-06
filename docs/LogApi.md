@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.LogApi
+# invoiceSdk.LogApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,14 +20,14 @@ Every API operation is logged and can be retrieved here.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.LogApi();
+let apiInstance = new invoiceSdk.LogApi();
 let opts = {
   'page': 1, // Number | Page number.
   'pageSize': 100 // Number | Items per page.
@@ -73,14 +73,14 @@ Every API operation is logged and can be retrieved here.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.LogApi();
+let apiInstance = new invoiceSdk.LogApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1LogIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

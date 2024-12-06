@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.Send
+# invoiceSdk.Send
 
 ## Properties
 

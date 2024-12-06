@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.SendApi
+# invoiceSdk.SendApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,14 +24,14 @@ Send invoices are the invoices that are sent to the SDI.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.SendApi();
+let apiInstance = new invoiceSdk.SendApi();
 let files = ["null"]; // [File] | 
 let opts = {
   'validate': false // Boolean | Validate the document first, and reject it on failure.
@@ -77,14 +77,14 @@ test **markdown**.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.SendApi();
+let apiInstance = new invoiceSdk.SendApi();
 let opts = {
   'companyId': 56, // Number | Company id.
   'identifier': "identifier_example", // String | SDI identifier.
@@ -154,14 +154,14 @@ Send invoices are the invoices that are sent to the SDI.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.SendApi();
+let apiInstance = new invoiceSdk.SendApi();
 let id = 56; // Number | Item id.
 apiInstance.invoiceV1SendIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -203,15 +203,15 @@ Send invoices are the invoices that are sent to the SDI.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.SendApi();
-let fatturaOrdinaria = new invoicetronic-invoice-sdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let apiInstance = new invoiceSdk.SendApi();
+let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 let opts = {
   'validate': false // Boolean | Validate the document first, and reject it on failure.
 };
@@ -256,15 +256,15 @@ Send invoices are the invoices that are sent to the SDI.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.SendApi();
-let send = new invoicetronic-invoice-sdk.Send(); // Send | 
+let apiInstance = new invoiceSdk.SendApi();
+let send = new invoiceSdk.Send(); // Send | 
 let opts = {
   'validate': false // Boolean | Validate the document first, and reject it on failure.
 };
@@ -309,15 +309,15 @@ Send invoices are the invoices that are sent to the SDI.
 ### Example
 
 ```javascript
-import invoicetronic-invoice-sdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoicetronic-invoice-sdk.ApiClient.instance;
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoicetronic-invoice-sdk.SendApi();
-let fatturaOrdinaria = new invoicetronic-invoice-sdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let apiInstance = new invoiceSdk.SendApi();
+let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 let opts = {
   'validate': false // Boolean | Validate the document first, and reject it on failure.
 };

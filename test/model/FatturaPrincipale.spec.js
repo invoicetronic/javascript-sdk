@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.FatturaPrincipale();
+    instance = new invoiceSdk.FatturaPrincipale();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('FatturaPrincipale', function() {
     it('should create an instance of FatturaPrincipale', function() {
       // uncomment below and update the code to test FatturaPrincipale
-      //var instance = new invoicetronic-invoice-sdk.FatturaPrincipale();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.FatturaPrincipale);
+      //var instance = new invoiceSdk.FatturaPrincipale();
+      //expect(instance).to.be.a(invoiceSdk.FatturaPrincipale);
     });
 
     it('should have the property numeroFatturaPrincipale (base name: "numero_fattura_principale")', function() {
       // uncomment below and update the code to test the property numeroFatturaPrincipale
-      //var instance = new invoicetronic-invoice-sdk.FatturaPrincipale();
+      //var instance = new invoiceSdk.FatturaPrincipale();
       //expect(instance).to.be();
     });
 
     it('should have the property dataFatturaPrincipale (base name: "data_fattura_principale")', function() {
       // uncomment below and update the code to test the property dataFatturaPrincipale
-      //var instance = new invoicetronic-invoice-sdk.FatturaPrincipale();
+      //var instance = new invoiceSdk.FatturaPrincipale();
       //expect(instance).to.be();
     });
 

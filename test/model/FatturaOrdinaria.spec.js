@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.FatturaOrdinaria();
+    instance = new invoiceSdk.FatturaOrdinaria();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('FatturaOrdinaria', function() {
     it('should create an instance of FatturaOrdinaria', function() {
       // uncomment below and update the code to test FatturaOrdinaria
-      //var instance = new invoicetronic-invoice-sdk.FatturaOrdinaria();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.FatturaOrdinaria);
+      //var instance = new invoiceSdk.FatturaOrdinaria();
+      //expect(instance).to.be.a(invoiceSdk.FatturaOrdinaria);
     });
 
     it('should have the property sistemaEmittente (base name: "sistema_emittente")', function() {
       // uncomment below and update the code to test the property sistemaEmittente
-      //var instance = new invoicetronic-invoice-sdk.FatturaOrdinaria();
+      //var instance = new invoiceSdk.FatturaOrdinaria();
       //expect(instance).to.be();
     });
 
     it('should have the property fatturaElettronicaHeader (base name: "fattura_elettronica_header")', function() {
       // uncomment below and update the code to test the property fatturaElettronicaHeader
-      //var instance = new invoicetronic-invoice-sdk.FatturaOrdinaria();
+      //var instance = new invoiceSdk.FatturaOrdinaria();
       //expect(instance).to.be();
     });
 
     it('should have the property fatturaElettronicaBody (base name: "fattura_elettronica_body")', function() {
       // uncomment below and update the code to test the property fatturaElettronicaBody
-      //var instance = new invoicetronic-invoice-sdk.FatturaOrdinaria();
+      //var instance = new invoiceSdk.FatturaOrdinaria();
       //expect(instance).to.be();
     });
 

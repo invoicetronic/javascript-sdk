@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+    instance = new invoiceSdk.DatiGeneraliDocumento();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,79 +50,79 @@
   describe('DatiGeneraliDocumento', function() {
     it('should create an instance of DatiGeneraliDocumento', function() {
       // uncomment below and update the code to test DatiGeneraliDocumento
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiGeneraliDocumento);
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
+      //expect(instance).to.be.a(invoiceSdk.DatiGeneraliDocumento);
     });
 
     it('should have the property tipoDocumento (base name: "tipo_documento")', function() {
       // uncomment below and update the code to test the property tipoDocumento
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property divisa (base name: "divisa")', function() {
       // uncomment below and update the code to test the property divisa
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property numero (base name: "numero")', function() {
       // uncomment below and update the code to test the property numero
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property datiRitenuta (base name: "dati_ritenuta")', function() {
       // uncomment below and update the code to test the property datiRitenuta
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property datiBollo (base name: "dati_bollo")', function() {
       // uncomment below and update the code to test the property datiBollo
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property datiCassaPrevidenziale (base name: "dati_cassa_previdenziale")', function() {
       // uncomment below and update the code to test the property datiCassaPrevidenziale
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property scontoMaggiorazione (base name: "sconto_maggiorazione")', function() {
       // uncomment below and update the code to test the property scontoMaggiorazione
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property importoTotaleDocumento (base name: "importo_totale_documento")', function() {
       // uncomment below and update the code to test the property importoTotaleDocumento
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property arrotondamento (base name: "arrotondamento")', function() {
       // uncomment below and update the code to test the property arrotondamento
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property causale (base name: "causale")', function() {
       // uncomment below and update the code to test the property causale
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 
     it('should have the property art73 (base name: "art73")', function() {
       // uncomment below and update the code to test the property art73
-      //var instance = new invoicetronic-invoice-sdk.DatiGeneraliDocumento();
+      //var instance = new invoiceSdk.DatiGeneraliDocumento();
       //expect(instance).to.be();
     });
 

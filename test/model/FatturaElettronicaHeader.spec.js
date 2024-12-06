@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+    instance = new invoiceSdk.FatturaElettronicaHeader();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('FatturaElettronicaHeader', function() {
     it('should create an instance of FatturaElettronicaHeader', function() {
       // uncomment below and update the code to test FatturaElettronicaHeader
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.FatturaElettronicaHeader);
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
+      //expect(instance).to.be.a(invoiceSdk.FatturaElettronicaHeader);
     });
 
     it('should have the property datiTrasmissione (base name: "dati_trasmissione")', function() {
       // uncomment below and update the code to test the property datiTrasmissione
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
       //expect(instance).to.be();
     });
 
     it('should have the property cedentePrestatore (base name: "cedente_prestatore")', function() {
       // uncomment below and update the code to test the property cedentePrestatore
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
       //expect(instance).to.be();
     });
 
     it('should have the property rappresentanteFiscale (base name: "RappresentanteFiscale")', function() {
       // uncomment below and update the code to test the property rappresentanteFiscale
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
       //expect(instance).to.be();
     });
 
     it('should have the property cessionarioCommittente (base name: "cessionario_committente")', function() {
       // uncomment below and update the code to test the property cessionarioCommittente
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
       //expect(instance).to.be();
     });
 
     it('should have the property terzoIntermediarioOSoggettoEmittente (base name: "terzo_intermediario_o_soggetto_emittente")', function() {
       // uncomment below and update the code to test the property terzoIntermediarioOSoggettoEmittente
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
       //expect(instance).to.be();
     });
 
     it('should have the property soggettoEmittente (base name: "soggetto_emittente")', function() {
       // uncomment below and update the code to test the property soggettoEmittente
-      //var instance = new invoicetronic-invoice-sdk.FatturaElettronicaHeader();
+      //var instance = new invoiceSdk.FatturaElettronicaHeader();
       //expect(instance).to.be();
     });
 

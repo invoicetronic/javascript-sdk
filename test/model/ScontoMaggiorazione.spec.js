@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.ScontoMaggiorazione();
+    instance = new invoiceSdk.ScontoMaggiorazione();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ScontoMaggiorazione', function() {
     it('should create an instance of ScontoMaggiorazione', function() {
       // uncomment below and update the code to test ScontoMaggiorazione
-      //var instance = new invoicetronic-invoice-sdk.ScontoMaggiorazione();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.ScontoMaggiorazione);
+      //var instance = new invoiceSdk.ScontoMaggiorazione();
+      //expect(instance).to.be.a(invoiceSdk.ScontoMaggiorazione);
     });
 
     it('should have the property tipo (base name: "tipo")', function() {
       // uncomment below and update the code to test the property tipo
-      //var instance = new invoicetronic-invoice-sdk.ScontoMaggiorazione();
+      //var instance = new invoiceSdk.ScontoMaggiorazione();
       //expect(instance).to.be();
     });
 
     it('should have the property percentuale (base name: "percentuale")', function() {
       // uncomment below and update the code to test the property percentuale
-      //var instance = new invoicetronic-invoice-sdk.ScontoMaggiorazione();
+      //var instance = new invoiceSdk.ScontoMaggiorazione();
       //expect(instance).to.be();
     });
 
     it('should have the property importo (base name: "importo")', function() {
       // uncomment below and update the code to test the property importo
-      //var instance = new invoicetronic-invoice-sdk.ScontoMaggiorazione();
+      //var instance = new invoiceSdk.ScontoMaggiorazione();
       //expect(instance).to.be();
     });
 

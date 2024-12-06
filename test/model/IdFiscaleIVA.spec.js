@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.IdFiscaleIVA();
+    instance = new invoiceSdk.IdFiscaleIVA();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('IdFiscaleIVA', function() {
     it('should create an instance of IdFiscaleIVA', function() {
       // uncomment below and update the code to test IdFiscaleIVA
-      //var instance = new invoicetronic-invoice-sdk.IdFiscaleIVA();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.IdFiscaleIVA);
+      //var instance = new invoiceSdk.IdFiscaleIVA();
+      //expect(instance).to.be.a(invoiceSdk.IdFiscaleIVA);
     });
 
     it('should have the property idPaese (base name: "id_paese")', function() {
       // uncomment below and update the code to test the property idPaese
-      //var instance = new invoicetronic-invoice-sdk.IdFiscaleIVA();
+      //var instance = new invoiceSdk.IdFiscaleIVA();
       //expect(instance).to.be();
     });
 
     it('should have the property idCodice (base name: "id_codice")', function() {
       // uncomment below and update the code to test the property idCodice
-      //var instance = new invoicetronic-invoice-sdk.IdFiscaleIVA();
+      //var instance = new invoiceSdk.IdFiscaleIVA();
       //expect(instance).to.be();
     });
 

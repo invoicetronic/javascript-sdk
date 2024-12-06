@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.DatiRiepilogo
+# invoiceSdk.DatiRiepilogo
 
 ## Properties
 

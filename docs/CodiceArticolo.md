@@ -1,4 +1,4 @@
-# invoicetronic-invoice-sdk.CodiceArticolo
+# invoiceSdk.CodiceArticolo
 
 ## Properties
 

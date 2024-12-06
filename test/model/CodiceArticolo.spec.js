@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.CodiceArticolo();
+    instance = new invoiceSdk.CodiceArticolo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('CodiceArticolo', function() {
     it('should create an instance of CodiceArticolo', function() {
       // uncomment below and update the code to test CodiceArticolo
-      //var instance = new invoicetronic-invoice-sdk.CodiceArticolo();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.CodiceArticolo);
+      //var instance = new invoiceSdk.CodiceArticolo();
+      //expect(instance).to.be.a(invoiceSdk.CodiceArticolo);
     });
 
     it('should have the property codiceTipo (base name: "codice_tipo")', function() {
       // uncomment below and update the code to test the property codiceTipo
-      //var instance = new invoicetronic-invoice-sdk.CodiceArticolo();
+      //var instance = new invoiceSdk.CodiceArticolo();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceValore (base name: "codice_valore")', function() {
       // uncomment below and update the code to test the property codiceValore
-      //var instance = new invoicetronic-invoice-sdk.CodiceArticolo();
+      //var instance = new invoiceSdk.CodiceArticolo();
       //expect(instance).to.be();
     });
 

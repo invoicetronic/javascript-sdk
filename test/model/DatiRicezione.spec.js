@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiRicezione();
+    instance = new invoiceSdk.DatiRicezione();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('DatiRicezione', function() {
     it('should create an instance of DatiRicezione', function() {
       // uncomment below and update the code to test DatiRicezione
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiRicezione);
+      //var instance = new invoiceSdk.DatiRicezione();
+      //expect(instance).to.be.a(invoiceSdk.DatiRicezione);
     });
 
     it('should have the property riferimentoNumeroLinea (base name: "riferimento_numero_linea")', function() {
       // uncomment below and update the code to test the property riferimentoNumeroLinea
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 
     it('should have the property idDocumento (base name: "id_documento")', function() {
       // uncomment below and update the code to test the property idDocumento
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 
     it('should have the property numItem (base name: "num_item")', function() {
       // uncomment below and update the code to test the property numItem
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceCommessaConvenzione (base name: "codice_commessa_convenzione")', function() {
       // uncomment below and update the code to test the property codiceCommessaConvenzione
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceCup (base name: "codice_cup")', function() {
       // uncomment below and update the code to test the property codiceCup
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceCig (base name: "codice_cig")', function() {
       // uncomment below and update the code to test the property codiceCig
-      //var instance = new invoicetronic-invoice-sdk.DatiRicezione();
+      //var instance = new invoiceSdk.DatiRicezione();
       //expect(instance).to.be();
     });
 

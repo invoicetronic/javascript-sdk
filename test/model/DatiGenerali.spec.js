@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.DatiGenerali();
+    instance = new invoiceSdk.DatiGenerali();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('DatiGenerali', function() {
     it('should create an instance of DatiGenerali', function() {
       // uncomment below and update the code to test DatiGenerali
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.DatiGenerali);
+      //var instance = new invoiceSdk.DatiGenerali();
+      //expect(instance).to.be.a(invoiceSdk.DatiGenerali);
     });
 
     it('should have the property datiGeneraliDocumento (base name: "dati_generali_documento")', function() {
       // uncomment below and update the code to test the property datiGeneraliDocumento
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiOrdineAcquisto (base name: "dati_ordine_acquisto")', function() {
       // uncomment below and update the code to test the property datiOrdineAcquisto
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiContratto (base name: "dati_contratto")', function() {
       // uncomment below and update the code to test the property datiContratto
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiConvenzione (base name: "dati_convenzione")', function() {
       // uncomment below and update the code to test the property datiConvenzione
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiRicezione (base name: "dati_ricezione")', function() {
       // uncomment below and update the code to test the property datiRicezione
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiFattureCollegate (base name: "dati_fatture_collegate")', function() {
       // uncomment below and update the code to test the property datiFattureCollegate
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiSal (base name: "dati_sal")', function() {
       // uncomment below and update the code to test the property datiSal
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiDdt (base name: "dati_ddt")', function() {
       // uncomment below and update the code to test the property datiDdt
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property datiTrasporto (base name: "dati_trasporto")', function() {
       // uncomment below and update the code to test the property datiTrasporto
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 
     it('should have the property fatturaPrincipale (base name: "fattura_principale")', function() {
       // uncomment below and update the code to test the property fatturaPrincipale
-      //var instance = new invoicetronic-invoice-sdk.DatiGenerali();
+      //var instance = new invoiceSdk.DatiGenerali();
       //expect(instance).to.be();
     });
 

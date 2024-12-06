@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoicetronic-invoice-sdk);
+    factory(root.expect, root.invoiceSdk);
   }
-}(this, function(expect, invoicetronic-invoice-sdk) {
+}(this, function(expect, invoiceSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoicetronic-invoice-sdk.TerzoIntermediarioOSoggettoEmittente();
+    instance = new invoiceSdk.TerzoIntermediarioOSoggettoEmittente();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('TerzoIntermediarioOSoggettoEmittente', function() {
     it('should create an instance of TerzoIntermediarioOSoggettoEmittente', function() {
       // uncomment below and update the code to test TerzoIntermediarioOSoggettoEmittente
-      //var instance = new invoicetronic-invoice-sdk.TerzoIntermediarioOSoggettoEmittente();
-      //expect(instance).to.be.a(invoicetronic-invoice-sdk.TerzoIntermediarioOSoggettoEmittente);
+      //var instance = new invoiceSdk.TerzoIntermediarioOSoggettoEmittente();
+      //expect(instance).to.be.a(invoiceSdk.TerzoIntermediarioOSoggettoEmittente);
     });
 
     it('should have the property datiAnagrafici (base name: "dati_anagrafici")', function() {
       // uncomment below and update the code to test the property datiAnagrafici
-      //var instance = new invoicetronic-invoice-sdk.TerzoIntermediarioOSoggettoEmittente();
+      //var instance = new invoiceSdk.TerzoIntermediarioOSoggettoEmittente();
       //expect(instance).to.be();
     });
 
