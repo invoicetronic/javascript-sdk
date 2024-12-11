@@ -451,7 +451,7 @@ null (empty response body)
 
 ## invoiceV1SendValidateXmlPost
 
-> invoiceV1SendValidateXmlPost()
+> invoiceV1SendValidateXmlPost(fatturaOrdinaria)
 
 Validate an invoice by xml
 
@@ -468,7 +468,8 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
-apiInstance.invoiceV1SendValidateXmlPost().then(() => {
+let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+apiInstance.invoiceV1SendValidateXmlPost(fatturaOrdinaria).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -478,7 +479,10 @@ apiInstance.invoiceV1SendValidateXmlPost().then(() => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
 
 ### Return type
 
@@ -490,7 +494,7 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/xml
 - **Accept**: application/json
 
 

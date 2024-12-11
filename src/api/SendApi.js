@@ -476,10 +476,15 @@ export default class SendApi {
     /**
      * Validate an invoice by xml
      * Send invoices are the invoices that are sent to the SDI.
+     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    invoiceV1SendValidateXmlPostWithHttpInfo() {
-      let postBody = null;
+    invoiceV1SendValidateXmlPostWithHttpInfo(fatturaOrdinaria) {
+      let postBody = fatturaOrdinaria;
+      // verify the required parameter 'fatturaOrdinaria' is set
+      if (fatturaOrdinaria === undefined || fatturaOrdinaria === null) {
+        throw new Error("Missing the required parameter 'fatturaOrdinaria' when calling invoiceV1SendValidateXmlPost");
+      }
 
       let pathParams = {
       };
@@ -491,7 +496,7 @@ export default class SendApi {
       };
 
       let authNames = ['Basic'];
-      let contentTypes = [];
+      let contentTypes = ['application/xml'];
       let accepts = ['application/json'];
       let returnType = null;
       return this.apiClient.callApi(
@@ -504,10 +509,11 @@ export default class SendApi {
     /**
      * Validate an invoice by xml
      * Send invoices are the invoices that are sent to the SDI.
+     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    invoiceV1SendValidateXmlPost() {
-      return this.invoiceV1SendValidateXmlPostWithHttpInfo()
+    invoiceV1SendValidateXmlPost(fatturaOrdinaria) {
+      return this.invoiceV1SendValidateXmlPostWithHttpInfo(fatturaOrdinaria)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
