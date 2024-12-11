@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ProblemHttpResult from '../model/ProblemHttpResult';
 import WebHook from '../model/WebHook';
 import WebHookHistory from '../model/WebHookHistory';
 

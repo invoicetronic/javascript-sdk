@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import FatturaOrdinaria from '../model/FatturaOrdinaria';
-import ProblemDetails from '../model/ProblemDetails';
+import ProblemHttpResult from '../model/ProblemHttpResult';
 import Send from '../model/Send';
 
 /**
@@ -38,7 +38,7 @@ export default class SendApi {
 
 
     /**
-     * Add a send invoice by file
+     * Add an invoice by file
      * Send invoices are the invoices that are sent to the SDI.
      * @param {Array.<File>} files 
      * @param {Object} opts Optional parameters
@@ -76,7 +76,7 @@ export default class SendApi {
     }
 
     /**
-     * Add a send invoice by file
+     * Add an invoice by file
      * Send invoices are the invoices that are sent to the SDI.
      * @param {Array.<File>} files 
      * @param {Object} opts Optional parameters
@@ -92,7 +92,7 @@ export default class SendApi {
 
 
     /**
-     * List send invoices
+     * List invoices
      * test **markdown**.
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id.
@@ -140,7 +140,7 @@ export default class SendApi {
 
       let authNames = ['Basic'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/problem+json'];
+      let accepts = ['application/json'];
       let returnType = [Send];
       return this.apiClient.callApi(
         '/invoice/v1/send', 'GET',
@@ -150,7 +150,7 @@ export default class SendApi {
     }
 
     /**
-     * List send invoices
+     * List invoices
      * test **markdown**.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id.
@@ -178,7 +178,7 @@ export default class SendApi {
 
 
     /**
-     * Get a send invoice by id
+     * Get a invoice by id
      * Send invoices are the invoices that are sent to the SDI.
      * @param {Number} id Item id.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
@@ -212,7 +212,7 @@ export default class SendApi {
     }
 
     /**
-     * Get a send invoice by id
+     * Get a invoice by id
      * Send invoices are the invoices that are sent to the SDI.
      * @param {Number} id Item id.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
@@ -226,7 +226,7 @@ export default class SendApi {
 
 
     /**
-     * Add a send invoice by json
+     * Add an invoice by json
      * Send invoices are the invoices that are sent to the SDI.
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
@@ -263,7 +263,7 @@ export default class SendApi {
     }
 
     /**
-     * Add a send invoice by json
+     * Add an invoice by json
      * Send invoices are the invoices that are sent to the SDI.
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
@@ -279,7 +279,7 @@ export default class SendApi {
 
 
     /**
-     * Add a send invoice
+     * Add an invoice
      * Send invoices are the invoices that are sent to the SDI.
      * @param {module:model/Send} send 
      * @param {Object} opts Optional parameters
@@ -316,7 +316,7 @@ export default class SendApi {
     }
 
     /**
-     * Add a send invoice
+     * Add an invoice
      * Send invoices are the invoices that are sent to the SDI.
      * @param {module:model/Send} send 
      * @param {Object} opts Optional parameters
@@ -332,7 +332,190 @@ export default class SendApi {
 
 
     /**
-     * Add a send invoice by xml
+     * Validate an invoice by file
+     * Send invoices are the invoices that are sent to the SDI.
+     * @param {Array.<File>} files 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    invoiceV1SendValidateFilesPostWithHttpInfo(files) {
+      let postBody = null;
+      // verify the required parameter 'files' is set
+      if (files === undefined || files === null) {
+        throw new Error("Missing the required parameter 'files' when calling invoiceV1SendValidateFilesPost");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+        'files': this.apiClient.buildCollectionParam(files, 'passthrough')
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = ['multipart/form-data'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/invoice/v1/send/validate/files', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Validate an invoice by file
+     * Send invoices are the invoices that are sent to the SDI.
+     * @param {Array.<File>} files 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    invoiceV1SendValidateFilesPost(files) {
+      return this.invoiceV1SendValidateFilesPostWithHttpInfo(files)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Validate an invoice by json
+     * Send invoices are the invoices that are sent to the SDI.
+     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    invoiceV1SendValidateJsonPostWithHttpInfo(fatturaOrdinaria) {
+      let postBody = fatturaOrdinaria;
+      // verify the required parameter 'fatturaOrdinaria' is set
+      if (fatturaOrdinaria === undefined || fatturaOrdinaria === null) {
+        throw new Error("Missing the required parameter 'fatturaOrdinaria' when calling invoiceV1SendValidateJsonPost");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/invoice/v1/send/validate/json', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Validate an invoice by json
+     * Send invoices are the invoices that are sent to the SDI.
+     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    invoiceV1SendValidateJsonPost(fatturaOrdinaria) {
+      return this.invoiceV1SendValidateJsonPostWithHttpInfo(fatturaOrdinaria)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Validate an invoice
+     * Send invoices are the invoices that are sent to the SDI.
+     * @param {module:model/Send} send 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    invoiceV1SendValidatePostWithHttpInfo(send) {
+      let postBody = send;
+      // verify the required parameter 'send' is set
+      if (send === undefined || send === null) {
+        throw new Error("Missing the required parameter 'send' when calling invoiceV1SendValidatePost");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/invoice/v1/send/validate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Validate an invoice
+     * Send invoices are the invoices that are sent to the SDI.
+     * @param {module:model/Send} send 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    invoiceV1SendValidatePost(send) {
+      return this.invoiceV1SendValidatePostWithHttpInfo(send)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Validate an invoice by xml
+     * Send invoices are the invoices that are sent to the SDI.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    invoiceV1SendValidateXmlPostWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/invoice/v1/send/validate/xml', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Validate an invoice by xml
+     * Send invoices are the invoices that are sent to the SDI.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    invoiceV1SendValidateXmlPost() {
+      return this.invoiceV1SendValidateXmlPostWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Add an invoice by xml
      * Send invoices are the invoices that are sent to the SDI.
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
@@ -369,7 +552,7 @@ export default class SendApi {
     }
 
     /**
-     * Add a send invoice by xml
+     * Add an invoice by xml
      * Send invoices are the invoices that are sent to the SDI.
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters

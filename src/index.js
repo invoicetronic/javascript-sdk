@@ -58,6 +58,7 @@ import IdTrasmittente from './model/IdTrasmittente';
 import IndirizzoResa from './model/IndirizzoResa';
 import IscrizioneREA from './model/IscrizioneREA';
 import ProblemDetails from './model/ProblemDetails';
+import ProblemHttpResult from './model/ProblemHttpResult';
 import RappresentanteFiscale from './model/RappresentanteFiscale';
 import RappresentanteFiscaleCessionarioCommittente from './model/RappresentanteFiscaleCessionarioCommittente';
 import Receive from './model/Receive';
@@ -385,6 +386,12 @@ export {
      * @property {module:model/ProblemDetails}
      */
     ProblemDetails,
+
+    /**
+     * The ProblemHttpResult model constructor.
+     * @property {module:model/ProblemHttpResult}
+     */
+    ProblemHttpResult,
 
     /**
      * The RappresentanteFiscale model constructor.

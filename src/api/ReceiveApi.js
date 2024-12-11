@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ProblemDetails from '../model/ProblemDetails';
+import ProblemHttpResult from '../model/ProblemHttpResult';
 import Receive from '../model/Receive';
 
 /**
@@ -87,7 +87,7 @@ export default class ReceiveApi {
 
       let authNames = ['Basic'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/problem+json'];
+      let accepts = ['application/json'];
       let returnType = [Receive];
       return this.apiClient.callApi(
         '/invoice/v1/receive', 'GET',

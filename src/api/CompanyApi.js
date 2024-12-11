@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Company from '../model/Company';
+import ProblemHttpResult from '../model/ProblemHttpResult';
 
 /**
 * Company service.

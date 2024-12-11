@@ -98,6 +98,46 @@
         done();
       });
     });
+    describe('invoiceV1SendValidateFilesPost', function() {
+      it('should call invoiceV1SendValidateFilesPost successfully', function(done) {
+        //uncomment below and update the code to test invoiceV1SendValidateFilesPost
+        //instance.invoiceV1SendValidateFilesPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('invoiceV1SendValidateJsonPost', function() {
+      it('should call invoiceV1SendValidateJsonPost successfully', function(done) {
+        //uncomment below and update the code to test invoiceV1SendValidateJsonPost
+        //instance.invoiceV1SendValidateJsonPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('invoiceV1SendValidatePost', function() {
+      it('should call invoiceV1SendValidatePost successfully', function(done) {
+        //uncomment below and update the code to test invoiceV1SendValidatePost
+        //instance.invoiceV1SendValidatePost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('invoiceV1SendValidateXmlPost', function() {
+      it('should call invoiceV1SendValidateXmlPost successfully', function(done) {
+        //uncomment below and update the code to test invoiceV1SendValidateXmlPost
+        //instance.invoiceV1SendValidateXmlPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('invoiceV1SendXmlPost', function() {
       it('should call invoiceV1SendXmlPost successfully', function(done) {
         //uncomment below and update the code to test invoiceV1SendXmlPost

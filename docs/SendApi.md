@@ -4,12 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1SendFilesPost**](SendApi.md#invoiceV1SendFilesPost) | **POST** /invoice/v1/send/files | Add a send invoice by file
-[**invoiceV1SendGet**](SendApi.md#invoiceV1SendGet) | **GET** /invoice/v1/send | List send invoices
-[**invoiceV1SendIdGet**](SendApi.md#invoiceV1SendIdGet) | **GET** /invoice/v1/send/{id} | Get a send invoice by id
-[**invoiceV1SendJsonPost**](SendApi.md#invoiceV1SendJsonPost) | **POST** /invoice/v1/send/json | Add a send invoice by json
-[**invoiceV1SendPost**](SendApi.md#invoiceV1SendPost) | **POST** /invoice/v1/send | Add a send invoice
-[**invoiceV1SendXmlPost**](SendApi.md#invoiceV1SendXmlPost) | **POST** /invoice/v1/send/xml | Add a send invoice by xml
+[**invoiceV1SendFilesPost**](SendApi.md#invoiceV1SendFilesPost) | **POST** /invoice/v1/send/files | Add an invoice by file
+[**invoiceV1SendGet**](SendApi.md#invoiceV1SendGet) | **GET** /invoice/v1/send | List invoices
+[**invoiceV1SendIdGet**](SendApi.md#invoiceV1SendIdGet) | **GET** /invoice/v1/send/{id} | Get a invoice by id
+[**invoiceV1SendJsonPost**](SendApi.md#invoiceV1SendJsonPost) | **POST** /invoice/v1/send/json | Add an invoice by json
+[**invoiceV1SendPost**](SendApi.md#invoiceV1SendPost) | **POST** /invoice/v1/send | Add an invoice
+[**invoiceV1SendValidateFilesPost**](SendApi.md#invoiceV1SendValidateFilesPost) | **POST** /invoice/v1/send/validate/files | Validate an invoice by file
+[**invoiceV1SendValidateJsonPost**](SendApi.md#invoiceV1SendValidateJsonPost) | **POST** /invoice/v1/send/validate/json | Validate an invoice by json
+[**invoiceV1SendValidatePost**](SendApi.md#invoiceV1SendValidatePost) | **POST** /invoice/v1/send/validate | Validate an invoice
+[**invoiceV1SendValidateXmlPost**](SendApi.md#invoiceV1SendValidateXmlPost) | **POST** /invoice/v1/send/validate/xml | Validate an invoice by xml
+[**invoiceV1SendXmlPost**](SendApi.md#invoiceV1SendXmlPost) | **POST** /invoice/v1/send/xml | Add an invoice by xml
 
 
 
@@ -17,7 +21,7 @@ Method | HTTP request | Description
 
 > Send invoiceV1SendFilesPost(files, opts)
 
-Add a send invoice by file
+Add an invoice by file
 
 Send invoices are the invoices that are sent to the SDI.
 
@@ -70,7 +74,7 @@ Name | Type | Description  | Notes
 
 > [Send] invoiceV1SendGet(opts)
 
-List send invoices
+List invoices
 
 test **markdown**.
 
@@ -140,14 +144,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/problem+json
+- **Accept**: application/json
 
 
 ## invoiceV1SendIdGet
 
 > Send invoiceV1SendIdGet(id)
 
-Get a send invoice by id
+Get a invoice by id
 
 Send invoices are the invoices that are sent to the SDI.
 
@@ -196,7 +200,7 @@ Name | Type | Description  | Notes
 
 > Send invoiceV1SendJsonPost(fatturaOrdinaria, opts)
 
-Add a send invoice by json
+Add an invoice by json
 
 Send invoices are the invoices that are sent to the SDI.
 
@@ -249,7 +253,7 @@ Name | Type | Description  | Notes
 
 > Send invoiceV1SendPost(send, opts)
 
-Add a send invoice
+Add an invoice
 
 Send invoices are the invoices that are sent to the SDI.
 
@@ -298,11 +302,203 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## invoiceV1SendValidateFilesPost
+
+> invoiceV1SendValidateFilesPost(files)
+
+Validate an invoice by file
+
+Send invoices are the invoices that are sent to the SDI.
+
+### Example
+
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoiceSdk.SendApi();
+let files = ["null"]; // [File] | 
+apiInstance.invoiceV1SendValidateFilesPost(files).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | **[File]**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
+
+
+## invoiceV1SendValidateJsonPost
+
+> invoiceV1SendValidateJsonPost(fatturaOrdinaria)
+
+Validate an invoice by json
+
+Send invoices are the invoices that are sent to the SDI.
+
+### Example
+
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoiceSdk.SendApi();
+let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+apiInstance.invoiceV1SendValidateJsonPost(fatturaOrdinaria).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## invoiceV1SendValidatePost
+
+> invoiceV1SendValidatePost(send)
+
+Validate an invoice
+
+Send invoices are the invoices that are sent to the SDI.
+
+### Example
+
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoiceSdk.SendApi();
+let send = new invoiceSdk.Send(); // Send | 
+apiInstance.invoiceV1SendValidatePost(send).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **send** | [**Send**](Send.md)|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## invoiceV1SendValidateXmlPost
+
+> invoiceV1SendValidateXmlPost()
+
+Validate an invoice by xml
+
+Send invoices are the invoices that are sent to the SDI.
+
+### Example
+
+```javascript
+import invoiceSdk from '@invoicetronic/invoice-sdk';
+let defaultClient = invoiceSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoiceSdk.SendApi();
+apiInstance.invoiceV1SendValidateXmlPost().then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## invoiceV1SendXmlPost
 
 > Send invoiceV1SendXmlPost(fatturaOrdinaria, opts)
 
-Add a send invoice by xml
+Add an invoice by xml
 
 Send invoices are the invoices that are sent to the SDI.
 

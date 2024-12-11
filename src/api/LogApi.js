@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Event from '../model/Event';
+import ProblemHttpResult from '../model/ProblemHttpResult';
 
 /**
 * Log service.

@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ProblemHttpResult from '../model/ProblemHttpResult';
 import Update from '../model/Update';
 
 /**
