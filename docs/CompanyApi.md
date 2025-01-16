@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 List companies
 
-Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
 
 ### Example
 
@@ -32,8 +32,8 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
 let opts = {
-  'page': 1, // Number | Page number.
-  'pageSize': 100 // Number | Items per page.
+  'page': 1, // Number | Page number. Defaults to 1.
+  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
 };
 apiInstance.invoiceV1CompanyGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -48,8 +48,8 @@ apiInstance.invoiceV1CompanyGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Page number. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. | [optional] [default to 100]
+ **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 Delete a company
 
-Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
 
 ### Example
 
@@ -84,7 +84,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1CompanyIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -98,7 +98,7 @@ apiInstance.invoiceV1CompanyIdDelete(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 Get a company by id
 
-Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
 
 ### Example
 
@@ -133,7 +133,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1CompanyIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -147,7 +147,7 @@ apiInstance.invoiceV1CompanyIdGet(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 Add a company
 
-Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
 
 ### Example
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 Update a company
 
-Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
 
 ### Example
 

@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -43,6 +43,7 @@ export default class SendApi {
      * @param {Array.<File>} files 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
+     * @param {module:model/String} [signature = 'Auto')] Whether to digitally sign the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     invoiceV1SendFilesPostWithHttpInfo(files, opts) {
@@ -56,7 +57,8 @@ export default class SendApi {
       let pathParams = {
       };
       let queryParams = {
-        'validate': opts['validate']
+        'validate': opts['validate'],
+        'signature': opts['signature']
       };
       let headerParams = {
       };
@@ -81,6 +83,7 @@ export default class SendApi {
      * @param {Array.<File>} files 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
+     * @param {module:model/String} opts.signature Whether to digitally sign the document. (default to 'Auto')
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     invoiceV1SendFilesPost(files, opts) {
@@ -95,10 +98,10 @@ export default class SendApi {
      * List invoices
      * test **markdown**.
      * @param {Object} opts Optional parameters
-     * @param {Number} [companyId] Company id.
+     * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
-     * @param {String} [committente] VAT number or fiscal code.
-     * @param {String} [prestatore] VAT number or fiscal code.
+     * @param {String} [committente] Vat number or fiscal code.
+     * @param {String} [prestatore] Vat number or fiscal code.
      * @param {String} [fileName] File name.
      * @param {Date} [lastUpdateFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [lastUpdateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
@@ -107,8 +110,8 @@ export default class SendApi {
      * @param {Date} [documentDateFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [documentDateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {String} [documentNumber] Document number.
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Send>} and HTTP response
      */
     invoiceV1SendGetWithHttpInfo(opts) {
@@ -153,10 +156,10 @@ export default class SendApi {
      * List invoices
      * test **markdown**.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.companyId Company id.
+     * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
-     * @param {String} opts.committente VAT number or fiscal code.
-     * @param {String} opts.prestatore VAT number or fiscal code.
+     * @param {String} opts.committente Vat number or fiscal code.
+     * @param {String} opts.prestatore Vat number or fiscal code.
      * @param {String} opts.fileName File name.
      * @param {Date} opts.lastUpdateFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.lastUpdateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
@@ -165,8 +168,8 @@ export default class SendApi {
      * @param {Date} opts.documentDateFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.documentDateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {String} opts.documentNumber Document number.
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Send>}
      */
     invoiceV1SendGet(opts) {
@@ -180,7 +183,7 @@ export default class SendApi {
     /**
      * Get a invoice by id
      * Send invoices are the invoices that are sent to the SDI.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     invoiceV1SendIdGetWithHttpInfo(id) {
@@ -214,7 +217,7 @@ export default class SendApi {
     /**
      * Get a invoice by id
      * Send invoices are the invoices that are sent to the SDI.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     invoiceV1SendIdGet(id) {
@@ -231,6 +234,7 @@ export default class SendApi {
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
+     * @param {module:model/String} [signature = 'Auto')] Whether to digitally sign the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     invoiceV1SendJsonPostWithHttpInfo(fatturaOrdinaria, opts) {
@@ -244,7 +248,8 @@ export default class SendApi {
       let pathParams = {
       };
       let queryParams = {
-        'validate': opts['validate']
+        'validate': opts['validate'],
+        'signature': opts['signature']
       };
       let headerParams = {
       };
@@ -268,6 +273,7 @@ export default class SendApi {
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
+     * @param {module:model/String} opts.signature Whether to digitally sign the document. (default to 'Auto')
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     invoiceV1SendJsonPost(fatturaOrdinaria, opts) {
@@ -284,6 +290,7 @@ export default class SendApi {
      * @param {module:model/Send} send 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
+     * @param {module:model/String} [signature = 'Auto')] Whether to digitally sign the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     invoiceV1SendPostWithHttpInfo(send, opts) {
@@ -297,7 +304,8 @@ export default class SendApi {
       let pathParams = {
       };
       let queryParams = {
-        'validate': opts['validate']
+        'validate': opts['validate'],
+        'signature': opts['signature']
       };
       let headerParams = {
       };
@@ -321,6 +329,7 @@ export default class SendApi {
      * @param {module:model/Send} send 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
+     * @param {module:model/String} opts.signature Whether to digitally sign the document. (default to 'Auto')
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     invoiceV1SendPost(send, opts) {
@@ -526,6 +535,7 @@ export default class SendApi {
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
+     * @param {module:model/String} [signature = 'Auto')] Whether to digitally sign the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     invoiceV1SendXmlPostWithHttpInfo(fatturaOrdinaria, opts) {
@@ -539,7 +549,8 @@ export default class SendApi {
       let pathParams = {
       };
       let queryParams = {
-        'validate': opts['validate']
+        'validate': opts['validate'],
+        'signature': opts['signature']
       };
       let headerParams = {
       };
@@ -563,6 +574,7 @@ export default class SendApi {
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
+     * @param {module:model/String} opts.signature Whether to digitally sign the document. (default to 'Auto')
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     invoiceV1SendXmlPost(fatturaOrdinaria, opts) {

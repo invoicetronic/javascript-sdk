@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Company from './Company';
 import DocumentData from './DocumentData';
 
 /**
@@ -90,8 +91,14 @@ class Send {
             if (data.hasOwnProperty('documents')) {
                 obj['documents'] = ApiClient.convertToType(data['documents'], [DocumentData]);
             }
+            if (data.hasOwnProperty('encoding')) {
+                obj['encoding'] = ApiClient.convertToType(data['encoding'], 'String');
+            }
             if (data.hasOwnProperty('meta_data')) {
                 obj['meta_data'] = ApiClient.convertToType(data['meta_data'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('company')) {
+                obj['company'] = Company.constructFromObject(data['company']);
             }
         }
         return obj;
@@ -136,6 +143,14 @@ class Send {
             for (const item of data['documents']) {
                 DocumentData.validateJSON(item);
             };
+        }
+        // ensure the json data is a string
+        if (data['encoding'] && !(typeof data['encoding'] === 'string' || data['encoding'] instanceof String)) {
+            throw new Error("Expected the field `encoding` to be a primitive type in the JSON string but got " + data['encoding']);
+        }
+        // validate the optional field `company`
+        if (data['company']) { // data not null
+          Company.validateJSON(data['company']);
         }
 
         return true;
@@ -231,13 +246,45 @@ Send.prototype['date_sent'] = undefined;
 Send.prototype['documents'] = undefined;
 
 /**
+ * Whether the payload is Base64 encoded or a plain XML (text).
+ * @member {module:model/Send.EncodingEnum} encoding
+ */
+Send.prototype['encoding'] = undefined;
+
+/**
  * Optional metadata, as json.
  * @member {Object.<String, String>} meta_data
  */
 Send.prototype['meta_data'] = undefined;
 
+/**
+ * @member {module:model/Company} company
+ */
+Send.prototype['company'] = undefined;
 
 
+
+
+
+/**
+ * Allowed values for the <code>encoding</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Send['EncodingEnum'] = {
+
+    /**
+     * value: "Xml"
+     * @const
+     */
+    "Xml": "Xml",
+
+    /**
+     * value: "Base64"
+     * @const
+     */
+    "Base64": "Base64"
+};
 
 
 

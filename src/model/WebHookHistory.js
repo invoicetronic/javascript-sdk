@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -69,12 +69,6 @@ class WebHookHistory {
             if (data.hasOwnProperty('status_code')) {
                 obj['status_code'] = ApiClient.convertToType(data['status_code'], 'Number');
             }
-            if (data.hasOwnProperty('request_body')) {
-                obj['request_body'] = ApiClient.convertToType(data['request_body'], 'String');
-            }
-            if (data.hasOwnProperty('response_body')) {
-                obj['response_body'] = ApiClient.convertToType(data['response_body'], 'String');
-            }
             if (data.hasOwnProperty('date_time')) {
                 obj['date_time'] = ApiClient.convertToType(data['date_time'], 'Date');
             }
@@ -94,14 +88,6 @@ class WebHookHistory {
         // ensure the json data is a string
         if (data['event'] && !(typeof data['event'] === 'string' || data['event'] instanceof String)) {
             throw new Error("Expected the field `event` to be a primitive type in the JSON string but got " + data['event']);
-        }
-        // ensure the json data is a string
-        if (data['request_body'] && !(typeof data['request_body'] === 'string' || data['request_body'] instanceof String)) {
-            throw new Error("Expected the field `request_body` to be a primitive type in the JSON string but got " + data['request_body']);
-        }
-        // ensure the json data is a string
-        if (data['response_body'] && !(typeof data['response_body'] === 'string' || data['response_body'] instanceof String)) {
-            throw new Error("Expected the field `response_body` to be a primitive type in the JSON string but got " + data['response_body']);
         }
 
         return true;
@@ -153,18 +139,6 @@ WebHookHistory.prototype['event'] = undefined;
  * @member {Number} status_code
  */
 WebHookHistory.prototype['status_code'] = undefined;
-
-/**
- * Webhook request body.
- * @member {String} request_body
- */
-WebHookHistory.prototype['request_body'] = undefined;
-
-/**
- * Webhook response body.
- * @member {String} response_body
- */
-WebHookHistory.prototype['response_body'] = undefined;
 
 /**
  * Date and time of the request.

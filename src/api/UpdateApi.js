@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -40,17 +40,17 @@ export default class UpdateApi {
      * List updates
      * Updates are notifications that are sent by the SDI about the status of sent invoices.
      * @param {Object} opts Optional parameters
-     * @param {Number} [companyId] Company id.
+     * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
-     * @param {Boolean} [unread] Only unread items.
+     * @param {Boolean} [unread] Unread items only.
      * @param {Number} [sendId] Send item's id.
      * @param {module:model/String} [state] SDI state
      * @param {Date} [lastUpdateFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [lastUpdateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [dateSentFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
-     * @param {Date} [dateSentTo] UTC ISO 8601 format (2024-11-29T12:34:56Z)
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Date} [dateSentTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Update>} and HTTP response
      */
     invoiceV1UpdateGetWithHttpInfo(opts) {
@@ -92,17 +92,17 @@ export default class UpdateApi {
      * List updates
      * Updates are notifications that are sent by the SDI about the status of sent invoices.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.companyId Company id.
+     * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
-     * @param {Boolean} opts.unread Only unread items.
+     * @param {Boolean} opts.unread Unread items only.
      * @param {Number} opts.sendId Send item's id.
      * @param {module:model/String} opts.state SDI state
      * @param {Date} opts.lastUpdateFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.lastUpdateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.dateSentFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
-     * @param {Date} opts.dateSentTo UTC ISO 8601 format (2024-11-29T12:34:56Z)
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Date} opts.dateSentTo UTC ISO 8601 (2024-11-29T12:34:56Z)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Update>}
      */
     invoiceV1UpdateGet(opts) {
@@ -116,7 +116,7 @@ export default class UpdateApi {
     /**
      * Get an update by id
      * Updates are notifications that are sent by the SDI about the status of sent invoices.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Update} and HTTP response
      */
     invoiceV1UpdateIdGetWithHttpInfo(id) {
@@ -150,7 +150,7 @@ export default class UpdateApi {
     /**
      * Get an update by id
      * Updates are notifications that are sent by the SDI about the status of sent invoices.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Update}
      */
     invoiceV1UpdateIdGet(id) {

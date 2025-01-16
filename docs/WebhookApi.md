@@ -34,8 +34,8 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let opts = {
-  'page': 1, // Number | Page number.
-  'pageSize': 100 // Number | Items per page.
+  'page': 1, // Number | Page number. Defaults to 1.
+  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
 };
 apiInstance.invoiceV1WebhookGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -50,8 +50,8 @@ apiInstance.invoiceV1WebhookGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Page number. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. | [optional] [default to 100]
+ **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1WebhookIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -100,7 +100,7 @@ apiInstance.invoiceV1WebhookIdDelete(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 
@@ -135,7 +135,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1WebhookIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -149,7 +149,7 @@ apiInstance.invoiceV1WebhookIdGet(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 
@@ -281,8 +281,8 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let opts = {
-  'page': 1, // Number | Page number.
-  'pageSize': 100 // Number | Items per page.
+  'page': 1, // Number | Page number. Defaults to 1.
+  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
 };
 apiInstance.invoiceV1WebhookhistoryGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -297,8 +297,8 @@ apiInstance.invoiceV1WebhookhistoryGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Page number. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. | [optional] [default to 100]
+ **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
 
 ### Return type
 
@@ -331,7 +331,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1WebhookhistoryIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -345,7 +345,7 @@ apiInstance.invoiceV1WebhookhistoryIdGet(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 

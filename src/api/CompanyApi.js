@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -38,10 +38,10 @@ export default class CompanyApi {
 
     /**
      * List companies
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
      * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Company>} and HTTP response
      */
     invoiceV1CompanyGetWithHttpInfo(opts) {
@@ -52,7 +52,7 @@ export default class CompanyApi {
       };
       let queryParams = {
         'page': opts['page'],
-        'pageSize': opts['pageSize']
+        'page_size': opts['pageSize']
       };
       let headerParams = {
       };
@@ -72,10 +72,10 @@ export default class CompanyApi {
 
     /**
      * List companies
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Company>}
      */
     invoiceV1CompanyGet(opts) {
@@ -88,8 +88,8 @@ export default class CompanyApi {
 
     /**
      * Delete a company
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
-     * @param {Number} id Item id.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
     invoiceV1CompanyIdDeleteWithHttpInfo(id) {
@@ -122,8 +122,8 @@ export default class CompanyApi {
 
     /**
      * Delete a company
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
-     * @param {Number} id Item id.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
     invoiceV1CompanyIdDelete(id) {
@@ -136,8 +136,8 @@ export default class CompanyApi {
 
     /**
      * Get a company by id
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
-     * @param {Number} id Item id.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
     invoiceV1CompanyIdGetWithHttpInfo(id) {
@@ -170,8 +170,8 @@ export default class CompanyApi {
 
     /**
      * Get a company by id
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
-     * @param {Number} id Item id.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
     invoiceV1CompanyIdGet(id) {
@@ -184,7 +184,7 @@ export default class CompanyApi {
 
     /**
      * Add a company
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
@@ -217,7 +217,7 @@ export default class CompanyApi {
 
     /**
      * Add a company
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
@@ -231,7 +231,7 @@ export default class CompanyApi {
 
     /**
      * Update a company
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
@@ -264,7 +264,7 @@ export default class CompanyApi {
 
     /**
      * Update a company
-     * Companies are the entities that send and receive invoices. At least one company is required in order to send and receive invoices.
+     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */

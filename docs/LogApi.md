@@ -29,8 +29,15 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.LogApi();
 let opts = {
-  'page': 1, // Number | Page number.
-  'pageSize': 100 // Number | Items per page.
+  'companyId': 56, // Number | Company id
+  'endpoint': "endpoint_example", // String | 
+  'method': "method_example", // String | 
+  'apiVerion': 56, // Number | Api version
+  'statusCode': 56, // Number | Response status code
+  'dateCreatedFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'dateCreatedTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
+  'page': 1, // Number | Page number. Defaults to 1.
+  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
 };
 apiInstance.invoiceV1LogGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -45,8 +52,15 @@ apiInstance.invoiceV1LogGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Page number. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. | [optional] [default to 100]
+ **companyId** | **Number**| Company id | [optional] 
+ **endpoint** | **String**|  | [optional] 
+ **method** | **String**|  | [optional] 
+ **apiVerion** | **Number**| Api version | [optional] 
+ **statusCode** | **Number**| Response status code | [optional] 
+ **dateCreatedFrom** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **dateCreatedTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
+ **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
 
 ### Return type
 
@@ -81,7 +95,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.LogApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1LogIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -95,7 +109,7 @@ apiInstance.invoiceV1LogIdGet(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 

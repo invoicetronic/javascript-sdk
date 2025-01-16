@@ -38,7 +38,8 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.SendApi();
 let files = ["null"]; // [File] | 
 let opts = {
-  'validate': false // Boolean | Validate the document first, and reject it on failure.
+  'validate': false, // Boolean | Validate the document first, and reject it on failure.
+  'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
 apiInstance.invoiceV1SendFilesPost(files, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | **[File]**|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
+ **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 
 ### Return type
 
@@ -90,10 +92,10 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
 let opts = {
-  'companyId': 56, // Number | Company id.
+  'companyId': 56, // Number | Company id
   'identifier': "identifier_example", // String | SDI identifier.
-  'committente': "committente_example", // String | VAT number or fiscal code.
-  'prestatore': "prestatore_example", // String | VAT number or fiscal code.
+  'committente': "committente_example", // String | Vat number or fiscal code.
+  'prestatore': "prestatore_example", // String | Vat number or fiscal code.
   'fileName': "fileName_example", // String | File name.
   'lastUpdateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'lastUpdateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
@@ -102,8 +104,8 @@ let opts = {
   'documentDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'documentDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'documentNumber': "documentNumber_example", // String | Document number.
-  'page': 1, // Number | Page number.
-  'pageSize': 100 // Number | Items per page.
+  'page': 1, // Number | Page number. Defaults to 1.
+  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
 };
 apiInstance.invoiceV1SendGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -118,10 +120,10 @@ apiInstance.invoiceV1SendGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| Company id. | [optional] 
+ **companyId** | **Number**| Company id | [optional] 
  **identifier** | **String**| SDI identifier. | [optional] 
- **committente** | **String**| VAT number or fiscal code. | [optional] 
- **prestatore** | **String**| VAT number or fiscal code. | [optional] 
+ **committente** | **String**| Vat number or fiscal code. | [optional] 
+ **prestatore** | **String**| Vat number or fiscal code. | [optional] 
  **fileName** | **String**| File name. | [optional] 
  **lastUpdateFrom** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **lastUpdateTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
@@ -130,8 +132,8 @@ Name | Type | Description  | Notes
  **documentDateFrom** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **documentDateTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **documentNumber** | **String**| Document number. | [optional] 
- **page** | **Number**| Page number. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. | [optional] [default to 100]
+ **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
 
 ### Return type
 
@@ -166,7 +168,7 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
-let id = 56; // Number | Item id.
+let id = 56; // Number | Item id
 apiInstance.invoiceV1SendIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -180,7 +182,7 @@ apiInstance.invoiceV1SendIdGet(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Item id. | 
+ **id** | **Number**| Item id | 
 
 ### Return type
 
@@ -217,7 +219,8 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.SendApi();
 let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 let opts = {
-  'validate': false // Boolean | Validate the document first, and reject it on failure.
+  'validate': false, // Boolean | Validate the document first, and reject it on failure.
+  'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
 apiInstance.invoiceV1SendJsonPost(fatturaOrdinaria, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -234,6 +237,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
+ **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 
 ### Return type
 
@@ -270,7 +274,8 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.SendApi();
 let send = new invoiceSdk.Send(); // Send | 
 let opts = {
-  'validate': false // Boolean | Validate the document first, and reject it on failure.
+  'validate': false, // Boolean | Validate the document first, and reject it on failure.
+  'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
 apiInstance.invoiceV1SendPost(send, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -287,6 +292,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **send** | [**Send**](Send.md)|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
+ **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 
 ### Return type
 
@@ -519,7 +525,8 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.SendApi();
 let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 let opts = {
-  'validate': false // Boolean | Validate the document first, and reject it on failure.
+  'validate': false, // Boolean | Validate the document first, and reject it on failure.
+  'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
 apiInstance.invoiceV1SendXmlPost(fatturaOrdinaria, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -536,6 +543,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
+ **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 
 ### Return type
 

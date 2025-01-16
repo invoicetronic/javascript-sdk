@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -41,8 +41,8 @@ export default class WebhookApi {
      * List webhooks
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
      * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHook>} and HTTP response
      */
     invoiceV1WebhookGetWithHttpInfo(opts) {
@@ -75,8 +75,8 @@ export default class WebhookApi {
      * List webhooks
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHook>}
      */
     invoiceV1WebhookGet(opts) {
@@ -90,7 +90,7 @@ export default class WebhookApi {
     /**
      * Delete a webhook by id
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHook} and HTTP response
      */
     invoiceV1WebhookIdDeleteWithHttpInfo(id) {
@@ -124,7 +124,7 @@ export default class WebhookApi {
     /**
      * Delete a webhook by id
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHook}
      */
     invoiceV1WebhookIdDelete(id) {
@@ -138,7 +138,7 @@ export default class WebhookApi {
     /**
      * Get a webhook by id
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHook} and HTTP response
      */
     invoiceV1WebhookIdGetWithHttpInfo(id) {
@@ -172,7 +172,7 @@ export default class WebhookApi {
     /**
      * Get a webhook by id
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHook}
      */
     invoiceV1WebhookIdGet(id) {
@@ -280,8 +280,8 @@ export default class WebhookApi {
     /**
      * List webhook history items
      * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookHistory>} and HTTP response
      */
     invoiceV1WebhookhistoryGetWithHttpInfo(opts) {
@@ -313,8 +313,8 @@ export default class WebhookApi {
     /**
      * List webhook history items
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHookHistory>}
      */
     invoiceV1WebhookhistoryGet(opts) {
@@ -327,7 +327,7 @@ export default class WebhookApi {
 
     /**
      * Get a webhook history item by id
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHookHistory} and HTTP response
      */
     invoiceV1WebhookhistoryIdGetWithHttpInfo(id) {
@@ -360,7 +360,7 @@ export default class WebhookApi {
 
     /**
      * Get a webhook history item by id
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHookHistory}
      */
     invoiceV1WebhookhistoryIdGet(id) {

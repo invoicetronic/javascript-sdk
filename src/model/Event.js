@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -56,6 +56,12 @@ class Event {
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'Number');
             }
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'Number');
+            }
+            if (data.hasOwnProperty('api_key_id')) {
+                obj['api_key_id'] = ApiClient.convertToType(data['api_key_id'], 'Number');
+            }
             if (data.hasOwnProperty('company_id')) {
                 obj['company_id'] = ApiClient.convertToType(data['company_id'], 'Number');
             }
@@ -80,20 +86,11 @@ class Event {
             if (data.hasOwnProperty('error')) {
                 obj['error'] = ApiClient.convertToType(data['error'], 'String');
             }
-            if (data.hasOwnProperty('request_body')) {
-                obj['request_body'] = ApiClient.convertToType(data['request_body'], 'String');
-            }
-            if (data.hasOwnProperty('response_body')) {
-                obj['response_body'] = ApiClient.convertToType(data['response_body'], 'String');
-            }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'Number');
-            }
-            if (data.hasOwnProperty('api_key_id')) {
-                obj['api_key_id'] = ApiClient.convertToType(data['api_key_id'], 'Number');
+            if (data.hasOwnProperty('response_body')) {
+                obj['response_body'] = ApiClient.convertToType(data['response_body'], 'String');
             }
         }
         return obj;
@@ -120,10 +117,6 @@ class Event {
         // ensure the json data is a string
         if (data['error'] && !(typeof data['error'] === 'string' || data['error'] instanceof String)) {
             throw new Error("Expected the field `error` to be a primitive type in the JSON string but got " + data['error']);
-        }
-        // ensure the json data is a string
-        if (data['request_body'] && !(typeof data['request_body'] === 'string' || data['request_body'] instanceof String)) {
-            throw new Error("Expected the field `request_body` to be a primitive type in the JSON string but got " + data['request_body']);
         }
         // ensure the json data is a string
         if (data['response_body'] && !(typeof data['response_body'] === 'string' || data['response_body'] instanceof String)) {
@@ -155,6 +148,18 @@ Event.prototype['created'] = undefined;
  * @member {Number} version
  */
 Event.prototype['version'] = undefined;
+
+/**
+ * User id.
+ * @member {Number} user_id
+ */
+Event.prototype['user_id'] = undefined;
+
+/**
+ * Api key id.
+ * @member {Number} api_key_id
+ */
+Event.prototype['api_key_id'] = undefined;
 
 /**
  * Company id.
@@ -205,34 +210,16 @@ Event.prototype['date_time'] = undefined;
 Event.prototype['error'] = undefined;
 
 /**
- * Request payload. It is guaranteed to be cyphered at rest.
- * @member {String} request_body
- */
-Event.prototype['request_body'] = undefined;
-
-/**
- * Response payload. It is guaranteed to be cyphered at rest.
- * @member {String} response_body
- */
-Event.prototype['response_body'] = undefined;
-
-/**
  * Wether the request was successful.
  * @member {Boolean} success
  */
 Event.prototype['success'] = undefined;
 
 /**
- * User id.
- * @member {Number} user_id
+ * Response payload. It is guaranteed to be cyphered at rest.
+ * @member {String} response_body
  */
-Event.prototype['user_id'] = undefined;
-
-/**
- * Api key id.
- * @member {Number} api_key_id
- */
-Event.prototype['api_key_id'] = undefined;
+Event.prototype['response_body'] = undefined;
 
 
 

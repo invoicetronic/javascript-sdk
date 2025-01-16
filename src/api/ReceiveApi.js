@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -40,11 +40,11 @@ export default class ReceiveApi {
      * List incoming invoices
      * Receive invoices are the invoices that are received from other companies.
      * @param {Object} opts Optional parameters
-     * @param {Number} [companyId] Company id.
+     * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
      * @param {Boolean} [unread] Unread items only.
-     * @param {String} [committente] VAT number or fiscal code.
-     * @param {String} [prestatore] VAT number or fiscal code.
+     * @param {String} [committente] Vat number or fiscal code.
+     * @param {String} [prestatore] Vat number or fiscal code.
      * @param {String} [fileName] File name.
      * @param {Date} [lastUpdateFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [lastUpdateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
@@ -53,8 +53,8 @@ export default class ReceiveApi {
      * @param {Date} [documentDateFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [documentDateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {String} [documentNumber] Document number.
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Receive>} and HTTP response
      */
     invoiceV1ReceiveGetWithHttpInfo(opts) {
@@ -100,11 +100,11 @@ export default class ReceiveApi {
      * List incoming invoices
      * Receive invoices are the invoices that are received from other companies.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.companyId Company id.
+     * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
      * @param {Boolean} opts.unread Unread items only.
-     * @param {String} opts.committente VAT number or fiscal code.
-     * @param {String} opts.prestatore VAT number or fiscal code.
+     * @param {String} opts.committente Vat number or fiscal code.
+     * @param {String} opts.prestatore Vat number or fiscal code.
      * @param {String} opts.fileName File name.
      * @param {Date} opts.lastUpdateFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.lastUpdateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
@@ -113,8 +113,8 @@ export default class ReceiveApi {
      * @param {Date} opts.documentDateFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.documentDateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {String} opts.documentNumber Document number.
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Receive>}
      */
     invoiceV1ReceiveGet(opts) {
@@ -128,7 +128,7 @@ export default class ReceiveApi {
     /**
      * Delete an incoming invoice by id
      * Receive invoices are the invoices that are received from other companies.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receive} and HTTP response
      */
     invoiceV1ReceiveIdDeleteWithHttpInfo(id) {
@@ -162,7 +162,7 @@ export default class ReceiveApi {
     /**
      * Delete an incoming invoice by id
      * Receive invoices are the invoices that are received from other companies.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receive}
      */
     invoiceV1ReceiveIdDelete(id) {
@@ -176,7 +176,7 @@ export default class ReceiveApi {
     /**
      * Get an incoming invoice by id
      * Receive invoices are the invoices that are received from other companies.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receive} and HTTP response
      */
     invoiceV1ReceiveIdGetWithHttpInfo(id) {
@@ -210,7 +210,7 @@ export default class ReceiveApi {
     /**
      * Get an incoming invoice by id
      * Receive invoices are the invoices that are received from other companies.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receive}
      */
     invoiceV1ReceiveIdGet(id) {

@@ -1,6 +1,6 @@
 /**
  * Italian eInvoice API
- * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while still providing complete control over the invoice send/receive process. The API also provides advanced features and a rich toolchain, such as invoice validation, multiple upload methods, webhooks, event logs, CORS support, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * The Italian eInvoice API is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@invoicetronic.com
@@ -40,8 +40,15 @@ export default class LogApi {
      * List events
      * Every API operation is logged and can be retrieved here.
      * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] Page number.
-     * @param {Number} [pageSize = 100)] Items per page.
+     * @param {Number} [companyId] Company id
+     * @param {String} [endpoint] 
+     * @param {String} [method] 
+     * @param {Number} [apiVerion] Api version
+     * @param {Number} [statusCode] Response status code
+     * @param {Date} [dateCreatedFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
+     * @param {Date} [dateCreatedTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
+     * @param {Number} [page = 1)] Page number. Defaults to 1.
+     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Event>} and HTTP response
      */
     invoiceV1LogGetWithHttpInfo(opts) {
@@ -51,6 +58,13 @@ export default class LogApi {
       let pathParams = {
       };
       let queryParams = {
+        'company_id': opts['companyId'],
+        'endpoint': opts['endpoint'],
+        'method': opts['method'],
+        'api_verion': opts['apiVerion'],
+        'status_code': opts['statusCode'],
+        'date_created_from': opts['dateCreatedFrom'],
+        'date_created_to': opts['dateCreatedTo'],
         'page': opts['page'],
         'page_size': opts['pageSize']
       };
@@ -74,8 +88,15 @@ export default class LogApi {
      * List events
      * Every API operation is logged and can be retrieved here.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number. (default to 1)
-     * @param {Number} opts.pageSize Items per page. (default to 100)
+     * @param {Number} opts.companyId Company id
+     * @param {String} opts.endpoint 
+     * @param {String} opts.method 
+     * @param {Number} opts.apiVerion Api version
+     * @param {Number} opts.statusCode Response status code
+     * @param {Date} opts.dateCreatedFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
+     * @param {Date} opts.dateCreatedTo UTC ISO 8601 (2024-11-29T12:34:56Z)
+     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Event>}
      */
     invoiceV1LogGet(opts) {
@@ -89,7 +110,7 @@ export default class LogApi {
     /**
      * Get an event by id
      * Every API operation is logged and can be retrieved here.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Event} and HTTP response
      */
     invoiceV1LogIdGetWithHttpInfo(id) {
@@ -123,7 +144,7 @@ export default class LogApi {
     /**
      * Get an event by id
      * Every API operation is logged and can be retrieved here.
-     * @param {Number} id Item id.
+     * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Event}
      */
     invoiceV1LogIdGet(id) {
