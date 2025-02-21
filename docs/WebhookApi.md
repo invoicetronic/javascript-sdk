@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1WebhookGet**](WebhookApi.md#invoiceV1WebhookGet) | **GET** /invoice/v1/webhook | List webhooks
-[**invoiceV1WebhookIdDelete**](WebhookApi.md#invoiceV1WebhookIdDelete) | **DELETE** /invoice/v1/webhook/{id} | Delete a webhook by id
-[**invoiceV1WebhookIdGet**](WebhookApi.md#invoiceV1WebhookIdGet) | **GET** /invoice/v1/webhook/{id} | Get a webhook by id
-[**invoiceV1WebhookPost**](WebhookApi.md#invoiceV1WebhookPost) | **POST** /invoice/v1/webhook | Add a webhook
-[**invoiceV1WebhookPut**](WebhookApi.md#invoiceV1WebhookPut) | **PUT** /invoice/v1/webhook | Update a webhook
-[**invoiceV1WebhookhistoryGet**](WebhookApi.md#invoiceV1WebhookhistoryGet) | **GET** /invoice/v1/webhookhistory | List webhook history items
-[**invoiceV1WebhookhistoryIdGet**](WebhookApi.md#invoiceV1WebhookhistoryIdGet) | **GET** /invoice/v1/webhookhistory/{id} | Get a webhook history item by id
+[**webhookGet**](WebhookApi.md#webhookGet) | **GET** /webhook | List webhooks
+[**webhookIdDelete**](WebhookApi.md#webhookIdDelete) | **DELETE** /webhook/{id} | Delete a webhook by id
+[**webhookIdGet**](WebhookApi.md#webhookIdGet) | **GET** /webhook/{id} | Get a webhook by id
+[**webhookPost**](WebhookApi.md#webhookPost) | **POST** /webhook | Add a webhook
+[**webhookPut**](WebhookApi.md#webhookPut) | **PUT** /webhook | Update a webhook
+[**webhookhistoryGet**](WebhookApi.md#webhookhistoryGet) | **GET** /webhookhistory | List webhook history items
+[**webhookhistoryIdGet**](WebhookApi.md#webhookhistoryIdGet) | **GET** /webhookhistory/{id} | Get a webhook history item by id
 
 
 
-## invoiceV1WebhookGet
+## webhookGet
 
-> [WebHook] invoiceV1WebhookGet(opts)
+> [WebHook] webhookGet(opts)
 
 List webhooks
 
@@ -35,9 +35,10 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.WebhookApi();
 let opts = {
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
-apiInstance.invoiceV1WebhookGet(opts).then((data) => {
+apiInstance.webhookGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -52,6 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type
 
@@ -67,9 +69,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1WebhookIdDelete
+## webhookIdDelete
 
-> WebHook invoiceV1WebhookIdDelete(id)
+> WebHook webhookIdDelete(id)
 
 Delete a webhook by id
 
@@ -87,7 +89,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1WebhookIdDelete(id).then((data) => {
+apiInstance.webhookIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -116,9 +118,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1WebhookIdGet
+## webhookIdGet
 
-> WebHook invoiceV1WebhookIdGet(id)
+> WebHook webhookIdGet(id)
 
 Get a webhook by id
 
@@ -136,7 +138,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1WebhookIdGet(id).then((data) => {
+apiInstance.webhookIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -165,9 +167,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1WebhookPost
+## webhookPost
 
-> WebHook invoiceV1WebhookPost(webHook)
+> WebHook webhookPost(webHook)
 
 Add a webhook
 
@@ -185,7 +187,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let webHook = new invoiceSdk.WebHook(); // WebHook | 
-apiInstance.invoiceV1WebhookPost(webHook).then((data) => {
+apiInstance.webhookPost(webHook).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -214,9 +216,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1WebhookPut
+## webhookPut
 
-> WebHook invoiceV1WebhookPut(webHook)
+> WebHook webhookPut(webHook)
 
 Update a webhook
 
@@ -234,7 +236,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let webHook = new invoiceSdk.WebHook(); // WebHook | 
-apiInstance.invoiceV1WebhookPut(webHook).then((data) => {
+apiInstance.webhookPut(webHook).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -263,9 +265,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1WebhookhistoryGet
+## webhookhistoryGet
 
-> [WebHookHistory] invoiceV1WebhookhistoryGet(opts)
+> [WebHookHistory] webhookhistoryGet(opts)
 
 List webhook history items
 
@@ -282,9 +284,10 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.WebhookApi();
 let opts = {
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
-apiInstance.invoiceV1WebhookhistoryGet(opts).then((data) => {
+apiInstance.webhookhistoryGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -299,6 +302,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type
 
@@ -314,9 +318,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1WebhookhistoryIdGet
+## webhookhistoryIdGet
 
-> WebHookHistory invoiceV1WebhookhistoryIdGet(id)
+> WebHookHistory webhookhistoryIdGet(id)
 
 Get a webhook history item by id
 
@@ -332,7 +336,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.WebhookApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1WebhookhistoryIdGet(id).then((data) => {
+apiInstance.webhookhistoryIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

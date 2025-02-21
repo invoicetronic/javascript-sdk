@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1CompanyGet**](CompanyApi.md#invoiceV1CompanyGet) | **GET** /invoice/v1/company | List companies
-[**invoiceV1CompanyIdDelete**](CompanyApi.md#invoiceV1CompanyIdDelete) | **DELETE** /invoice/v1/company/{id} | Delete a company
-[**invoiceV1CompanyIdGet**](CompanyApi.md#invoiceV1CompanyIdGet) | **GET** /invoice/v1/company/{id} | Get a company by id
-[**invoiceV1CompanyPost**](CompanyApi.md#invoiceV1CompanyPost) | **POST** /invoice/v1/company | Add a company
-[**invoiceV1CompanyPut**](CompanyApi.md#invoiceV1CompanyPut) | **PUT** /invoice/v1/company | Update a company
+[**companyGet**](CompanyApi.md#companyGet) | **GET** /company | List companies
+[**companyIdDelete**](CompanyApi.md#companyIdDelete) | **DELETE** /company/{id} | Delete a company
+[**companyIdGet**](CompanyApi.md#companyIdGet) | **GET** /company/{id} | Get a company by id
+[**companyPost**](CompanyApi.md#companyPost) | **POST** /company | Add a company
+[**companyPut**](CompanyApi.md#companyPut) | **PUT** /company | Update a company
 
 
 
-## invoiceV1CompanyGet
+## companyGet
 
-> [Company] invoiceV1CompanyGet(opts)
+> [Company] companyGet(opts)
 
 List companies
 
@@ -33,9 +33,10 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoiceSdk.CompanyApi();
 let opts = {
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
-apiInstance.invoiceV1CompanyGet(opts).then((data) => {
+apiInstance.companyGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type
 
@@ -65,9 +67,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1CompanyIdDelete
+## companyIdDelete
 
-> Company invoiceV1CompanyIdDelete(id)
+> Company companyIdDelete(id)
 
 Delete a company
 
@@ -85,7 +87,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1CompanyIdDelete(id).then((data) => {
+apiInstance.companyIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -114,9 +116,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1CompanyIdGet
+## companyIdGet
 
-> Company invoiceV1CompanyIdGet(id)
+> Company companyIdGet(id)
 
 Get a company by id
 
@@ -134,7 +136,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1CompanyIdGet(id).then((data) => {
+apiInstance.companyIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -163,9 +165,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1CompanyPost
+## companyPost
 
-> Company invoiceV1CompanyPost(company)
+> Company companyPost(company)
 
 Add a company
 
@@ -183,7 +185,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
 let company = new invoiceSdk.Company(); // Company | 
-apiInstance.invoiceV1CompanyPost(company).then((data) => {
+apiInstance.companyPost(company).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -212,9 +214,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1CompanyPut
+## companyPut
 
-> Company invoiceV1CompanyPut(company)
+> Company companyPut(company)
 
 Update a company
 
@@ -232,7 +234,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.CompanyApi();
 let company = new invoiceSdk.Company(); // Company | 
-apiInstance.invoiceV1CompanyPut(company).then((data) => {
+apiInstance.companyPut(company).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

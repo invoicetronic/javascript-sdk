@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1UpdateGet**](UpdateApi.md#invoiceV1UpdateGet) | **GET** /invoice/v1/update | List updates
-[**invoiceV1UpdateIdGet**](UpdateApi.md#invoiceV1UpdateIdGet) | **GET** /invoice/v1/update/{id} | Get an update by id
+[**updateGet**](UpdateApi.md#updateGet) | **GET** /update | List updates
+[**updateIdGet**](UpdateApi.md#updateIdGet) | **GET** /update/{id} | Get an update by id
 
 
 
-## invoiceV1UpdateGet
+## updateGet
 
-> [Update] invoiceV1UpdateGet(opts)
+> [Update] updateGet(opts)
 
 List updates
 
@@ -39,9 +39,10 @@ let opts = {
   'dateSentFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'dateSentTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
-apiInstance.invoiceV1UpdateGet(opts).then((data) => {
+apiInstance.updateGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
  **dateSentTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type
 
@@ -80,9 +82,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1UpdateIdGet
+## updateIdGet
 
-> Update invoiceV1UpdateIdGet(id)
+> Update updateIdGet(id)
 
 Get an update by id
 
@@ -100,7 +102,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.UpdateApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1UpdateIdGet(id).then((data) => {
+apiInstance.updateIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

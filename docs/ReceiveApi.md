@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1ReceiveGet**](ReceiveApi.md#invoiceV1ReceiveGet) | **GET** /invoice/v1/receive | List incoming invoices
-[**invoiceV1ReceiveIdDelete**](ReceiveApi.md#invoiceV1ReceiveIdDelete) | **DELETE** /invoice/v1/receive/{id} | Delete an incoming invoice by id
-[**invoiceV1ReceiveIdGet**](ReceiveApi.md#invoiceV1ReceiveIdGet) | **GET** /invoice/v1/receive/{id} | Get an incoming invoice by id
+[**receiveGet**](ReceiveApi.md#receiveGet) | **GET** /receive | List incoming invoices
+[**receiveIdDelete**](ReceiveApi.md#receiveIdDelete) | **DELETE** /receive/{id} | Delete an incoming invoice by id
+[**receiveIdGet**](ReceiveApi.md#receiveIdGet) | **GET** /receive/{id} | Get an incoming invoice by id
 
 
 
-## invoiceV1ReceiveGet
+## receiveGet
 
-> [Receive] invoiceV1ReceiveGet(opts)
+> [Receive] receiveGet(opts)
 
 List incoming invoices
 
@@ -44,9 +44,10 @@ let opts = {
   'documentDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'documentNumber': "documentNumber_example", // String | Document number.
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
-apiInstance.invoiceV1ReceiveGet(opts).then((data) => {
+apiInstance.receiveGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -74,6 +75,7 @@ Name | Type | Description  | Notes
  **documentNumber** | **String**| Document number. | [optional] 
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type
 
@@ -89,9 +91,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1ReceiveIdDelete
+## receiveIdDelete
 
-> Receive invoiceV1ReceiveIdDelete(id)
+> Receive receiveIdDelete(id)
 
 Delete an incoming invoice by id
 
@@ -109,7 +111,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.ReceiveApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1ReceiveIdDelete(id).then((data) => {
+apiInstance.receiveIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -138,9 +140,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1ReceiveIdGet
+## receiveIdGet
 
-> Receive invoiceV1ReceiveIdGet(id)
+> Receive receiveIdGet(id)
 
 Get an incoming invoice by id
 
@@ -158,7 +160,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.ReceiveApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1ReceiveIdGet(id).then((data) => {
+apiInstance.receiveIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

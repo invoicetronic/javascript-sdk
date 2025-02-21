@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1SendFilesPost**](SendApi.md#invoiceV1SendFilesPost) | **POST** /invoice/v1/send/files | Add an invoice by file
-[**invoiceV1SendGet**](SendApi.md#invoiceV1SendGet) | **GET** /invoice/v1/send | List invoices
-[**invoiceV1SendIdGet**](SendApi.md#invoiceV1SendIdGet) | **GET** /invoice/v1/send/{id} | Get a invoice by id
-[**invoiceV1SendJsonPost**](SendApi.md#invoiceV1SendJsonPost) | **POST** /invoice/v1/send/json | Add an invoice by json
-[**invoiceV1SendPost**](SendApi.md#invoiceV1SendPost) | **POST** /invoice/v1/send | Add an invoice
-[**invoiceV1SendValidateFilesPost**](SendApi.md#invoiceV1SendValidateFilesPost) | **POST** /invoice/v1/send/validate/files | Validate an invoice by file
-[**invoiceV1SendValidateJsonPost**](SendApi.md#invoiceV1SendValidateJsonPost) | **POST** /invoice/v1/send/validate/json | Validate an invoice by json
-[**invoiceV1SendValidatePost**](SendApi.md#invoiceV1SendValidatePost) | **POST** /invoice/v1/send/validate | Validate an invoice
-[**invoiceV1SendValidateXmlPost**](SendApi.md#invoiceV1SendValidateXmlPost) | **POST** /invoice/v1/send/validate/xml | Validate an invoice by xml
-[**invoiceV1SendXmlPost**](SendApi.md#invoiceV1SendXmlPost) | **POST** /invoice/v1/send/xml | Add an invoice by xml
+[**sendFilePost**](SendApi.md#sendFilePost) | **POST** /send/file | Add an invoice by file
+[**sendGet**](SendApi.md#sendGet) | **GET** /send | List invoices
+[**sendIdGet**](SendApi.md#sendIdGet) | **GET** /send/{id} | Get a invoice by id
+[**sendJsonPost**](SendApi.md#sendJsonPost) | **POST** /send/json | Add an invoice by json
+[**sendPost**](SendApi.md#sendPost) | **POST** /send | Add an invoice
+[**sendValidateFilesPost**](SendApi.md#sendValidateFilesPost) | **POST** /send/validate/files | Validate an invoice by file
+[**sendValidateJsonPost**](SendApi.md#sendValidateJsonPost) | **POST** /send/validate/json | Validate an invoice by json
+[**sendValidatePost**](SendApi.md#sendValidatePost) | **POST** /send/validate | Validate an invoice
+[**sendValidateXmlPost**](SendApi.md#sendValidateXmlPost) | **POST** /send/validate/xml | Validate an invoice by xml
+[**sendXmlPost**](SendApi.md#sendXmlPost) | **POST** /send/xml | Add an invoice by xml
 
 
 
-## invoiceV1SendFilesPost
+## sendFilePost
 
-> Send invoiceV1SendFilesPost(files, opts)
+> Send sendFilePost(file, opts)
 
 Add an invoice by file
 
@@ -36,12 +36,12 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
-let files = ["null"]; // [File] | 
+let file = "/path/to/file"; // File | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
-apiInstance.invoiceV1SendFilesPost(files, opts).then((data) => {
+apiInstance.sendFilePost(file, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -54,7 +54,7 @@ apiInstance.invoiceV1SendFilesPost(files, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **files** | **[File]**|  | 
+ **file** | **File**|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
  **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 
@@ -72,9 +72,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1SendGet
+## sendGet
 
-> [Send] invoiceV1SendGet(opts)
+> [Send] sendGet(opts)
 
 List invoices
 
@@ -105,9 +105,10 @@ let opts = {
   'documentDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'documentNumber': "documentNumber_example", // String | Document number.
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
-apiInstance.invoiceV1SendGet(opts).then((data) => {
+apiInstance.sendGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -134,6 +135,7 @@ Name | Type | Description  | Notes
  **documentNumber** | **String**| Document number. | [optional] 
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type
 
@@ -149,9 +151,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1SendIdGet
+## sendIdGet
 
-> Send invoiceV1SendIdGet(id)
+> Send sendIdGet(id)
 
 Get a invoice by id
 
@@ -169,7 +171,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1SendIdGet(id).then((data) => {
+apiInstance.sendIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -198,9 +200,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1SendJsonPost
+## sendJsonPost
 
-> Send invoiceV1SendJsonPost(fatturaOrdinaria, opts)
+> Send sendJsonPost(fatturaOrdinaria, opts)
 
 Add an invoice by json
 
@@ -222,7 +224,7 @@ let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
-apiInstance.invoiceV1SendJsonPost(fatturaOrdinaria, opts).then((data) => {
+apiInstance.sendJsonPost(fatturaOrdinaria, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -253,9 +255,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1SendPost
+## sendPost
 
-> Send invoiceV1SendPost(send, opts)
+> Send sendPost(send, opts)
 
 Add an invoice
 
@@ -277,7 +279,7 @@ let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
-apiInstance.invoiceV1SendPost(send, opts).then((data) => {
+apiInstance.sendPost(send, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -308,9 +310,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1SendValidateFilesPost
+## sendValidateFilesPost
 
-> invoiceV1SendValidateFilesPost(files)
+> sendValidateFilesPost(files)
 
 Validate an invoice by file
 
@@ -328,7 +330,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
 let files = ["null"]; // [File] | 
-apiInstance.invoiceV1SendValidateFilesPost(files).then(() => {
+apiInstance.sendValidateFilesPost(files).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -357,9 +359,9 @@ null (empty response body)
 - **Accept**: application/json
 
 
-## invoiceV1SendValidateJsonPost
+## sendValidateJsonPost
 
-> invoiceV1SendValidateJsonPost(fatturaOrdinaria)
+> sendValidateJsonPost(fatturaOrdinaria)
 
 Validate an invoice by json
 
@@ -377,7 +379,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
 let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
-apiInstance.invoiceV1SendValidateJsonPost(fatturaOrdinaria).then(() => {
+apiInstance.sendValidateJsonPost(fatturaOrdinaria).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -406,9 +408,9 @@ null (empty response body)
 - **Accept**: application/json
 
 
-## invoiceV1SendValidatePost
+## sendValidatePost
 
-> invoiceV1SendValidatePost(send)
+> sendValidatePost(send)
 
 Validate an invoice
 
@@ -426,7 +428,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
 let send = new invoiceSdk.Send(); // Send | 
-apiInstance.invoiceV1SendValidatePost(send).then(() => {
+apiInstance.sendValidatePost(send).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -455,9 +457,9 @@ null (empty response body)
 - **Accept**: application/json
 
 
-## invoiceV1SendValidateXmlPost
+## sendValidateXmlPost
 
-> invoiceV1SendValidateXmlPost(fatturaOrdinaria)
+> sendValidateXmlPost(fatturaOrdinaria)
 
 Validate an invoice by xml
 
@@ -475,7 +477,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.SendApi();
 let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
-apiInstance.invoiceV1SendValidateXmlPost(fatturaOrdinaria).then(() => {
+apiInstance.sendValidateXmlPost(fatturaOrdinaria).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -504,9 +506,9 @@ null (empty response body)
 - **Accept**: application/json
 
 
-## invoiceV1SendXmlPost
+## sendXmlPost
 
-> Send invoiceV1SendXmlPost(fatturaOrdinaria, opts)
+> Send sendXmlPost(fatturaOrdinaria, opts)
 
 Add an invoice by xml
 
@@ -528,7 +530,7 @@ let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
-apiInstance.invoiceV1SendXmlPost(fatturaOrdinaria, opts).then((data) => {
+apiInstance.sendXmlPost(fatturaOrdinaria, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

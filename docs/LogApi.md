@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoiceV1LogGet**](LogApi.md#invoiceV1LogGet) | **GET** /invoice/v1/log | List events
-[**invoiceV1LogIdGet**](LogApi.md#invoiceV1LogIdGet) | **GET** /invoice/v1/log/{id} | Get an event by id
+[**logGet**](LogApi.md#logGet) | **GET** /log | List events
+[**logIdGet**](LogApi.md#logIdGet) | **GET** /log/{id} | Get an event by id
 
 
 
-## invoiceV1LogGet
+## logGet
 
-> [Event] invoiceV1LogGet(opts)
+> [Event] logGet(opts)
 
 List events
 
@@ -37,9 +37,14 @@ let opts = {
   'dateCreatedFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'dateCreatedTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100 // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'sort': "sort_example", // String | Sort by field. Prefix with '-' for descending order.
+  'query': "query_example", // String | 
+  'success': true, // Boolean | 
+  'dateTimeFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | Date and time of the event
+  'dateTimeTo': new Date("2013-10-20T19:20:30+01:00") // Date | Date and time of the event
 };
-apiInstance.invoiceV1LogGet(opts).then((data) => {
+apiInstance.logGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -61,6 +66,11 @@ Name | Type | Description  | Notes
  **dateCreatedTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
+ **query** | **String**|  | [optional] 
+ **success** | **Boolean**|  | [optional] 
+ **dateTimeFrom** | **Date**| Date and time of the event | [optional] 
+ **dateTimeTo** | **Date**| Date and time of the event | [optional] 
 
 ### Return type
 
@@ -76,9 +86,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## invoiceV1LogIdGet
+## logIdGet
 
-> Event invoiceV1LogIdGet(id)
+> Event logIdGet(id)
 
 Get an event by id
 
@@ -96,7 +106,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoiceSdk.LogApi();
 let id = 56; // Number | Item id
-apiInstance.invoiceV1LogIdGet(id).then((data) => {
+apiInstance.logIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

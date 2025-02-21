@@ -1,6 +1,6 @@
 {
   "name": "@invoicetronic/invoice-sdk",
-  "version": "1.0.0",
+  "version": "1",
   "description": "JavaScript SDK for the Italian eInvoice API",
   "license": "Unlicense",
   "main": "dist/index.js",
