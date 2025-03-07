@@ -1,4 +1,4 @@
-# invoiceSdk.CompanyApi
+# invoicetronicSdk.CompanyApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,19 +18,19 @@ Method | HTTP request | Description
 
 List companies
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.CompanyApi();
+let apiInstance = new invoicetronicSdk.CompanyApi();
 let opts = {
   'page': 1, // Number | Page number. Defaults to 1.
   'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
@@ -73,19 +73,19 @@ Name | Type | Description  | Notes
 
 Delete a company
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.CompanyApi();
+let apiInstance = new invoicetronicSdk.CompanyApi();
 let id = 56; // Number | Item id
 apiInstance.companyIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -122,19 +122,19 @@ Name | Type | Description  | Notes
 
 Get a company by id
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.CompanyApi();
+let apiInstance = new invoicetronicSdk.CompanyApi();
 let id = 56; // Number | Item id
 apiInstance.companyIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -171,20 +171,20 @@ Name | Type | Description  | Notes
 
 Add a company
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.CompanyApi();
-let company = new invoiceSdk.Company(); // Company | 
+let apiInstance = new invoicetronicSdk.CompanyApi();
+let company = new invoicetronicSdk.Company(); // Company | 
 apiInstance.companyPost(company).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -220,20 +220,20 @@ Name | Type | Description  | Notes
 
 Update a company
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed. **You can only receive invoices for existing companies**.
+Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.CompanyApi();
-let company = new invoiceSdk.Company(); // Company | 
+let apiInstance = new invoicetronicSdk.CompanyApi();
+let company = new invoicetronicSdk.Company(); // Company | 
 apiInstance.companyPut(company).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

@@ -1,4 +1,4 @@
-# invoiceSdk.RappresentanteFiscaleCessionarioCommittente
+# invoicetronicSdk.RappresentanteFiscaleCessionarioCommittente
 
 ## Properties
 

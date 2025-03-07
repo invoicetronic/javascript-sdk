@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.WebHook();
+    instance = new invoicetronicSdk.WebHook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('WebHook', function() {
     it('should create an instance of WebHook', function() {
       // uncomment below and update the code to test WebHook
-      //var instance = new invoiceSdk.WebHook();
-      //expect(instance).to.be.a(invoiceSdk.WebHook);
+      //var instance = new invoicetronicSdk.WebHook();
+      //expect(instance).to.be.a(invoicetronicSdk.WebHook);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property companyId (base name: "company_id")', function() {
       // uncomment below and update the code to test the property companyId
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property enabled (base name: "enabled")', function() {
       // uncomment below and update the code to test the property enabled
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property secret (base name: "secret")', function() {
       // uncomment below and update the code to test the property secret
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instance = new invoiceSdk.WebHook();
+      //var instance = new invoicetronicSdk.WebHook();
       //expect(instance).to.be();
     });
 

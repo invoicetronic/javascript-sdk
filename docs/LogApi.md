@@ -1,4 +1,4 @@
-# invoiceSdk.LogApi
+# invoicetronicSdk.LogApi
 
 All URIs are relative to *http://localhost*
 
@@ -15,19 +15,19 @@ Method | HTTP request | Description
 
 List events
 
-Every API operation is logged and can be retrieved here.
+Every API operation is logged and can be retrieved here. Log records are preserved for 15 days.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.LogApi();
+let apiInstance = new invoicetronicSdk.LogApi();
 let opts = {
   'companyId': 56, // Number | Company id
   'endpoint': "endpoint_example", // String | 
@@ -92,19 +92,19 @@ Name | Type | Description  | Notes
 
 Get an event by id
 
-Every API operation is logged and can be retrieved here.
+Every API operation is logged and can be retrieved here. Log records are preserved for 15 days.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.LogApi();
+let apiInstance = new invoicetronicSdk.LogApi();
 let id = 56; // Number | Item id
 apiInstance.logIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

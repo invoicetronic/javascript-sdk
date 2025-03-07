@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.SedeCessionarioCommittente();
+    instance = new invoicetronicSdk.SedeCessionarioCommittente();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('SedeCessionarioCommittente', function() {
     it('should create an instance of SedeCessionarioCommittente', function() {
       // uncomment below and update the code to test SedeCessionarioCommittente
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
-      //expect(instance).to.be.a(invoiceSdk.SedeCessionarioCommittente);
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
+      //expect(instance).to.be.a(invoicetronicSdk.SedeCessionarioCommittente);
     });
 
     it('should have the property indirizzo (base name: "indirizzo")', function() {
       // uncomment below and update the code to test the property indirizzo
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroCivico (base name: "numero_civico")', function() {
       // uncomment below and update the code to test the property numeroCivico
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property cap (base name: "cap")', function() {
       // uncomment below and update the code to test the property cap
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property comune (base name: "comune")', function() {
       // uncomment below and update the code to test the property comune
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property provincia (base name: "provincia")', function() {
       // uncomment below and update the code to test the property provincia
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
       //expect(instance).to.be();
     });
 
     it('should have the property nazione (base name: "nazione")', function() {
       // uncomment below and update the code to test the property nazione
-      //var instance = new invoiceSdk.SedeCessionarioCommittente();
+      //var instance = new invoicetronicSdk.SedeCessionarioCommittente();
       //expect(instance).to.be();
     });
 

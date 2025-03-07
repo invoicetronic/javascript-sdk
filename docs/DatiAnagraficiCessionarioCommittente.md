@@ -1,4 +1,4 @@
-# invoiceSdk.DatiAnagraficiCessionarioCommittente
+# invoicetronicSdk.DatiAnagraficiCessionarioCommittente
 
 ## Properties
 

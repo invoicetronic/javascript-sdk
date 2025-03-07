@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.DatiBeniServizi();
+    instance = new invoicetronicSdk.DatiBeniServizi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DatiBeniServizi', function() {
     it('should create an instance of DatiBeniServizi', function() {
       // uncomment below and update the code to test DatiBeniServizi
-      //var instance = new invoiceSdk.DatiBeniServizi();
-      //expect(instance).to.be.a(invoiceSdk.DatiBeniServizi);
+      //var instance = new invoicetronicSdk.DatiBeniServizi();
+      //expect(instance).to.be.a(invoicetronicSdk.DatiBeniServizi);
     });
 
     it('should have the property dettaglioLinee (base name: "dettaglio_linee")', function() {
       // uncomment below and update the code to test the property dettaglioLinee
-      //var instance = new invoiceSdk.DatiBeniServizi();
+      //var instance = new invoicetronicSdk.DatiBeniServizi();
       //expect(instance).to.be();
     });
 
     it('should have the property datiRiepilogo (base name: "dati_riepilogo")', function() {
       // uncomment below and update the code to test the property datiRiepilogo
-      //var instance = new invoiceSdk.DatiBeniServizi();
+      //var instance = new invoicetronicSdk.DatiBeniServizi();
       //expect(instance).to.be();
     });
 

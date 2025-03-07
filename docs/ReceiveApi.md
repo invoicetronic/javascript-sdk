@@ -1,4 +1,4 @@
-# invoiceSdk.ReceiveApi
+# invoicetronicSdk.ReceiveApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,19 +16,19 @@ Method | HTTP request | Description
 
 List incoming invoices
 
-Receive invoices are the invoices that are received from other companies.
+Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.ReceiveApi();
+let apiInstance = new invoicetronicSdk.ReceiveApi();
 let opts = {
   'companyId': 56, // Number | Company id
   'identifier': "identifier_example", // String | SDI identifier.
@@ -97,19 +97,19 @@ Name | Type | Description  | Notes
 
 Delete an incoming invoice by id
 
-Receive invoices are the invoices that are received from other companies.
+Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.ReceiveApi();
+let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
 apiInstance.receiveIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -146,19 +146,19 @@ Name | Type | Description  | Notes
 
 Get an incoming invoice by id
 
-Receive invoices are the invoices that are received from other companies.
+Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.ReceiveApi();
+let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
 apiInstance.receiveIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

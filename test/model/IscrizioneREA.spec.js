@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.IscrizioneREA();
+    instance = new invoicetronicSdk.IscrizioneREA();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('IscrizioneREA', function() {
     it('should create an instance of IscrizioneREA', function() {
       // uncomment below and update the code to test IscrizioneREA
-      //var instance = new invoiceSdk.IscrizioneREA();
-      //expect(instance).to.be.a(invoiceSdk.IscrizioneREA);
+      //var instance = new invoicetronicSdk.IscrizioneREA();
+      //expect(instance).to.be.a(invoicetronicSdk.IscrizioneREA);
     });
 
     it('should have the property ufficio (base name: "ufficio")', function() {
       // uncomment below and update the code to test the property ufficio
-      //var instance = new invoiceSdk.IscrizioneREA();
+      //var instance = new invoicetronicSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroRea (base name: "numero_rea")', function() {
       // uncomment below and update the code to test the property numeroRea
-      //var instance = new invoiceSdk.IscrizioneREA();
+      //var instance = new invoicetronicSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property capitaleSociale (base name: "capitale_sociale")', function() {
       // uncomment below and update the code to test the property capitaleSociale
-      //var instance = new invoiceSdk.IscrizioneREA();
+      //var instance = new invoicetronicSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property socioUnico (base name: "socio_unico")', function() {
       // uncomment below and update the code to test the property socioUnico
-      //var instance = new invoiceSdk.IscrizioneREA();
+      //var instance = new invoicetronicSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 
     it('should have the property statoLiquidazione (base name: "stato_liquidazione")', function() {
       // uncomment below and update the code to test the property statoLiquidazione
-      //var instance = new invoiceSdk.IscrizioneREA();
+      //var instance = new invoicetronicSdk.IscrizioneREA();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# invoiceSdk.WebHook
+# invoicetronicSdk.WebHook
 
 ## Properties
 
@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **companyId** | **Number** | Company id. | [optional] 
 **url** | **String** | The url of your application&#39;s endpoint that will receive a POST request when the webhook is fired. | [optional] 
 **enabled** | **Boolean** | Wetehr the webhooks is enabled or not. On creation, this is set to &#x60;true&#x60;. | [optional] 
-**secret** | **String** | The secret used to generate webhook signatures, only returned on creation. You should store this value securely and validate it on every call, to ensure that the caller is InvoiceApi. | [optional] 
+**secret** | **String** | The secret used to generate webhook signatures, only returned on creation. You should store this value securely and validate it on every call, to ensure that the caller is InvoicetronicApi. | [optional] 
 **description** | **String** | An optional description. | [optional] 
-**events** | **[String]** | List of events to that trigger the webhook.  See InvoiceApi.SupportedEvents.Available for a list of valid event names. | [optional] 
+**events** | **[String]** | List of events to that trigger the webhook.  See Invoicetronic.SupportedEvents.Available for a list of valid event names. | [optional] 
 
 

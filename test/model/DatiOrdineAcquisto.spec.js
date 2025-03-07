@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.DatiOrdineAcquisto();
+    instance = new invoicetronicSdk.DatiOrdineAcquisto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('DatiOrdineAcquisto', function() {
     it('should create an instance of DatiOrdineAcquisto', function() {
       // uncomment below and update the code to test DatiOrdineAcquisto
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
-      //expect(instance).to.be.a(invoiceSdk.DatiOrdineAcquisto);
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
+      //expect(instance).to.be.a(invoicetronicSdk.DatiOrdineAcquisto);
     });
 
     it('should have the property riferimentoNumeroLinea (base name: "riferimento_numero_linea")', function() {
       // uncomment below and update the code to test the property riferimentoNumeroLinea
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 
     it('should have the property idDocumento (base name: "id_documento")', function() {
       // uncomment below and update the code to test the property idDocumento
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 
     it('should have the property numItem (base name: "num_item")', function() {
       // uncomment below and update the code to test the property numItem
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceCommessaConvenzione (base name: "codice_commessa_convenzione")', function() {
       // uncomment below and update the code to test the property codiceCommessaConvenzione
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceCup (base name: "codice_cup")', function() {
       // uncomment below and update the code to test the property codiceCup
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceCig (base name: "codice_cig")', function() {
       // uncomment below and update the code to test the property codiceCig
-      //var instance = new invoiceSdk.DatiOrdineAcquisto();
+      //var instance = new invoicetronicSdk.DatiOrdineAcquisto();
       //expect(instance).to.be();
     });
 

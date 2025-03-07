@@ -1,4 +1,4 @@
-# invoiceSdk.SendApi
+# invoicetronicSdk.SendApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,19 +23,19 @@ Method | HTTP request | Description
 
 Add an invoice by file
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
+let apiInstance = new invoicetronicSdk.SendApi();
 let file = "/path/to/file"; // File | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
@@ -83,14 +83,14 @@ test **markdown**.
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
+let apiInstance = new invoicetronicSdk.SendApi();
 let opts = {
   'companyId': 56, // Number | Company id
   'identifier': "identifier_example", // String | SDI identifier.
@@ -157,19 +157,19 @@ Name | Type | Description  | Notes
 
 Get a invoice by id
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
+let apiInstance = new invoicetronicSdk.SendApi();
 let id = 56; // Number | Item id
 apiInstance.sendIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -206,20 +206,20 @@ Name | Type | Description  | Notes
 
 Add an invoice by json
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
-let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let apiInstance = new invoicetronicSdk.SendApi();
+let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
@@ -261,20 +261,20 @@ Name | Type | Description  | Notes
 
 Add an invoice
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
-let send = new invoiceSdk.Send(); // Send | 
+let apiInstance = new invoicetronicSdk.SendApi();
+let send = new invoicetronicSdk.Send(); // Send | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
@@ -316,19 +316,19 @@ Name | Type | Description  | Notes
 
 Validate an invoice by file
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
+let apiInstance = new invoicetronicSdk.SendApi();
 let files = ["null"]; // [File] | 
 apiInstance.sendValidateFilesPost(files).then(() => {
   console.log('API called successfully.');
@@ -365,20 +365,20 @@ null (empty response body)
 
 Validate an invoice by json
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
-let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let apiInstance = new invoicetronicSdk.SendApi();
+let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 apiInstance.sendValidateJsonPost(fatturaOrdinaria).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -414,20 +414,20 @@ null (empty response body)
 
 Validate an invoice
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
-let send = new invoiceSdk.Send(); // Send | 
+let apiInstance = new invoicetronicSdk.SendApi();
+let send = new invoicetronicSdk.Send(); // Send | 
 apiInstance.sendValidatePost(send).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -463,20 +463,20 @@ null (empty response body)
 
 Validate an invoice by xml
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
-let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let apiInstance = new invoicetronicSdk.SendApi();
+let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 apiInstance.sendValidateXmlPost(fatturaOrdinaria).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -512,20 +512,20 @@ null (empty response body)
 
 Add an invoice by xml
 
-Send invoices are the invoices that are sent to the SDI.
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
 ### Example
 
 ```javascript
-import invoiceSdk from '@invoicetronic/invoice-sdk';
-let defaultClient = invoiceSdk.ApiClient.instance;
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
 Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
-let apiInstance = new invoiceSdk.SendApi();
-let fatturaOrdinaria = new invoiceSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let apiInstance = new invoicetronicSdk.SendApi();
+let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.

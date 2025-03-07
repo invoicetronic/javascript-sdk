@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+    instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('DatiAnagraficiCedentePrestatore', function() {
     it('should create an instance of DatiAnagraficiCedentePrestatore', function() {
       // uncomment below and update the code to test DatiAnagraficiCedentePrestatore
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
-      //expect(instance).to.be.a(invoiceSdk.DatiAnagraficiCedentePrestatore);
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
+      //expect(instance).to.be.a(invoicetronicSdk.DatiAnagraficiCedentePrestatore);
     });
 
     it('should have the property idFiscaleIva (base name: "id_fiscale_iva")', function() {
       // uncomment below and update the code to test the property idFiscaleIva
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property codiceFiscale (base name: "codice_fiscale")', function() {
       // uncomment below and update the code to test the property codiceFiscale
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property anagrafica (base name: "anagrafica")', function() {
       // uncomment below and update the code to test the property anagrafica
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property alboProfessionale (base name: "albo_professionale")', function() {
       // uncomment below and update the code to test the property alboProfessionale
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property provinciaAlbo (base name: "provincia_albo")', function() {
       // uncomment below and update the code to test the property provinciaAlbo
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroIscrizioneAlbo (base name: "numero_iscrizione_albo")', function() {
       // uncomment below and update the code to test the property numeroIscrizioneAlbo
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property dataIscrizioneAlbo (base name: "data_iscrizione_albo")', function() {
       // uncomment below and update the code to test the property dataIscrizioneAlbo
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 
     it('should have the property regimeFiscale (base name: "regime_fiscale")', function() {
       // uncomment below and update the code to test the property regimeFiscale
-      //var instance = new invoiceSdk.DatiAnagraficiCedentePrestatore();
+      //var instance = new invoicetronicSdk.DatiAnagraficiCedentePrestatore();
       //expect(instance).to.be();
     });
 

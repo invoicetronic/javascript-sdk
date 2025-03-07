@@ -1,4 +1,4 @@
-# invoiceSdk.ProblemHttpResult
+# invoicetronicSdk.ProblemHttpResult
 
 ## Properties
 

@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -67,6 +67,7 @@ import SedeCedentePrestatore from './model/SedeCedentePrestatore';
 import SedeCessionarioCommittente from './model/SedeCessionarioCommittente';
 import Send from './model/Send';
 import StabileOrganizzazione from './model/StabileOrganizzazione';
+import Status from './model/Status';
 import TerzoIntermediarioOSoggettoEmittente from './model/TerzoIntermediarioOSoggettoEmittente';
 import Update from './model/Update';
 import WebHook from './model/WebHook';
@@ -75,19 +76,20 @@ import CompanyApi from './api/CompanyApi';
 import LogApi from './api/LogApi';
 import ReceiveApi from './api/ReceiveApi';
 import SendApi from './api/SendApi';
+import StatusApi from './api/StatusApi';
 import UpdateApi from './api/UpdateApi';
 import WebhookApi from './api/WebhookApi';
 
 
 /**
-* JavaScript SDK for the Italian eInvoice API.<br>
+* JavaScript SDK for the Invoicetronic API.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var invoiceSdk = require('index'); // See note below*.
-* var xxxSvc = new invoiceSdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new invoiceSdk.Yyy(); // Construct a model instance.
+* var invoicetronicSdk = require('index'); // See note below*.
+* var xxxSvc = new invoicetronicSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new invoicetronicSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -99,8 +101,8 @@ import WebhookApi from './api/WebhookApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new invoiceSdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new invoiceSdk.Yyy(); // Construct a model instance.
+* var xxxSvc = new invoicetronicSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new invoicetronicSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -442,6 +444,12 @@ export {
     StabileOrganizzazione,
 
     /**
+     * The Status model constructor.
+     * @property {module:model/Status}
+     */
+    Status,
+
+    /**
      * The TerzoIntermediarioOSoggettoEmittente model constructor.
      * @property {module:model/TerzoIntermediarioOSoggettoEmittente}
      */
@@ -488,6 +496,12 @@ export {
     * @property {module:api/SendApi}
     */
     SendApi,
+
+    /**
+    * The StatusApi service constructor.
+    * @property {module:api/StatusApi}
+    */
+    StatusApi,
 
     /**
     * The UpdateApi service constructor.

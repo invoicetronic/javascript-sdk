@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.DettaglioPagamento();
+    instance = new invoicetronicSdk.DettaglioPagamento();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,133 +50,133 @@
   describe('DettaglioPagamento', function() {
     it('should create an instance of DettaglioPagamento', function() {
       // uncomment below and update the code to test DettaglioPagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
-      //expect(instance).to.be.a(invoiceSdk.DettaglioPagamento);
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
+      //expect(instance).to.be.a(invoicetronicSdk.DettaglioPagamento);
     });
 
     it('should have the property beneficiario (base name: "beneficiario")', function() {
       // uncomment below and update the code to test the property beneficiario
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property modalitaPagamento (base name: "modalita_pagamento")', function() {
       // uncomment below and update the code to test the property modalitaPagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataRiferimentoTerminiPagamento (base name: "data_riferimento_termini_pagamento")', function() {
       // uncomment below and update the code to test the property dataRiferimentoTerminiPagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property giorniTerminiPagamento (base name: "giorni_termini_pagamento")', function() {
       // uncomment below and update the code to test the property giorniTerminiPagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataScadenzaPagamento (base name: "data_scadenza_pagamento")', function() {
       // uncomment below and update the code to test the property dataScadenzaPagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property importoPagamento (base name: "importo_pagamento")', function() {
       // uncomment below and update the code to test the property importoPagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property codUfficioPostale (base name: "cod_ufficio_postale")', function() {
       // uncomment below and update the code to test the property codUfficioPostale
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property cognomeQuietanzante (base name: "cognome_quietanzante")', function() {
       // uncomment below and update the code to test the property cognomeQuietanzante
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property nomeQuietanzante (base name: "nome_quietanzante")', function() {
       // uncomment below and update the code to test the property nomeQuietanzante
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property cfQuietanzante (base name: "cf_quietanzante")', function() {
       // uncomment below and update the code to test the property cfQuietanzante
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property titoloQuietanzante (base name: "titolo_quietanzante")', function() {
       // uncomment below and update the code to test the property titoloQuietanzante
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property istitutoFinanziario (base name: "istituto_finanziario")', function() {
       // uncomment below and update the code to test the property istitutoFinanziario
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property iban (base name: "iban")', function() {
       // uncomment below and update the code to test the property iban
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property abi (base name: "abi")', function() {
       // uncomment below and update the code to test the property abi
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property cab (base name: "cab")', function() {
       // uncomment below and update the code to test the property cab
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property bic (base name: "bic")', function() {
       // uncomment below and update the code to test the property bic
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property scontoPagamentoAnticipato (base name: "sconto_pagamento_anticipato")', function() {
       // uncomment below and update the code to test the property scontoPagamentoAnticipato
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataLimitePagamentoAnticipato (base name: "data_limite_pagamento_anticipato")', function() {
       // uncomment below and update the code to test the property dataLimitePagamentoAnticipato
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property penalitaPagamentiRitardati (base name: "penalita_pagamenti_ritardati")', function() {
       // uncomment below and update the code to test the property penalitaPagamentiRitardati
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property dataDecorrenzaPenale (base name: "data_decorrenza_penale")', function() {
       // uncomment below and update the code to test the property dataDecorrenzaPenale
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 
     it('should have the property codicePagamento (base name: "codice_pagamento")', function() {
       // uncomment below and update the code to test the property codicePagamento
-      //var instance = new invoiceSdk.DettaglioPagamento();
+      //var instance = new invoicetronicSdk.DettaglioPagamento();
       //expect(instance).to.be();
     });
 

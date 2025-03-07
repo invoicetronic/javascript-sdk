@@ -1,6 +1,6 @@
 /**
- * Italian eInvoice API v1
- * The [Italian eInvoice API][2] is a RESTful API that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed by Invoicetronic to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. The API also provides advanced features as encryption at rest, invoice validation, multiple upload formats, webhooks, event logging, client SDKs for commonly used languages, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
+ * Invoicetronic API
+ * The [Invoicetronic API][2] is a RESTful service that allows you to send and receive invoices through the Italian [Servizio di Interscambio (SDI)][1], or Interchange Service. The API is designed to be simple and easy to use, abstracting away SDI complexity while providing complete control over the invoice send/receive process. It provides advanced features as encryption at rest, multi-language pre-flight invoice validation, multiple upload formats, webhooks, event logging, client SDKs, and CLI tools.  For more information, see  [Invoicetronic website][2]  [1]: https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/ [2]: https://invoicetronic.com/
  *
  * The version of the OpenAPI document: 1
  * Contact: support@invoicetronic.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.invoiceSdk);
+    factory(root.expect, root.invoicetronicSdk);
   }
-}(this, function(expect, invoiceSdk) {
+}(this, function(expect, invoicetronicSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new invoiceSdk.DatiTrasporto();
+    instance = new invoicetronicSdk.DatiTrasporto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,85 +50,85 @@
   describe('DatiTrasporto', function() {
     it('should create an instance of DatiTrasporto', function() {
       // uncomment below and update the code to test DatiTrasporto
-      //var instance = new invoiceSdk.DatiTrasporto();
-      //expect(instance).to.be.a(invoiceSdk.DatiTrasporto);
+      //var instance = new invoicetronicSdk.DatiTrasporto();
+      //expect(instance).to.be.a(invoicetronicSdk.DatiTrasporto);
     });
 
     it('should have the property datiAnagraficiVettore (base name: "dati_anagrafici_vettore")', function() {
       // uncomment below and update the code to test the property datiAnagraficiVettore
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property mezzoTrasporto (base name: "mezzo_trasporto")', function() {
       // uncomment below and update the code to test the property mezzoTrasporto
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property causaleTrasporto (base name: "causale_trasporto")', function() {
       // uncomment below and update the code to test the property causaleTrasporto
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property numeroColli (base name: "numero_colli")', function() {
       // uncomment below and update the code to test the property numeroColli
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property descrizione (base name: "descrizione")', function() {
       // uncomment below and update the code to test the property descrizione
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property unitaMisuraPeso (base name: "unita_misura_peso")', function() {
       // uncomment below and update the code to test the property unitaMisuraPeso
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property pesoLordo (base name: "peso_lordo")', function() {
       // uncomment below and update the code to test the property pesoLordo
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property pesoNetto (base name: "peso_netto")', function() {
       // uncomment below and update the code to test the property pesoNetto
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property dataOraRitiro (base name: "data_ora_ritiro")', function() {
       // uncomment below and update the code to test the property dataOraRitiro
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property dataInizioTrasporto (base name: "data_inizio_trasporto")', function() {
       // uncomment below and update the code to test the property dataInizioTrasporto
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property tipoResa (base name: "tipo_resa")', function() {
       // uncomment below and update the code to test the property tipoResa
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property indirizzoResa (base name: "indirizzo_resa")', function() {
       // uncomment below and update the code to test the property indirizzoResa
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 
     it('should have the property dataOraConsegna (base name: "data_ora_consegna")', function() {
       // uncomment below and update the code to test the property dataOraConsegna
-      //var instance = new invoiceSdk.DatiTrasporto();
+      //var instance = new invoicetronicSdk.DatiTrasporto();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# invoiceSdk.IndirizzoResa
+# invoicetronicSdk.IndirizzoResa
 
 ## Properties
 
