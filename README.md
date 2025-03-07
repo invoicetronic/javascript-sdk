@@ -63,11 +63,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/invoicetronic/invoice-javascript-sdk
+If the library is hosted at a git repository, e.g.https://github.com/invoicetronic/javascript-sdk
 then install it via:
 
 ```shell
-    npm install invoicetronic/invoice-javascript-sdk --save
+    npm install invoicetronic/javascript-sdk --save
 ```
 
 ### For browser
