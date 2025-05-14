@@ -345,16 +345,16 @@ export default class SendApi {
 
 
     /**
-     * Validate an invoice by file
+     * Validate an invoice file
      * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
-     * @param {Array.<File>} files 
+     * @param {File} file 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    sendValidateFilesPostWithHttpInfo(files) {
+    sendValidateFilePostWithHttpInfo(file) {
       let postBody = null;
-      // verify the required parameter 'files' is set
-      if (files === undefined || files === null) {
-        throw new Error("Missing the required parameter 'files' when calling sendValidateFilesPost");
+      // verify the required parameter 'file' is set
+      if (file === undefined || file === null) {
+        throw new Error("Missing the required parameter 'file' when calling sendValidateFilePost");
       }
 
       let pathParams = {
@@ -364,7 +364,7 @@ export default class SendApi {
       let headerParams = {
       };
       let formParams = {
-        'files': this.apiClient.buildCollectionParam(files, 'passthrough')
+        'file': file
       };
 
       let authNames = ['Basic'];
@@ -372,20 +372,20 @@ export default class SendApi {
       let accepts = ['application/json'];
       let returnType = null;
       return this.apiClient.callApi(
-        '/send/validate/files', 'POST',
+        '/send/validate/file', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Validate an invoice by file
+     * Validate an invoice file
      * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
-     * @param {Array.<File>} files 
+     * @param {File} file 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    sendValidateFilesPost(files) {
-      return this.sendValidateFilesPostWithHttpInfo(files)
+    sendValidateFilePost(file) {
+      return this.sendValidateFilePostWithHttpInfo(file)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

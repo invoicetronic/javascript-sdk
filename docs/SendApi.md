@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**sendIdGet**](SendApi.md#sendIdGet) | **GET** /send/{id} | Get a invoice by id
 [**sendJsonPost**](SendApi.md#sendJsonPost) | **POST** /send/json | Add an invoice by json
 [**sendPost**](SendApi.md#sendPost) | **POST** /send | Add an invoice
-[**sendValidateFilesPost**](SendApi.md#sendValidateFilesPost) | **POST** /send/validate/files | Validate an invoice by file
+[**sendValidateFilePost**](SendApi.md#sendValidateFilePost) | **POST** /send/validate/file | Validate an invoice file
 [**sendValidateJsonPost**](SendApi.md#sendValidateJsonPost) | **POST** /send/validate/json | Validate an invoice by json
 [**sendValidatePost**](SendApi.md#sendValidatePost) | **POST** /send/validate | Validate an invoice
 [**sendValidateXmlPost**](SendApi.md#sendValidateXmlPost) | **POST** /send/validate/xml | Validate an invoice by xml
@@ -310,11 +310,11 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## sendValidateFilesPost
+## sendValidateFilePost
 
-> sendValidateFilesPost(files)
+> sendValidateFilePost(file)
 
-Validate an invoice by file
+Validate an invoice file
 
 Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
 
@@ -329,8 +329,8 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
-let files = ["null"]; // [File] | 
-apiInstance.sendValidateFilesPost(files).then(() => {
+let file = "/path/to/file"; // File | 
+apiInstance.sendValidateFilePost(file).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -343,7 +343,7 @@ apiInstance.sendValidateFilesPost(files).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **files** | **[File]**|  | 
+ **file** | **File**|  | 
 
 ### Return type
 

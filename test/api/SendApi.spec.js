@@ -98,10 +98,10 @@
         done();
       });
     });
-    describe('sendValidateFilesPost', function() {
-      it('should call sendValidateFilesPost successfully', function(done) {
-        //uncomment below and update the code to test sendValidateFilesPost
-        //instance.sendValidateFilesPost(function(error) {
+    describe('sendValidateFilePost', function() {
+      it('should call sendValidateFilePost successfully', function(done) {
+        //uncomment below and update the code to test sendValidateFilePost
+        //instance.sendValidateFilePost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
