@@ -149,7 +149,7 @@ WebHook.prototype['company_id'] = undefined;
 WebHook.prototype['url'] = undefined;
 
 /**
- * Wetehr the webhooks is enabled or not. On creation, this is set to `true`.
+ * Wether the webhook is enabled. On creation, this is set to `true`.
  * @member {Boolean} enabled
  */
 WebHook.prototype['enabled'] = undefined;

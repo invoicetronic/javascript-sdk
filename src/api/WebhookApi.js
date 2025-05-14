@@ -42,9 +42,14 @@ export default class WebhookApi {
      * List webhooks
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
      * @param {Object} opts Optional parameters
+     * @param {Number} [companyId] Company id
      * @param {Number} [page = 1)] Page number. Defaults to 1.
      * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
+     * @param {String} [description] 
+     * @param {Boolean} [enabled] 
+     * @param {String} [events] 
+     * @param {String} [url] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHook>} and HTTP response
      */
     webhookGetWithHttpInfo(opts) {
@@ -54,9 +59,14 @@ export default class WebhookApi {
       let pathParams = {
       };
       let queryParams = {
+        'company_id': opts['companyId'],
         'page': opts['page'],
         'page_size': opts['pageSize'],
-        'sort': opts['sort']
+        'sort': opts['sort'],
+        'description': opts['description'],
+        'enabled': opts['enabled'],
+        'events': opts['events'],
+        'url': opts['url']
       };
       let headerParams = {
       };
@@ -78,9 +88,14 @@ export default class WebhookApi {
      * List webhooks
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
      * @param {Object} opts Optional parameters
+     * @param {Number} opts.companyId Company id
      * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
      * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
+     * @param {String} opts.description 
+     * @param {Boolean} opts.enabled 
+     * @param {String} opts.events 
+     * @param {String} opts.url 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHook>}
      */
     webhookGet(opts) {
@@ -288,6 +303,7 @@ export default class WebhookApi {
      * @param {Number} [page = 1)] Page number. Defaults to 1.
      * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
+     * @param {Number} [webhookId] WebHook id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookHistory>} and HTTP response
      */
     webhookhistoryGetWithHttpInfo(opts) {
@@ -299,7 +315,8 @@ export default class WebhookApi {
       let queryParams = {
         'page': opts['page'],
         'page_size': opts['pageSize'],
-        'sort': opts['sort']
+        'sort': opts['sort'],
+        'webhook_id': opts['webhookId']
       };
       let headerParams = {
       };
@@ -324,6 +341,7 @@ export default class WebhookApi {
      * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
      * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
+     * @param {Number} opts.webhookId WebHook id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHookHistory>}
      */
     webhookhistoryGet(opts) {
