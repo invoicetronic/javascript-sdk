@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import DocumentData from './DocumentData';
 import Error from './Error';
 
 /**
@@ -90,6 +91,12 @@ class Update {
             if (data.hasOwnProperty('is_read')) {
                 obj['is_read'] = ApiClient.convertToType(data['is_read'], 'Boolean');
             }
+            if (data.hasOwnProperty('meta_data')) {
+                obj['meta_data'] = ApiClient.convertToType(data['meta_data'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('documents')) {
+                obj['documents'] = ApiClient.convertToType(data['documents'], [DocumentData]);
+            }
         }
         return obj;
     }
@@ -124,6 +131,16 @@ class Update {
             // validate the optional field `errors` (array)
             for (const item of data['errors']) {
                 Error.validateJSON(item);
+            };
+        }
+        if (data['documents']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['documents'])) {
+                throw new Error("Expected the field `documents` to be an array in the JSON data but got " + data['documents']);
+            }
+            // validate the optional field `documents` (array)
+            for (const item of data['documents']) {
+                DocumentData.validateJSON(item);
             };
         }
 
@@ -218,6 +235,18 @@ Update.prototype['errors'] = undefined;
  * @member {Boolean} is_read
  */
 Update.prototype['is_read'] = undefined;
+
+/**
+ * Metadata from the Send item this update refers to.
+ * @member {Object.<String, String>} meta_data
+ */
+Update.prototype['meta_data'] = undefined;
+
+/**
+ * Invoice references from the Send item this update refers to.
+ * @member {Array.<module:model/DocumentData>} documents
+ */
+Update.prototype['documents'] = undefined;
 
 
 

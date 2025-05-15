@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **messageId** | **String** | SDI message id. | [optional] 
 **errors** | [**[Error]**](Error.md) | SDI errors, if any. | [optional] 
 **isRead** | **Boolean** | Wether the item has been read at least once. | [optional] 
+**metaData** | **{String: String}** | Metadata from the Send item this update refers to. | [optional] 
+**documents** | [**[DocumentData]**](DocumentData.md) | Invoice references from the Send item this update refers to. | [optional] 
 
 
 

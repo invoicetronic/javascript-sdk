@@ -138,6 +138,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property metaData (base name: "meta_data")', function() {
+      // uncomment below and update the code to test the property metaData
+      //var instance = new invoicetronicSdk.Update();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property documents (base name: "documents")', function() {
+      // uncomment below and update the code to test the property documents
+      //var instance = new invoicetronicSdk.Update();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
