@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **isRead** | **Boolean** | Wether the item has been read at least once. | [optional] 
 **metaData** | **{String: String}** | Metadata from the Send item this update refers to. | [optional] 
 **documents** | [**[DocumentData]**](DocumentData.md) | Invoice references from the Send item this update refers to. | [optional] 
+**prestatore** | **String** | Prestatore reference from the Send item this status refers to. | [optional] 
 
 
 

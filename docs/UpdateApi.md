@@ -31,6 +31,7 @@ let apiInstance = new invoicetronicSdk.UpdateApi();
 let opts = {
   'companyId': 56, // Number | Company id
   'identifier': "identifier_example", // String | SDI identifier.
+  'prestatore': "prestatore_example", // String | Vat number or fiscal code.
   'unread': true, // Boolean | Unread items only.
   'sendId': 56, // Number | Send item's id.
   'state': "state_example", // String | SDI state
@@ -57,6 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| Company id | [optional] 
  **identifier** | **String**| SDI identifier. | [optional] 
+ **prestatore** | **String**| Vat number or fiscal code. | [optional] 
  **unread** | **Boolean**| Unread items only. | [optional] 
  **sendId** | **Number**| Send item&#39;s id. | [optional] 
  **state** | **String**| SDI state | [optional] 

@@ -97,6 +97,9 @@ class Update {
             if (data.hasOwnProperty('documents')) {
                 obj['documents'] = ApiClient.convertToType(data['documents'], [DocumentData]);
             }
+            if (data.hasOwnProperty('prestatore')) {
+                obj['prestatore'] = ApiClient.convertToType(data['prestatore'], 'String');
+            }
         }
         return obj;
     }
@@ -142,6 +145,10 @@ class Update {
             for (const item of data['documents']) {
                 DocumentData.validateJSON(item);
             };
+        }
+        // ensure the json data is a string
+        if (data['prestatore'] && !(typeof data['prestatore'] === 'string' || data['prestatore'] instanceof String)) {
+            throw new Error("Expected the field `prestatore` to be a primitive type in the JSON string but got " + data['prestatore']);
         }
 
         return true;
@@ -247,6 +254,12 @@ Update.prototype['meta_data'] = undefined;
  * @member {Array.<module:model/DocumentData>} documents
  */
 Update.prototype['documents'] = undefined;
+
+/**
+ * Prestatore reference from the Send item this status refers to.
+ * @member {String} prestatore
+ */
+Update.prototype['prestatore'] = undefined;
 
 
 

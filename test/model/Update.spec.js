@@ -150,6 +150,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property prestatore (base name: "prestatore")', function() {
+      // uncomment below and update the code to test the property prestatore
+      //var instance = new invoicetronicSdk.Update();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

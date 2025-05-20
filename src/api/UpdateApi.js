@@ -42,6 +42,7 @@ export default class UpdateApi {
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
+     * @param {String} [prestatore] Vat number or fiscal code.
      * @param {Boolean} [unread] Unread items only.
      * @param {Number} [sendId] Send item's id.
      * @param {module:model/String} [state] SDI state
@@ -63,6 +64,7 @@ export default class UpdateApi {
       let queryParams = {
         'company_id': opts['companyId'],
         'identifier': opts['identifier'],
+        'prestatore': opts['prestatore'],
         'unread': opts['unread'],
         'send_id': opts['sendId'],
         'state': opts['state'],
@@ -96,6 +98,7 @@ export default class UpdateApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
+     * @param {String} opts.prestatore Vat number or fiscal code.
      * @param {Boolean} opts.unread Unread items only.
      * @param {Number} opts.sendId Send item's id.
      * @param {module:model/String} opts.state SDI state
