@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import DocumentData from './DocumentData';
 import Error from './Error';
+import SendReduced from './SendReduced';
 
 /**
  * The Update model module.
@@ -67,14 +67,8 @@ class Update {
             if (data.hasOwnProperty('send_id')) {
                 obj['send_id'] = ApiClient.convertToType(data['send_id'], 'Number');
             }
-            if (data.hasOwnProperty('date_sent')) {
-                obj['date_sent'] = ApiClient.convertToType(data['date_sent'], 'Date');
-            }
             if (data.hasOwnProperty('last_update')) {
                 obj['last_update'] = ApiClient.convertToType(data['last_update'], 'Date');
-            }
-            if (data.hasOwnProperty('identifier')) {
-                obj['identifier'] = ApiClient.convertToType(data['identifier'], 'String');
             }
             if (data.hasOwnProperty('state')) {
                 obj['state'] = ApiClient.convertToType(data['state'], 'String');
@@ -91,14 +85,8 @@ class Update {
             if (data.hasOwnProperty('is_read')) {
                 obj['is_read'] = ApiClient.convertToType(data['is_read'], 'Boolean');
             }
-            if (data.hasOwnProperty('meta_data')) {
-                obj['meta_data'] = ApiClient.convertToType(data['meta_data'], {'String': 'String'});
-            }
-            if (data.hasOwnProperty('documents')) {
-                obj['documents'] = ApiClient.convertToType(data['documents'], [DocumentData]);
-            }
-            if (data.hasOwnProperty('prestatore')) {
-                obj['prestatore'] = ApiClient.convertToType(data['prestatore'], 'String');
+            if (data.hasOwnProperty('send')) {
+                obj['send'] = SendReduced.constructFromObject(data['send']);
             }
         }
         return obj;
@@ -110,10 +98,6 @@ class Update {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Update</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['identifier'] && !(typeof data['identifier'] === 'string' || data['identifier'] instanceof String)) {
-            throw new Error("Expected the field `identifier` to be a primitive type in the JSON string but got " + data['identifier']);
-        }
         // ensure the json data is a string
         if (data['state'] && !(typeof data['state'] === 'string' || data['state'] instanceof String)) {
             throw new Error("Expected the field `state` to be a primitive type in the JSON string but got " + data['state']);
@@ -136,19 +120,9 @@ class Update {
                 Error.validateJSON(item);
             };
         }
-        if (data['documents']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['documents'])) {
-                throw new Error("Expected the field `documents` to be an array in the JSON data but got " + data['documents']);
-            }
-            // validate the optional field `documents` (array)
-            for (const item of data['documents']) {
-                DocumentData.validateJSON(item);
-            };
-        }
-        // ensure the json data is a string
-        if (data['prestatore'] && !(typeof data['prestatore'] === 'string' || data['prestatore'] instanceof String)) {
-            throw new Error("Expected the field `prestatore` to be a primitive type in the JSON string but got " + data['prestatore']);
+        // validate the optional field `send`
+        if (data['send']) { // data not null
+          SendReduced.validateJSON(data['send']);
         }
 
         return true;
@@ -196,22 +170,10 @@ Update.prototype['company_id'] = undefined;
 Update.prototype['send_id'] = undefined;
 
 /**
- * When the document was sent to the SDI.
- * @member {Date} date_sent
- */
-Update.prototype['date_sent'] = undefined;
-
-/**
  * Last update from SDI.
  * @member {Date} last_update
  */
 Update.prototype['last_update'] = undefined;
-
-/**
- * SDI identifier. This is set by the SDI and it is unique within the SDI system.
- * @member {String} identifier
- */
-Update.prototype['identifier'] = undefined;
 
 /**
  * State of the document. Theses are the possible values, as per the SDI documentation:
@@ -244,22 +206,9 @@ Update.prototype['errors'] = undefined;
 Update.prototype['is_read'] = undefined;
 
 /**
- * Metadata from the Send item this update refers to.
- * @member {Object.<String, String>} meta_data
+ * @member {module:model/SendReduced} send
  */
-Update.prototype['meta_data'] = undefined;
-
-/**
- * Invoice references from the Send item this update refers to.
- * @member {Array.<module:model/DocumentData>} documents
- */
-Update.prototype['documents'] = undefined;
-
-/**
- * Prestatore reference from the Send item this status refers to.
- * @member {String} prestatore
- */
-Update.prototype['prestatore'] = undefined;
+Update.prototype['send'] = undefined;
 
 
 

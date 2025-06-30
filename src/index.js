@@ -66,6 +66,7 @@ import ScontoMaggiorazione from './model/ScontoMaggiorazione';
 import SedeCedentePrestatore from './model/SedeCedentePrestatore';
 import SedeCessionarioCommittente from './model/SedeCessionarioCommittente';
 import Send from './model/Send';
+import SendReduced from './model/SendReduced';
 import StabileOrganizzazione from './model/StabileOrganizzazione';
 import Status from './model/Status';
 import TerzoIntermediarioOSoggettoEmittente from './model/TerzoIntermediarioOSoggettoEmittente';
@@ -436,6 +437,12 @@ export {
      * @property {module:model/Send}
      */
     Send,
+
+    /**
+     * The SendReduced model constructor.
+     * @property {module:model/SendReduced}
+     */
+    SendReduced,
 
     /**
      * The StabileOrganizzazione model constructor.

@@ -111,6 +111,7 @@ export default class SendApi {
      * @param {Date} [documentDateFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [documentDateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {String} [documentNumber] Document number.
+     * @param {Boolean} [includePayload] Include payload in the response. Defaults to false.
      * @param {Number} [page = 1)] Page number. Defaults to 1.
      * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
@@ -135,6 +136,7 @@ export default class SendApi {
         'document_date_from': opts['documentDateFrom'],
         'document_date_to': opts['documentDateTo'],
         'document_number': opts['documentNumber'],
+        'include_payload': opts['includePayload'],
         'page': opts['page'],
         'page_size': opts['pageSize'],
         'sort': opts['sort']
@@ -171,6 +173,7 @@ export default class SendApi {
      * @param {Date} opts.documentDateFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.documentDateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {String} opts.documentNumber Document number.
+     * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false.
      * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
      * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.

@@ -90,20 +90,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property dateSent (base name: "date_sent")', function() {
-      // uncomment below and update the code to test the property dateSent
-      //var instance = new invoicetronicSdk.Update();
-      //expect(instance).to.be();
-    });
-
     it('should have the property lastUpdate (base name: "last_update")', function() {
       // uncomment below and update the code to test the property lastUpdate
-      //var instance = new invoicetronicSdk.Update();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property identifier (base name: "identifier")', function() {
-      // uncomment below and update the code to test the property identifier
       //var instance = new invoicetronicSdk.Update();
       //expect(instance).to.be();
     });
@@ -138,20 +126,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property metaData (base name: "meta_data")', function() {
-      // uncomment below and update the code to test the property metaData
-      //var instance = new invoicetronicSdk.Update();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property documents (base name: "documents")', function() {
-      // uncomment below and update the code to test the property documents
-      //var instance = new invoicetronicSdk.Update();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property prestatore (base name: "prestatore")', function() {
-      // uncomment below and update the code to test the property prestatore
+    it('should have the property send (base name: "send")', function() {
+      // uncomment below and update the code to test the property send
       //var instance = new invoicetronicSdk.Update();
       //expect(instance).to.be();
     });
