@@ -43,8 +43,8 @@ export default class WebhookApi {
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
-     * @param {Number} [page = 1)] Page number. Defaults to 1.
-     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
+     * @param {Number} [page = 1)] Page number.
+     * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
      * @param {String} [description] 
      * @param {Boolean} [enabled] 
@@ -89,8 +89,8 @@ export default class WebhookApi {
      * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
-     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
-     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
+     * @param {Number} opts.page Page number. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
      * @param {String} opts.description 
      * @param {Boolean} opts.enabled 
@@ -300,8 +300,8 @@ export default class WebhookApi {
      * List webhook history items
      * Webhook history items are stored in the database and can be accessed via the API. They are preserved for 15 in both the live and sandbox environments.
      * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] Page number. Defaults to 1.
-     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
+     * @param {Number} [page = 1)] Page number.
+     * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
      * @param {Number} [webhookId] WebHook id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookHistory>} and HTTP response
@@ -338,8 +338,8 @@ export default class WebhookApi {
      * List webhook history items
      * Webhook history items are stored in the database and can be accessed via the API. They are preserved for 15 in both the live and sandbox environments.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
-     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
+     * @param {Number} opts.page Page number. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
      * @param {Number} opts.webhookId WebHook id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHookHistory>}

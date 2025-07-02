@@ -105,8 +105,8 @@ let opts = {
   'documentDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'documentNumber': "documentNumber_example", // String | Document number.
   'includePayload': true, // Boolean | Include payload in the response. Defaults to false.
-  'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'page': 1, // Number | Page number.
+  'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
   'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
 };
 apiInstance.sendGet(opts).then((data) => {
@@ -135,8 +135,8 @@ Name | Type | Description  | Notes
  **documentDateTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **documentNumber** | **String**| Document number. | [optional] 
  **includePayload** | **Boolean**| Include payload in the response. Defaults to false. | [optional] 
- **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **page** | **Number**| Page number. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
  **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
 
 ### Return type

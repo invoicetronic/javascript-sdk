@@ -47,8 +47,8 @@ export default class LogApi {
      * @param {Number} [statusCode] Response status code
      * @param {Date} [dateCreatedFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [dateCreatedTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
-     * @param {Number} [page = 1)] Page number. Defaults to 1.
-     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
+     * @param {Number} [page = 1)] Page number.
+     * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
      * @param {String} [query] 
      * @param {Boolean} [success] 
@@ -105,8 +105,8 @@ export default class LogApi {
      * @param {Number} opts.statusCode Response status code
      * @param {Date} opts.dateCreatedFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.dateCreatedTo UTC ISO 8601 (2024-11-29T12:34:56Z)
-     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
-     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
+     * @param {Number} opts.page Page number. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
      * @param {String} opts.query 
      * @param {Boolean} opts.success 

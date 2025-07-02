@@ -41,8 +41,8 @@ export default class CompanyApi {
      * List companies
      * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
      * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] Page number. Defaults to 1.
-     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
+     * @param {Number} [page = 1)] Page number.
+     * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Company>} and HTTP response
      */
@@ -77,8 +77,8 @@ export default class CompanyApi {
      * List companies
      * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
-     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
+     * @param {Number} opts.page Page number. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Company>}
      */

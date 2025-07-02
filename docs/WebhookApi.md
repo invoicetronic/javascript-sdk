@@ -35,8 +35,8 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoicetronicSdk.WebhookApi();
 let opts = {
   'companyId': 56, // Number | Company id
-  'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'page': 1, // Number | Page number.
+  'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
   'sort': "sort_example", // String | Sort by field. Prefix with '-' for descending order.
   'description': "description_example", // String | 
   'enabled': true, // Boolean | 
@@ -57,8 +57,8 @@ apiInstance.webhookGet(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| Company id | [optional] 
- **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **page** | **Number**| Page number. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
  **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
  **description** | **String**|  | [optional] 
  **enabled** | **Boolean**|  | [optional] 
@@ -295,8 +295,8 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.WebhookApi();
 let opts = {
-  'page': 1, // Number | Page number. Defaults to 1.
-  'pageSize': 100, // Number | Items per page. Defaults to 50. Cannot be greater than 200.
+  'page': 1, // Number | Page number.
+  'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
   'sort': "sort_example", // String | Sort by field. Prefix with '-' for descending order.
   'webhookId': 56 // Number | WebHook id
 };
@@ -313,8 +313,8 @@ apiInstance.webhookhistoryGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Number**| Page number. Defaults to 1. | [optional] [default to 1]
- **pageSize** | **Number**| Items per page. Defaults to 50. Cannot be greater than 200. | [optional] [default to 100]
+ **page** | **Number**| Page number. | [optional] [default to 1]
+ **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
  **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
  **webhookId** | **Number**| WebHook id | [optional] 
 

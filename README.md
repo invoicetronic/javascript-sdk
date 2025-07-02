@@ -115,8 +115,8 @@ Basic.password = 'YOUR PASSWORD'
 
 var api = new invoicetronicSdk.CompanyApi()
 var opts = {
-  'page': 1, // {Number} Page number. Defaults to 1.
-  'pageSize': 100, // {Number} Items per page. Defaults to 50. Cannot be greater than 200.
+  'page': 1, // {Number} Page number.
+  'pageSize': 100, // {Number} Items per page. Cannot be greater than 200.
   'sort': "sort_example" // {String} Sort by field. Prefix with '-' for descending order.
 };
 api.companyGet(opts).then(function(data) {

@@ -50,8 +50,8 @@ export default class UpdateApi {
      * @param {Date} [lastUpdateTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [dateSentFrom] UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} [dateSentTo] UTC ISO 8601 (2024-11-29T12:34:56Z)
-     * @param {Number} [page = 1)] Page number. Defaults to 1.
-     * @param {Number} [pageSize = 100)] Items per page. Defaults to 50. Cannot be greater than 200.
+     * @param {Number} [page = 1)] Page number.
+     * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Update>} and HTTP response
      */
@@ -106,8 +106,8 @@ export default class UpdateApi {
      * @param {Date} opts.lastUpdateTo UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.dateSentFrom UTC ISO 8601 (2024-11-29T12:34:56Z)
      * @param {Date} opts.dateSentTo UTC ISO 8601 (2024-11-29T12:34:56Z)
-     * @param {Number} opts.page Page number. Defaults to 1. (default to 1)
-     * @param {Number} opts.pageSize Items per page. Defaults to 50. Cannot be greater than 200. (default to 100)
+     * @param {Number} opts.page Page number. (default to 1)
+     * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Update>}
      */
