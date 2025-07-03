@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**sendFilePost**](SendApi.md#sendFilePost) | **POST** /send/file | Add an invoice by file
 [**sendGet**](SendApi.md#sendGet) | **GET** /send | List invoices
 [**sendIdGet**](SendApi.md#sendIdGet) | **GET** /send/{id} | Get a invoice by id
+[**sendIdentifierGet**](SendApi.md#sendIdentifierGet) | **GET** /send/{identifier} | Get a invoice by identifier
 [**sendJsonPost**](SendApi.md#sendJsonPost) | **POST** /send/json | Add an invoice by json
 [**sendPost**](SendApi.md#sendPost) | **POST** /send | Add an invoice
 [**sendValidateFilePost**](SendApi.md#sendValidateFilePost) | **POST** /send/validate/file | Validate an invoice file
@@ -155,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## sendIdGet
 
-> Send sendIdGet(id)
+> Send sendIdGet(id, opts)
 
 Get a invoice by id
 
@@ -173,7 +174,10 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let id = 56; // Number | Item id
-apiInstance.sendIdGet(id).then((data) => {
+let opts = {
+  'includePayload': false // Boolean | 
+};
+apiInstance.sendIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -187,6 +191,60 @@ apiInstance.sendIdGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Item id | 
+ **includePayload** | **Boolean**|  | [optional] [default to false]
+
+### Return type
+
+[**Send**](Send.md)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## sendIdentifierGet
+
+> Send sendIdentifierGet(identifier, opts)
+
+Get a invoice by identifier
+
+Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+
+### Example
+
+```javascript
+import invoicetronicSdk from '@invoicetronic/sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoicetronicSdk.SendApi();
+let identifier = "identifier_example"; // String | 
+let opts = {
+  'includePayload': false // Boolean | 
+};
+apiInstance.sendIdentifierGet(identifier, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**|  | 
+ **includePayload** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 

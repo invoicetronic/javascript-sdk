@@ -147,6 +147,7 @@ Class | Method | HTTP request | Description
 *invoicetronicSdk.SendApi* | [**sendFilePost**](docs/SendApi.md#sendFilePost) | **POST** /send/file | Add an invoice by file
 *invoicetronicSdk.SendApi* | [**sendGet**](docs/SendApi.md#sendGet) | **GET** /send | List invoices
 *invoicetronicSdk.SendApi* | [**sendIdGet**](docs/SendApi.md#sendIdGet) | **GET** /send/{id} | Get a invoice by id
+*invoicetronicSdk.SendApi* | [**sendIdentifierGet**](docs/SendApi.md#sendIdentifierGet) | **GET** /send/{identifier} | Get a invoice by identifier
 *invoicetronicSdk.SendApi* | [**sendJsonPost**](docs/SendApi.md#sendJsonPost) | **POST** /send/json | Add an invoice by json
 *invoicetronicSdk.SendApi* | [**sendPost**](docs/SendApi.md#sendPost) | **POST** /send | Add an invoice
 *invoicetronicSdk.SendApi* | [**sendValidateFilePost**](docs/SendApi.md#sendValidateFilePost) | **POST** /send/validate/file | Validate an invoice file

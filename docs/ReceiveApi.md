@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ## receiveIdGet
 
-> Receive receiveIdGet(id)
+> Receive receiveIdGet(id, opts)
 
 Get an incoming invoice by id
 
@@ -162,7 +162,10 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
-apiInstance.receiveIdGet(id).then((data) => {
+let opts = {
+  'includePayload': false // Boolean | 
+};
+apiInstance.receiveIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -176,6 +179,7 @@ apiInstance.receiveIdGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Item id | 
+ **includePayload** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
