@@ -41,7 +41,7 @@ let opts = {
   'dateSentTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'page': 1, // Number | Page number.
   'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
-  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
+  'sort': "'last_update'" // String | Sort by field. Prefix with '-' for descending order.
 };
 apiInstance.updateGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
  **dateSentTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **page** | **Number**| Page number. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
- **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
+ **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] [default to &#39;last_update&#39;]
 
 ### Return type
 
