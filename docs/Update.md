@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 
 * `RifiutatoDalDestinatario` (value: `"RifiutatoDalDestinatario"`)
 
-* `ImpossibilitàDiRecapito` (value: `"ImpossibilitàDiRecapito"`)
+* `ImpossibilitaDiRecapito` (value: `"ImpossibilitaDiRecapito"`)
 
 * `DecorrenzaTermini` (value: `"DecorrenzaTermini"`)
 

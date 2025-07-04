@@ -258,10 +258,10 @@ Update['StateEnum'] = {
     "RifiutatoDalDestinatario": "RifiutatoDalDestinatario",
 
     /**
-     * value: "ImpossibilitàDiRecapito"
+     * value: "ImpossibilitaDiRecapito"
      * @const
      */
-    "ImpossibilitàDiRecapito": "ImpossibilitàDiRecapito",
+    "ImpossibilitaDiRecapito": "ImpossibilitaDiRecapito",
 
     /**
      * value: "DecorrenzaTermini"
