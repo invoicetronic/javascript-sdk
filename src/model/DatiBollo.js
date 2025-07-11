@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiBollo model module.
  * @module model/DatiBollo
- * @version 1
+ * @version 1.0
  */
 class DatiBollo {
     /**

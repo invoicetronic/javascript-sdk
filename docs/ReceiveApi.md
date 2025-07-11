@@ -163,7 +163,7 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
 let opts = {
-  'includePayload': false // Boolean | 
+  'includePayload': false // Boolean | Include payload in the response. Defaults to false.
 };
 apiInstance.receiveIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -179,7 +179,7 @@ apiInstance.receiveIdGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Item id | 
- **includePayload** | **Boolean**|  | [optional] [default to false]
+ **includePayload** | **Boolean**| Include payload in the response. Defaults to false. | [optional] [default to false]
 
 ### Return type
 

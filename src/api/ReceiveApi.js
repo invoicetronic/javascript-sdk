@@ -19,7 +19,7 @@ import Receive from '../model/Receive';
 /**
 * Receive service.
 * @module api/ReceiveApi
-* @version 1
+* @version 1.0
 */
 export default class ReceiveApi {
 
@@ -184,7 +184,7 @@ export default class ReceiveApi {
      * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [includePayload = false)] 
+     * @param {Boolean} [includePayload = false)] Include payload in the response. Defaults to false.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receive} and HTTP response
      */
     receiveIdGetWithHttpInfo(id, opts) {
@@ -199,7 +199,7 @@ export default class ReceiveApi {
         'id': id
       };
       let queryParams = {
-        'includePayload': opts['includePayload']
+        'include_payload': opts['includePayload']
       };
       let headerParams = {
       };
@@ -222,7 +222,7 @@ export default class ReceiveApi {
      * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.includePayload  (default to false)
+     * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false. (default to false)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receive}
      */
     receiveIdGet(id, opts) {

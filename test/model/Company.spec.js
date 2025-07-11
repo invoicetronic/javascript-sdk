@@ -96,12 +96,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property counter (base name: "counter")', function() {
-      // uncomment below and update the code to test the property counter
-      //var instance = new invoicetronicSdk.Company();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

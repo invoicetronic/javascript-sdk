@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Company model module.
  * @module model/Company
- * @version 1
+ * @version 1.0
  */
 class Company {
     /**
@@ -74,9 +74,6 @@ class Company {
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('counter')) {
-                obj['counter'] = ApiClient.convertToType(data['counter'], 'Number');
             }
         }
         return obj;
@@ -156,12 +153,6 @@ Company.prototype['fiscal_code'] = undefined;
  * @member {String} name
  */
 Company.prototype['name'] = undefined;
-
-/**
- * Holds the last unique value used to generate a XML filename. This is automatically updated by the system   when a raw XML file is uploaded. Normally, you do not need or want to change this value.
- * @member {Number} counter
- */
-Company.prototype['counter'] = undefined;
 
 
 

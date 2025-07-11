@@ -175,7 +175,7 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoicetronicSdk.SendApi();
 let id = 56; // Number | Item id
 let opts = {
-  'includePayload': false // Boolean | 
+  'includePayload': false // Boolean | Include payload in the response. Defaults to false.
 };
 apiInstance.sendIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -191,7 +191,7 @@ apiInstance.sendIdGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Item id | 
- **includePayload** | **Boolean**|  | [optional] [default to false]
+ **includePayload** | **Boolean**| Include payload in the response. Defaults to false. | [optional] [default to false]
 
 ### Return type
 
@@ -228,7 +228,7 @@ Basic.password = 'YOUR PASSWORD';
 let apiInstance = new invoicetronicSdk.SendApi();
 let identifier = "identifier_example"; // String | 
 let opts = {
-  'includePayload': false // Boolean | 
+  'includePayload': false // Boolean | Include payload in the response. Defaults to false.
 };
 apiInstance.sendIdentifierGet(identifier, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -244,7 +244,7 @@ apiInstance.sendIdentifierGet(identifier, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**|  | 
- **includePayload** | **Boolean**|  | [optional] [default to false]
+ **includePayload** | **Boolean**| Include payload in the response. Defaults to false. | [optional] [default to false]
 
 ### Return type
 

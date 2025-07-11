@@ -21,7 +21,7 @@ import Send from '../model/Send';
 /**
 * Send service.
 * @module api/SendApi
-* @version 1
+* @version 1.0
 */
 export default class SendApi {
 
@@ -192,7 +192,7 @@ export default class SendApi {
      * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [includePayload = false)] 
+     * @param {Boolean} [includePayload = false)] Include payload in the response. Defaults to false.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     sendIdGetWithHttpInfo(id, opts) {
@@ -207,7 +207,7 @@ export default class SendApi {
         'id': id
       };
       let queryParams = {
-        'includePayload': opts['includePayload']
+        'include_payload': opts['includePayload']
       };
       let headerParams = {
       };
@@ -230,7 +230,7 @@ export default class SendApi {
      * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.includePayload  (default to false)
+     * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false. (default to false)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     sendIdGet(id, opts) {
@@ -246,7 +246,7 @@ export default class SendApi {
      * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
      * @param {String} identifier 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [includePayload = false)] 
+     * @param {Boolean} [includePayload = false)] Include payload in the response. Defaults to false.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
     sendIdentifierGetWithHttpInfo(identifier, opts) {
@@ -261,7 +261,7 @@ export default class SendApi {
         'identifier': identifier
       };
       let queryParams = {
-        'includePayload': opts['includePayload']
+        'include_payload': opts['includePayload']
       };
       let headerParams = {
       };
@@ -284,7 +284,7 @@ export default class SendApi {
      * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
      * @param {String} identifier 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.includePayload  (default to false)
+     * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false. (default to false)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
     sendIdentifierGet(identifier, opts) {
