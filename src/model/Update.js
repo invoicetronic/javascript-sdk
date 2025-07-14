@@ -18,7 +18,7 @@ import SendReduced from './SendReduced';
 /**
  * The Update model module.
  * @module model/Update
- * @version 1.0
+ * @version main
  */
 class Update {
     /**

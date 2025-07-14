@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiDDT model module.
  * @module model/DatiDDT
- * @version 1.0
+ * @version main
  */
 class DatiDDT {
     /**

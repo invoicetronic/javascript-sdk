@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IdTrasmittente model module.
  * @module model/IdTrasmittente
- * @version 1.0
+ * @version main
  */
 class IdTrasmittente {
     /**
