@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IndirizzoResa model module.
  * @module model/IndirizzoResa
- * @version main
+ * @version 1.0.0
  */
 class IndirizzoResa {
     /**

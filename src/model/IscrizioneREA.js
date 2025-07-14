@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IscrizioneREA model module.
  * @module model/IscrizioneREA
- * @version main
+ * @version 1.0.0
  */
 class IscrizioneREA {
     /**

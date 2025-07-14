@@ -19,7 +19,7 @@ import Receive from '../model/Receive';
 /**
 * Receive service.
 * @module api/ReceiveApi
-* @version main
+* @version 1.0.0
 */
 export default class ReceiveApi {
 

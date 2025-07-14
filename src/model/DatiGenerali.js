@@ -26,7 +26,7 @@ import FatturaPrincipale from './FatturaPrincipale';
 /**
  * The DatiGenerali model module.
  * @module model/DatiGenerali
- * @version main
+ * @version 1.0.0
  */
 class DatiGenerali {
     /**

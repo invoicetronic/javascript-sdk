@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Allegati model module.
  * @module model/Allegati
- * @version main
+ * @version 1.0.0
  */
 class Allegati {
     /**

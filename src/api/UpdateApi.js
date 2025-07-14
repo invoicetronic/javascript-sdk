@@ -19,7 +19,7 @@ import Update from '../model/Update';
 /**
 * Update service.
 * @module api/UpdateApi
-* @version main
+* @version 1.0.0
 */
 export default class UpdateApi {
 
