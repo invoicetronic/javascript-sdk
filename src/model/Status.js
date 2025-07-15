@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Status model module.
  * @module model/Status
- * @version 1.0.0
+ * @version main
  */
 class Status {
     /**

@@ -19,7 +19,7 @@ import ProblemHttpResult from '../model/ProblemHttpResult';
 /**
 * Log service.
 * @module api/LogApi
-* @version 1.0.0
+* @version main
 */
 export default class LogApi {
 

@@ -18,7 +18,7 @@ import DocumentData from './DocumentData';
 /**
  * The Send model module.
  * @module model/Send
- * @version 1.0.0
+ * @version main
  */
 class Send {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FatturaPrincipale model module.
  * @module model/FatturaPrincipale
- * @version 1.0.0
+ * @version main
  */
 class FatturaPrincipale {
     /**

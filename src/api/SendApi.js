@@ -21,7 +21,7 @@ import Send from '../model/Send';
 /**
 * Send service.
 * @module api/SendApi
-* @version 1.0.0
+* @version main
 */
 export default class SendApi {
 

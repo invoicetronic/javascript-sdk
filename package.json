@@ -1,8 +1,8 @@
 {
   "name": "@invoicetronic/sdk",
-  "version": "1.0.0",
+  "version": "main",
   "description": "JavaScript SDK for the Invoicetronic API",
-  "license": "Unlicense",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
