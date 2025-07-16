@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SedeCessionarioCommittente model module.
  * @module model/SedeCessionarioCommittente
- * @version main
+ * @version 1.0.0
  */
 class SedeCessionarioCommittente {
     /**

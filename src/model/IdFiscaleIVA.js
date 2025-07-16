@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IdFiscaleIVA model module.
  * @module model/IdFiscaleIVA
- * @version main
+ * @version 1.0.0
  */
 class IdFiscaleIVA {
     /**

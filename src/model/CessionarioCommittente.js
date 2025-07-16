@@ -20,7 +20,7 @@ import StabileOrganizzazione from './StabileOrganizzazione';
 /**
  * The CessionarioCommittente model module.
  * @module model/CessionarioCommittente
- * @version main
+ * @version 1.0.0
  */
 class CessionarioCommittente {
     /**

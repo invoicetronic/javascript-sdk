@@ -21,7 +21,7 @@ import TerzoIntermediarioOSoggettoEmittente from './TerzoIntermediarioOSoggettoE
 /**
  * The FatturaElettronicaHeader model module.
  * @module model/FatturaElettronicaHeader
- * @version main
+ * @version 1.0.0
  */
 class FatturaElettronicaHeader {
     /**

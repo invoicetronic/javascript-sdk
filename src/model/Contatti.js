@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Contatti model module.
  * @module model/Contatti
- * @version main
+ * @version 1.0.0
  */
 class Contatti {
     /**

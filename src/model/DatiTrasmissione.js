@@ -18,7 +18,7 @@ import IdTrasmittente from './IdTrasmittente';
 /**
  * The DatiTrasmissione model module.
  * @module model/DatiTrasmissione
- * @version main
+ * @version 1.0.0
  */
 class DatiTrasmissione {
     /**
