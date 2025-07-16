@@ -20,7 +20,7 @@ Updates are notifications sent by the SDI about the status of invoices you sent.
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -95,7 +95,7 @@ Updates are notifications sent by the SDI about the status of invoices you sent.
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];

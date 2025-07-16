@@ -25,7 +25,7 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -90,7 +90,7 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -139,7 +139,7 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -188,7 +188,7 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -237,7 +237,7 @@ Webhooks are used to notify external services about write events that occur in t
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -286,7 +286,7 @@ Webhook history items are stored in the database and can be accessed via the API
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -343,7 +343,7 @@ Webhook history items are stored in the database and can be accessed via the API
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];

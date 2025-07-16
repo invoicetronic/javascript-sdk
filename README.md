@@ -26,7 +26,7 @@ To publish the library as a [npm](https://www.npmjs.com/), please follow the pro
 Then install it via:
 
 ```shell
-npm install @invoicetronic/sdk --save
+npm install @invoicetronic/js-sdk --save
 ```
 
 Finally, you need to build the module:
@@ -49,7 +49,7 @@ Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the follow
 npm link
 ```
 
-To use the link you just defined in your project, switch to the directory you want to use your @invoicetronic/sdk from, and run:
+To use the link you just defined in your project, switch to the directory you want to use your @invoicetronic/js-sdk from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
@@ -105,7 +105,7 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var invoicetronicSdk = require('@invoicetronic/sdk');
+var invoicetronicSdk = require('@invoicetronic/js-sdk');
 
 var defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic

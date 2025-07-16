@@ -23,7 +23,7 @@ Companies are the entities that send and receive invoices. As you send invoices,
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -78,7 +78,7 @@ Companies are the entities that send and receive invoices. As you send invoices,
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -127,7 +127,7 @@ Companies are the entities that send and receive invoices. As you send invoices,
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -176,7 +176,7 @@ Companies are the entities that send and receive invoices. As you send invoices,
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
@@ -225,7 +225,7 @@ Companies are the entities that send and receive invoices. As you send invoices,
 ### Example
 
 ```javascript
-import invoicetronicSdk from '@invoicetronic/sdk';
+import invoicetronicSdk from '@invoicetronic/js-sdk';
 let defaultClient = invoicetronicSdk.ApiClient.instance;
 // Configure HTTP basic authorization: Basic
 let Basic = defaultClient.authentications['Basic'];
