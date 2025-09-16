@@ -21,7 +21,7 @@ import WebHookHistory from '../model/WebHookHistory';
 /**
 * Webhook service.
 * @module api/WebhookApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class WebhookApi {
 

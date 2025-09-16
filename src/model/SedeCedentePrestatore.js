@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SedeCedentePrestatore model module.
  * @module model/SedeCedentePrestatore
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SedeCedentePrestatore {
     /**

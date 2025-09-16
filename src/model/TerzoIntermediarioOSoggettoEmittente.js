@@ -17,7 +17,7 @@ import DatiAnagrafici from './DatiAnagrafici';
 /**
  * The TerzoIntermediarioOSoggettoEmittente model module.
  * @module model/TerzoIntermediarioOSoggettoEmittente
- * @version 1.0.0
+ * @version 1.0.1
  */
 class TerzoIntermediarioOSoggettoEmittente {
     /**

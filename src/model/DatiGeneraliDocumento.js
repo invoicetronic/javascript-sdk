@@ -20,7 +20,7 @@ import ScontoMaggiorazione from './ScontoMaggiorazione';
 /**
  * The DatiGeneraliDocumento model module.
  * @module model/DatiGeneraliDocumento
- * @version 1.0.0
+ * @version 1.0.1
  */
 class DatiGeneraliDocumento {
     /**

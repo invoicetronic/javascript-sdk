@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiRicezione model module.
  * @module model/DatiRicezione
- * @version 1.0.0
+ * @version 1.0.1
  */
 class DatiRicezione {
     /**
