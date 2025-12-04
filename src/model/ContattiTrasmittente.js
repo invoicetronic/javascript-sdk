@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ContattiTrasmittente model module.
  * @module model/ContattiTrasmittente
- * @version 1.0.1
+ * @version 1.1
  */
 class ContattiTrasmittente {
     /**

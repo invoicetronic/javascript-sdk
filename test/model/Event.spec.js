@@ -96,12 +96,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property query (base name: "query")', function() {
-      // uncomment below and update the code to test the property query
-      //var instance = new invoicetronicSdk.Event();
-      //expect(instance).to.be();
-    });
-
     it('should have the property endpoint (base name: "endpoint")', function() {
       // uncomment below and update the code to test the property endpoint
       //var instance = new invoicetronicSdk.Event();
@@ -132,8 +126,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property resourceId (base name: "resource_id")', function() {
+      // uncomment below and update the code to test the property resourceId
+      //var instance = new invoicetronicSdk.Event();
+      //expect(instance).to.be();
+    });
+
     it('should have the property success (base name: "success")', function() {
       // uncomment below and update the code to test the property success
+      //var instance = new invoicetronicSdk.Event();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property query (base name: "query")', function() {
+      // uncomment below and update the code to test the property query
       //var instance = new invoicetronicSdk.Event();
       //expect(instance).to.be();
     });

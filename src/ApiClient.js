@@ -16,7 +16,7 @@ import superagent from "superagent";
 
 /**
 * @module ApiClient
-* @version 1.0.1
+* @version 1.1
 */
 
 /**
@@ -54,7 +54,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'Invoicetronic/1.0.1/JavaScript-SDK'
+            'User-Agent': 'Invoicetronic/1.1/JavaScript-SDK'
         };
 
         /**

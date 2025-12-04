@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Event model module.
  * @module model/Event
- * @version 1.0.1
+ * @version 1.1
  */
 class Event {
     /**
@@ -68,9 +68,6 @@ class Event {
             if (data.hasOwnProperty('method')) {
                 obj['method'] = ApiClient.convertToType(data['method'], 'String');
             }
-            if (data.hasOwnProperty('query')) {
-                obj['query'] = ApiClient.convertToType(data['query'], 'String');
-            }
             if (data.hasOwnProperty('endpoint')) {
                 obj['endpoint'] = ApiClient.convertToType(data['endpoint'], 'String');
             }
@@ -86,8 +83,14 @@ class Event {
             if (data.hasOwnProperty('error')) {
                 obj['error'] = ApiClient.convertToType(data['error'], 'String');
             }
+            if (data.hasOwnProperty('resource_id')) {
+                obj['resource_id'] = ApiClient.convertToType(data['resource_id'], 'Number');
+            }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
+            }
+            if (data.hasOwnProperty('query')) {
+                obj['query'] = ApiClient.convertToType(data['query'], 'String');
             }
             if (data.hasOwnProperty('response_body')) {
                 obj['response_body'] = ApiClient.convertToType(data['response_body'], 'String');
@@ -107,16 +110,16 @@ class Event {
             throw new Error("Expected the field `method` to be a primitive type in the JSON string but got " + data['method']);
         }
         // ensure the json data is a string
-        if (data['query'] && !(typeof data['query'] === 'string' || data['query'] instanceof String)) {
-            throw new Error("Expected the field `query` to be a primitive type in the JSON string but got " + data['query']);
-        }
-        // ensure the json data is a string
         if (data['endpoint'] && !(typeof data['endpoint'] === 'string' || data['endpoint'] instanceof String)) {
             throw new Error("Expected the field `endpoint` to be a primitive type in the JSON string but got " + data['endpoint']);
         }
         // ensure the json data is a string
         if (data['error'] && !(typeof data['error'] === 'string' || data['error'] instanceof String)) {
             throw new Error("Expected the field `error` to be a primitive type in the JSON string but got " + data['error']);
+        }
+        // ensure the json data is a string
+        if (data['query'] && !(typeof data['query'] === 'string' || data['query'] instanceof String)) {
+            throw new Error("Expected the field `query` to be a primitive type in the JSON string but got " + data['query']);
         }
         // ensure the json data is a string
         if (data['response_body'] && !(typeof data['response_body'] === 'string' || data['response_body'] instanceof String)) {
@@ -174,12 +177,6 @@ Event.prototype['company_id'] = undefined;
 Event.prototype['method'] = undefined;
 
 /**
- * Request query.
- * @member {String} query
- */
-Event.prototype['query'] = undefined;
-
-/**
  * API endpoint.
  * @member {String} endpoint
  */
@@ -210,10 +207,22 @@ Event.prototype['date_time'] = undefined;
 Event.prototype['error'] = undefined;
 
 /**
+ * ID of the resource created or modified by this request.
+ * @member {Number} resource_id
+ */
+Event.prototype['resource_id'] = undefined;
+
+/**
  * Wether the request was successful.
  * @member {Boolean} success
  */
 Event.prototype['success'] = undefined;
+
+/**
+ * Request query. Only used for internal logging, not sent to webhooks.
+ * @member {String} query
+ */
+Event.prototype['query'] = undefined;
 
 /**
  * Response payload. It is guaranteed to be cyphered at rest.

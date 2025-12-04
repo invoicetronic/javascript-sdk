@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StabileOrganizzazione model module.
  * @module model/StabileOrganizzazione
- * @version 1.0.1
+ * @version 1.1
  */
 class StabileOrganizzazione {
     /**
