@@ -18,7 +18,7 @@ import IdFiscaleIVA from './IdFiscaleIVA';
 /**
  * The DatiAnagraficiCedentePrestatore model module.
  * @module model/DatiAnagraficiCedentePrestatore
- * @version 1.1.2
+ * @version 1.1.3
  */
 class DatiAnagraficiCedentePrestatore {
     /**

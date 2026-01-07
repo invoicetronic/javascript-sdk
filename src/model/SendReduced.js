@@ -17,7 +17,7 @@ import DocumentData from './DocumentData';
 /**
  * The SendReduced model module.
  * @module model/SendReduced
- * @version 1.1.2
+ * @version 1.1.3
  */
 class SendReduced {
     /**

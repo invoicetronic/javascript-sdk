@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AltriDatiGestionali model module.
  * @module model/AltriDatiGestionali
- * @version 1.1.2
+ * @version 1.1.3
  */
 class AltriDatiGestionali {
     /**

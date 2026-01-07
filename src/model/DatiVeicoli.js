@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiVeicoli model module.
  * @module model/DatiVeicoli
- * @version 1.1.2
+ * @version 1.1.3
  */
 class DatiVeicoli {
     /**

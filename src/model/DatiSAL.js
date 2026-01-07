@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiSAL model module.
  * @module model/DatiSAL
- * @version 1.1.2
+ * @version 1.1.3
  */
 class DatiSAL {
     /**
