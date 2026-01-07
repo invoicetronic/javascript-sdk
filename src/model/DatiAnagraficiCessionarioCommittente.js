@@ -18,7 +18,7 @@ import IdFiscaleIVA from './IdFiscaleIVA';
 /**
  * The DatiAnagraficiCessionarioCommittente model module.
  * @module model/DatiAnagraficiCessionarioCommittente
- * @version 1.1.3
+ * @version 1.1.4
  */
 class DatiAnagraficiCessionarioCommittente {
     /**

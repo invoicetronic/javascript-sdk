@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiOrdineAcquisto model module.
  * @module model/DatiOrdineAcquisto
- * @version 1.1.3
+ * @version 1.1.4
  */
 class DatiOrdineAcquisto {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiRiepilogo model module.
  * @module model/DatiRiepilogo
- * @version 1.1.3
+ * @version 1.1.4
  */
 class DatiRiepilogo {
     /**

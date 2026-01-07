@@ -20,7 +20,7 @@ import ProblemHttpResult from '../model/ProblemHttpResult';
 /**
 * Company service.
 * @module api/CompanyApi
-* @version 1.1.3
+* @version 1.1.4
 */
 export default class CompanyApi {
 

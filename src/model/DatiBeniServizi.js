@@ -18,7 +18,7 @@ import DettaglioLinee from './DettaglioLinee';
 /**
  * The DatiBeniServizi model module.
  * @module model/DatiBeniServizi
- * @version 1.1.3
+ * @version 1.1.4
  */
 class DatiBeniServizi {
     /**

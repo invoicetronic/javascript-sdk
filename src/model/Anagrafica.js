@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Anagrafica model module.
  * @module model/Anagrafica
- * @version 1.1.3
+ * @version 1.1.4
  */
 class Anagrafica {
     /**
