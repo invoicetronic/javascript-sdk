@@ -21,7 +21,7 @@ import StabileOrganizzazione from './StabileOrganizzazione';
 /**
  * The CedentePrestatore model module.
  * @module model/CedentePrestatore
- * @version 1.1.4
+ * @version 1.1.5
  */
 class CedentePrestatore {
     /**

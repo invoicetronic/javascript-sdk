@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiContratto model module.
  * @module model/DatiContratto
- * @version 1.1.4
+ * @version 1.1.5
  */
 class DatiContratto {
     /**

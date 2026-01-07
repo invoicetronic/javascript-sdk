@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiCassaPrevidenziale model module.
  * @module model/DatiCassaPrevidenziale
- * @version 1.1.4
+ * @version 1.1.5
  */
 class DatiCassaPrevidenziale {
     /**

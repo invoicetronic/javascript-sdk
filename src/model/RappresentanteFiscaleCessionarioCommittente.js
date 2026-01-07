@@ -17,7 +17,7 @@ import IdFiscaleIVA from './IdFiscaleIVA';
 /**
  * The RappresentanteFiscaleCessionarioCommittente model module.
  * @module model/RappresentanteFiscaleCessionarioCommittente
- * @version 1.1.4
+ * @version 1.1.5
  */
 class RappresentanteFiscaleCessionarioCommittente {
     /**

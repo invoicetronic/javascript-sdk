@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DocumentData model module.
  * @module model/DocumentData
- * @version 1.1.4
+ * @version 1.1.5
  */
 class DocumentData {
     /**

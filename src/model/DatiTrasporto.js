@@ -18,7 +18,7 @@ import IndirizzoResa from './IndirizzoResa';
 /**
  * The DatiTrasporto model module.
  * @module model/DatiTrasporto
- * @version 1.1.4
+ * @version 1.1.5
  */
 class DatiTrasporto {
     /**
