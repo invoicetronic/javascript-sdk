@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiConvenzione model module.
  * @module model/DatiConvenzione
- * @version 1.1.5
+ * @version 1.1.6
  */
 class DatiConvenzione {
     /**

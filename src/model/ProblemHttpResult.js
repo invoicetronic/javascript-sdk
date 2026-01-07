@@ -17,7 +17,7 @@ import ProblemDetails from './ProblemDetails';
 /**
  * The ProblemHttpResult model module.
  * @module model/ProblemHttpResult
- * @version 1.1.5
+ * @version 1.1.6
  */
 class ProblemHttpResult {
     /**

@@ -18,7 +18,7 @@ import FatturaElettronicaHeader from './FatturaElettronicaHeader';
 /**
  * The FatturaOrdinaria model module.
  * @module model/FatturaOrdinaria
- * @version 1.1.5
+ * @version 1.1.6
  */
 class FatturaOrdinaria {
     /**

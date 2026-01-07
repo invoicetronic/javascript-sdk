@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebHookHistory model module.
  * @module model/WebHookHistory
- * @version 1.1.5
+ * @version 1.1.6
  */
 class WebHookHistory {
     /**

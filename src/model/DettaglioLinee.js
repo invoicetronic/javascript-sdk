@@ -19,7 +19,7 @@ import ScontoMaggiorazione from './ScontoMaggiorazione';
 /**
  * The DettaglioLinee model module.
  * @module model/DettaglioLinee
- * @version 1.1.5
+ * @version 1.1.6
  */
 class DettaglioLinee {
     /**

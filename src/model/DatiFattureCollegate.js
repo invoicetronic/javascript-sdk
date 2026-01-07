@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiFattureCollegate model module.
  * @module model/DatiFattureCollegate
- * @version 1.1.5
+ * @version 1.1.6
  */
 class DatiFattureCollegate {
     /**

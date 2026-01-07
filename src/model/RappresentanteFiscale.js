@@ -17,7 +17,7 @@ import DatiAnagrafici from './DatiAnagrafici';
 /**
  * The RappresentanteFiscale model module.
  * @module model/RappresentanteFiscale
- * @version 1.1.5
+ * @version 1.1.6
  */
 class RappresentanteFiscale {
     /**
