@@ -1,6 +1,6 @@
 {
   "name": "@invoicetronic/js-sdk",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "JavaScript SDK for the Invoicetronic API",
   "license": "MIT",
   "main": "dist/index.js",

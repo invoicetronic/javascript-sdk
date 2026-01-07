@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DatiRitenuta model module.
  * @module model/DatiRitenuta
- * @version 1.1.1
+ * @version 1.1.2
  */
 class DatiRitenuta {
     /**
