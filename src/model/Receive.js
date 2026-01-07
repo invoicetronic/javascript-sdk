@@ -17,16 +17,17 @@ import DocumentData from './DocumentData';
 /**
  * The Receive model module.
  * @module model/Receive
- * @version 1.1
+ * @version 1.1.1
  */
 class Receive {
     /**
      * Constructs a new <code>Receive</code>.
      * @alias module:model/Receive
+     * @param payload {String} Xml payloaad. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be cyphered at rest.
      */
-    constructor() { 
+    constructor(payload) { 
         
-        Receive.initialize(this);
+        Receive.initialize(this, payload);
     }
 
     /**
@@ -34,7 +35,8 @@ class Receive {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, payload) { 
+        obj['payload'] = payload;
     }
 
     /**
@@ -109,6 +111,12 @@ class Receive {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Receive</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Receive.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['committente'] && !(typeof data['committente'] === 'string' || data['committente'] instanceof String)) {
             throw new Error("Expected the field `committente` to be a primitive type in the JSON string but got " + data['committente']);
@@ -158,7 +166,7 @@ class Receive {
 
 }
 
-
+Receive.RequiredProperties = ["payload"];
 
 /**
  * Unique identifier. Leave it at 0 for new records as it will be set automatically.

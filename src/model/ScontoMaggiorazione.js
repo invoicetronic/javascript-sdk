@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScontoMaggiorazione model module.
  * @module model/ScontoMaggiorazione
- * @version 1.1
+ * @version 1.1.1
  */
 class ScontoMaggiorazione {
     /**

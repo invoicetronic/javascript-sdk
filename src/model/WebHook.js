@@ -16,16 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The WebHook model module.
  * @module model/WebHook
- * @version 1.1
+ * @version 1.1.1
  */
 class WebHook {
     /**
      * Constructs a new <code>WebHook</code>.
      * @alias module:model/WebHook
+     * @param url {String} The url of your application's endpoint that will receive a POST request when the webhook is fired.
      */
-    constructor() { 
+    constructor(url) { 
         
-        WebHook.initialize(this);
+        WebHook.initialize(this, url);
     }
 
     /**
@@ -33,7 +34,8 @@ class WebHook {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, url) { 
+        obj['url'] = url;
     }
 
     /**
@@ -87,6 +89,12 @@ class WebHook {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebHook</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of WebHook.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['url'] && !(typeof data['url'] === 'string' || data['url'] instanceof String)) {
             throw new Error("Expected the field `url` to be a primitive type in the JSON string but got " + data['url']);
@@ -110,7 +118,7 @@ class WebHook {
 
 }
 
-
+WebHook.RequiredProperties = ["url"];
 
 /**
  * Unique identifier. Leave it at 0 for new records as it will be set automatically.

@@ -16,16 +16,18 @@ import ApiClient from '../ApiClient';
 /**
  * The Event model module.
  * @module model/Event
- * @version 1.1
+ * @version 1.1.1
  */
 class Event {
     /**
      * Constructs a new <code>Event</code>.
      * @alias module:model/Event
+     * @param method {String} Request method.
+     * @param endpoint {String} API endpoint.
      */
-    constructor() { 
+    constructor(method, endpoint) { 
         
-        Event.initialize(this);
+        Event.initialize(this, method, endpoint);
     }
 
     /**
@@ -33,7 +35,9 @@ class Event {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, method, endpoint) { 
+        obj['method'] = method;
+        obj['endpoint'] = endpoint;
     }
 
     /**
@@ -105,6 +109,12 @@ class Event {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Event</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Event.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['method'] && !(typeof data['method'] === 'string' || data['method'] instanceof String)) {
             throw new Error("Expected the field `method` to be a primitive type in the JSON string but got " + data['method']);
@@ -132,7 +142,7 @@ class Event {
 
 }
 
-
+Event.RequiredProperties = ["method", "endpoint"];
 
 /**
  * Unique identifier. Leave it at 0 for new records as it will be set automatically.
