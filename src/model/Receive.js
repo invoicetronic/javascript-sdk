@@ -17,13 +17,13 @@ import DocumentData from './DocumentData';
 /**
  * The Receive model module.
  * @module model/Receive
- * @version 1.1.6
+ * @version 1.2
  */
 class Receive {
     /**
      * Constructs a new <code>Receive</code>.
      * @alias module:model/Receive
-     * @param payload {String} Xml payloaad. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be cyphered at rest.
+     * @param payload {String} Xml payload. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be encrypted at rest.
      */
     constructor(payload) { 
         
@@ -211,7 +211,7 @@ Receive.prototype['committente'] = undefined;
 Receive.prototype['prestatore'] = undefined;
 
 /**
- * SDI identifier. This is set by the SDI and is guaranted to be unique within the SDI system.
+ * SDI identifier. This is set by the SDI and is guaranteed to be unique within the SDI system.
  * @member {String} identifier
  */
 Receive.prototype['identifier'] = undefined;
@@ -229,7 +229,7 @@ Receive.prototype['file_name'] = undefined;
 Receive.prototype['format'] = undefined;
 
 /**
- * Xml payloaad. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be cyphered at rest.
+ * Xml payload. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be encrypted at rest.
  * @member {String} payload
  */
 Receive.prototype['payload'] = undefined;
@@ -259,7 +259,7 @@ Receive.prototype['documents'] = undefined;
 Receive.prototype['encoding'] = undefined;
 
 /**
- * Wether the invoice has been read at least once.
+ * Whether the invoice has been read at least once. Set to true only when the invoice is requested with include_payload=true.
  * @member {Boolean} is_read
  */
 Receive.prototype['is_read'] = undefined;

@@ -18,7 +18,7 @@ import Status from '../model/Status';
 /**
 * Status service.
 * @module api/StatusApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class StatusApi {
 
@@ -37,7 +37,7 @@ export default class StatusApi {
 
     /**
      * Account status
-     * This endpoint is used to know how many operations (invoices + validations) and signatures are left on your account.   When `signature_left` is 0, you will receive a `403 Forbidden` response if you try to sign an invoice. Likewise, if `operation_left` is 0, you will receive a `403 Forbidden` response when storing or validating an invoice.  You can raise the limits by purchasing operations and/or signatures from the [Dashboard](https://dashboard.invoicetronic.com).  __Please note__ that these values are not enforced if you are on the Sandbox. See the [API Keys & Sandbox](https://invoicetronic.com/apikeys/) documentation section to learn more about the Sandbox.
+     * Retrieve the number of operations (invoices + validations) and signatures left on your account.  When `signature_left` is 0, you will receive a `403 Forbidden` response when trying to sign an invoice. Likewise, if `operation_left` is 0, you will receive a `403 Forbidden` response when storing or validating an invoice.  You can also check your account status from the [Dashboard](https://dashboard.invoicetronic.com), where you can purchase additional operations and/or signatures.  **Please note** that these values are not enforced if you are on the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Status} and HTTP response
      */
     statusGetWithHttpInfo() {
@@ -65,7 +65,7 @@ export default class StatusApi {
 
     /**
      * Account status
-     * This endpoint is used to know how many operations (invoices + validations) and signatures are left on your account.   When `signature_left` is 0, you will receive a `403 Forbidden` response if you try to sign an invoice. Likewise, if `operation_left` is 0, you will receive a `403 Forbidden` response when storing or validating an invoice.  You can raise the limits by purchasing operations and/or signatures from the [Dashboard](https://dashboard.invoicetronic.com).  __Please note__ that these values are not enforced if you are on the Sandbox. See the [API Keys & Sandbox](https://invoicetronic.com/apikeys/) documentation section to learn more about the Sandbox.
+     * Retrieve the number of operations (invoices + validations) and signatures left on your account.  When `signature_left` is 0, you will receive a `403 Forbidden` response when trying to sign an invoice. Likewise, if `operation_left` is 0, you will receive a `403 Forbidden` response when storing or validating an invoice.  You can also check your account status from the [Dashboard](https://dashboard.invoicetronic.com), where you can purchase additional operations and/or signatures.  **Please note** that these values are not enforced if you are on the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Status}
      */
     statusGet() {

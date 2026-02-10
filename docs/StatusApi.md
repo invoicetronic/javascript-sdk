@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Account status
 
-This endpoint is used to know how many operations (invoices + validations) and signatures are left on your account.   When &#x60;signature_left&#x60; is 0, you will receive a &#x60;403 Forbidden&#x60; response if you try to sign an invoice. Likewise, if &#x60;operation_left&#x60; is 0, you will receive a &#x60;403 Forbidden&#x60; response when storing or validating an invoice.  You can raise the limits by purchasing operations and/or signatures from the [Dashboard](https://dashboard.invoicetronic.com).  __Please note__ that these values are not enforced if you are on the Sandbox. See the [API Keys &amp; Sandbox](https://invoicetronic.com/apikeys/) documentation section to learn more about the Sandbox.
+Retrieve the number of operations (invoices + validations) and signatures left on your account.  When &#x60;signature_left&#x60; is 0, you will receive a &#x60;403 Forbidden&#x60; response when trying to sign an invoice. Likewise, if &#x60;operation_left&#x60; is 0, you will receive a &#x60;403 Forbidden&#x60; response when storing or validating an invoice.  You can also check your account status from the [Dashboard](https://dashboard.invoicetronic.com), where you can purchase additional operations and/or signatures.  **Please note** that these values are not enforced if you are on the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
 
 ### Example
 

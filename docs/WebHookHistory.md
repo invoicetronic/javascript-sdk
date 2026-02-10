@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **event** | **String** | Event name. | [optional] 
 **statusCode** | **Number** | Status code. | [optional] 
 **dateTime** | **Date** | Date and time of the request. | [optional] 
-**success** | **Boolean** | Wether the request was successful. | [optional] [readonly] 
+**success** | **Boolean** | Whether the request was successful. | [optional] [readonly] 
 
 

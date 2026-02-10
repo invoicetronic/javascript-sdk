@@ -21,7 +21,7 @@ import WebHookHistory from '../model/WebHookHistory';
 /**
 * Webhook service.
 * @module api/WebhookApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class WebhookApi {
 
@@ -40,7 +40,7 @@ export default class WebhookApi {
 
     /**
      * List webhooks
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Retrieve a paginated list of webhooks. Results can be filtered by company, description, enabled status, events, and URL.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {Number} [page = 1)] Page number.
@@ -86,7 +86,7 @@ export default class WebhookApi {
 
     /**
      * List webhooks
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Retrieve a paginated list of webhooks. Results can be filtered by company, description, enabled status, events, and URL.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {Number} opts.page Page number. (default to 1)
@@ -108,7 +108,7 @@ export default class WebhookApi {
 
     /**
      * Delete a webhook by id
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Delete a webhook subscription by its internal id.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHook} and HTTP response
      */
@@ -142,7 +142,7 @@ export default class WebhookApi {
 
     /**
      * Delete a webhook by id
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Delete a webhook subscription by its internal id.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHook}
      */
@@ -156,7 +156,7 @@ export default class WebhookApi {
 
     /**
      * Get a webhook by id
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Retrieve a webhook by its internal id.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHook} and HTTP response
      */
@@ -190,7 +190,7 @@ export default class WebhookApi {
 
     /**
      * Get a webhook by id
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Retrieve a webhook by its internal id.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHook}
      */
@@ -204,7 +204,7 @@ export default class WebhookApi {
 
     /**
      * Add a webhook
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Create a new webhook subscription.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {module:model/WebHook} webHook 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHook} and HTTP response
      */
@@ -237,7 +237,7 @@ export default class WebhookApi {
 
     /**
      * Add a webhook
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Create a new webhook subscription.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {module:model/WebHook} webHook 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHook}
      */
@@ -251,7 +251,7 @@ export default class WebhookApi {
 
     /**
      * Update a webhook
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Update an existing webhook subscription.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {module:model/WebHook} webHook 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHook} and HTTP response
      */
@@ -284,7 +284,7 @@ export default class WebhookApi {
 
     /**
      * Update a webhook
-     * Webhooks are used to notify external services about write events that occur in the API. You can subscribe to specific events and receive a notification when they occur.
+     * Update an existing webhook subscription.  **Webhooks** allow you to receive notifications to an external service when specific events occur, such as invoice creation or status updates. You can subscribe to specific events and receive a notification when they occur.  You can also manage webhooks via the [Dashboard](https://dashboard.invoicetronic.com).  For more information, see the **[Webhooks documentation page](https://invoicetronic.com/en/docs/webhooks/)**.
      * @param {module:model/WebHook} webHook 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHook}
      */

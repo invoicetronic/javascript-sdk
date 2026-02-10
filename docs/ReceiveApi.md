@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 List incoming invoices
 
-Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, and document number. Returns invoice metadata; set &#x60;include_payload&#x60; to true to include the full invoice content. Invoices are marked as read (&#x60;is_read&#x60; &#x3D; true) only when &#x60;include_payload&#x60; is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
 
 ### Example
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 Delete an incoming invoice by id
 
-Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+Permanently delete a receive invoice by its internal id. This action cannot be undone.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
 
 ### Example
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 Get an incoming invoice by id
 
-Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+Retrieve an incoming invoice by its internal id. The &#x60;id&#x60; is unique and assigned by the system when the invoice is received. Returns invoice metadata; set &#x60;include_payload&#x60; to true to include the full invoice content. The invoice is marked as read (&#x60;is_read&#x60; &#x3D; true) only when &#x60;include_payload&#x60; is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
 
 ### Example
 

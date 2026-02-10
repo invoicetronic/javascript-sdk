@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 List companies
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+Retrieve a paginated list of companies.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
 
 ### Example
 
@@ -69,11 +69,11 @@ Name | Type | Description  | Notes
 
 ## companyIdDelete
 
-> Company companyIdDelete(id)
+> Company companyIdDelete(id, opts)
 
 Delete a company
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+Delete a company by its internal id.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.  **Warning:** Deleting a company will permanently remove all associated data, including sent invoices, received invoices, invoice updates from SDI, logs, and webhooks.  If the company has any linked invoices, you must explicitly confirm deletion by adding &#x60;?force&#x3D;true&#x60; to the request. Without this parameter, the API will return &#x60;409 Conflict&#x60; with details about the linked data.
 
 ### Example
 
@@ -87,7 +87,10 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let id = 56; // Number | Item id
-apiInstance.companyIdDelete(id).then((data) => {
+let opts = {
+  'force': false // Boolean | Force delete including all related data.
+};
+apiInstance.companyIdDelete(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -101,6 +104,7 @@ apiInstance.companyIdDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Item id | 
+ **force** | **Boolean**| Force delete including all related data. | [optional] [default to false]
 
 ### Return type
 
@@ -122,7 +126,7 @@ Name | Type | Description  | Notes
 
 Get a company by id
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+Retrieve a company by its internal id.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
 
 ### Example
 
@@ -171,7 +175,7 @@ Name | Type | Description  | Notes
 
 Add a company
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+Add a new company.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
 
 ### Example
 
@@ -220,7 +224,7 @@ Name | Type | Description  | Notes
 
 Update a company
 
-Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+Update an existing company.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
 
 ### Example
 

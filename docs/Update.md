@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **companyId** | **Number** | Company id. | [optional] 
 **sendId** | **Number** | Send id. This is the id of the sent invoice to which this update refers to. | [optional] 
 **lastUpdate** | **Date** | Last update from SDI. | [optional] 
-**state** | **String** | State of the document. Theses are the possible values, as per the SDI documentation: | [optional] 
+**state** | **String** | State of the document. These are the possible values, as per the SDI documentation: | [optional] 
 **description** | **String** | Description for the state. | [optional] 
 **messageId** | **String** | SDI message id. | [optional] 
 **errors** | [**[Error]**](Error.md) | SDI errors, if any. | [optional] 
-**isRead** | **Boolean** | Wether the item has been read at least once. | [optional] 
+**isRead** | **Boolean** | Whether the item has been read at least once. | [optional] 
 **send** | [**SendReduced**](SendReduced.md) |  | [optional] 
 
 

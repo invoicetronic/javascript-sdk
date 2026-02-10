@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebHook model module.
  * @module model/WebHook
- * @version 1.1.6
+ * @version 1.2
  */
 class WebHook {
     /**
@@ -157,7 +157,7 @@ WebHook.prototype['company_id'] = undefined;
 WebHook.prototype['url'] = undefined;
 
 /**
- * Wether the webhook is enabled. On creation, this is set to `true`.
+ * Whether the webhook is enabled. On creation, this is set to `true`.
  * @member {Boolean} enabled
  */
 WebHook.prototype['enabled'] = undefined;
@@ -175,7 +175,7 @@ WebHook.prototype['secret'] = undefined;
 WebHook.prototype['description'] = undefined;
 
 /**
- * List of events to that trigger the webhook.  See Invoicetronic.SupportedEvents.Available for a list of valid event names.
+ * List of events that trigger the webhook.  See Invoicetronic.SupportedEvents.Available for a list of valid event names.
  * @member {Array.<String>} events
  */
 WebHook.prototype['events'] = undefined;

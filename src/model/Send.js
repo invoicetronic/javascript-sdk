@@ -18,13 +18,13 @@ import DocumentData from './DocumentData';
 /**
  * The Send model module.
  * @module model/Send
- * @version 1.1.6
+ * @version 1.2
  */
 class Send {
     /**
      * Constructs a new <code>Send</code>.
      * @alias module:model/Send
-     * @param payload {String} Xml payloaad. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be cyphered at rest.
+     * @param payload {String} Xml payload. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be encrypted at rest.
      */
     constructor(payload) { 
         
@@ -212,7 +212,7 @@ Send.prototype['committente'] = undefined;
 Send.prototype['prestatore'] = undefined;
 
 /**
- * SDI identifier. This is set by the SDI and is guaranted to be unique within the SDI system.
+ * SDI identifier. This is set by the SDI and is guaranteed to be unique within the SDI system.
  * @member {String} identifier
  */
 Send.prototype['identifier'] = undefined;
@@ -230,7 +230,7 @@ Send.prototype['file_name'] = undefined;
 Send.prototype['format'] = undefined;
 
 /**
- * Xml payloaad. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be cyphered at rest.
+ * Xml payload. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be encrypted at rest.
  * @member {String} payload
  */
 Send.prototype['payload'] = undefined;

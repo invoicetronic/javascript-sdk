@@ -17,7 +17,7 @@ import DettaglioPagamento from './DettaglioPagamento';
 /**
  * The DatiPagamento model module.
  * @module model/DatiPagamento
- * @version 1.1.6
+ * @version 1.2
  */
 class DatiPagamento {
     /**

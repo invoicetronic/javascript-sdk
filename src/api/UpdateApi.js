@@ -19,7 +19,7 @@ import Update from '../model/Update';
 /**
 * Update service.
 * @module api/UpdateApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class UpdateApi {
 
@@ -38,7 +38,7 @@ export default class UpdateApi {
 
     /**
      * List updates
-     * Updates are notifications sent by the SDI about the status of invoices you sent.
+     * Retrieve a paginated list of updates. Results can be filtered by various criteria such as company, send item, SDI state, and date ranges.  **Updates** are status notifications from Italy's SDI (Sistema di Interscambio) about invoices you sent. Multiple updates can exist for the same send item as the invoice progresses through the SDI workflow.  The `state` field is the most important property and can have the following values:  | Value | Name | Description | |-------|------|-------------| | 2 | `Inviato` | Sent to the SDI. | | 5 | `Consegnato` | Delivered to the recipient. | | 6 | `NonConsegnato` | Not delivered to the recipient. Only relevant for public administration entities. | | 7 | `Scartato` | Rejected by the SDI. | | 8 | `AccettatoDalDestinatario` | Accepted by the recipient. Only relevant for public administration entities. | | 9 | `RifiutatoDalDestinatario` | Rejected by the recipient. Only relevant for public administration entities. | | 10 | `ImpossibilitaDiRecapito` | Available on the recipient's tax drawer, but it was not possible to deliver it to the recipient's reception system. | | 11 | `DecorrenzaTermini` | A public administration entity has not responded for more than 15 days. The document is considered delivered. | | 12 | `AttestazioneTrasmissioneFattura` | A public administration entity has received the document, but has not yet processed it. |  **Important:** Always monitor the state of your sent invoices. A state of `Inviato` only means the invoice has been submitted to SDI, not that it has been delivered. A state like `Scartato` indicates that the invoice was **not** successfully delivered and may require corrective action, such as fixing validation errors and resubmitting. In that case, `description` contains the reason for the rejection.
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
@@ -94,7 +94,7 @@ export default class UpdateApi {
 
     /**
      * List updates
-     * Updates are notifications sent by the SDI about the status of invoices you sent.
+     * Retrieve a paginated list of updates. Results can be filtered by various criteria such as company, send item, SDI state, and date ranges.  **Updates** are status notifications from Italy's SDI (Sistema di Interscambio) about invoices you sent. Multiple updates can exist for the same send item as the invoice progresses through the SDI workflow.  The `state` field is the most important property and can have the following values:  | Value | Name | Description | |-------|------|-------------| | 2 | `Inviato` | Sent to the SDI. | | 5 | `Consegnato` | Delivered to the recipient. | | 6 | `NonConsegnato` | Not delivered to the recipient. Only relevant for public administration entities. | | 7 | `Scartato` | Rejected by the SDI. | | 8 | `AccettatoDalDestinatario` | Accepted by the recipient. Only relevant for public administration entities. | | 9 | `RifiutatoDalDestinatario` | Rejected by the recipient. Only relevant for public administration entities. | | 10 | `ImpossibilitaDiRecapito` | Available on the recipient's tax drawer, but it was not possible to deliver it to the recipient's reception system. | | 11 | `DecorrenzaTermini` | A public administration entity has not responded for more than 15 days. The document is considered delivered. | | 12 | `AttestazioneTrasmissioneFattura` | A public administration entity has received the document, but has not yet processed it. |  **Important:** Always monitor the state of your sent invoices. A state of `Inviato` only means the invoice has been submitted to SDI, not that it has been delivered. A state like `Scartato` indicates that the invoice was **not** successfully delivered and may require corrective action, such as fixing validation errors and resubmitting. In that case, `description` contains the reason for the rejection.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
@@ -121,7 +121,7 @@ export default class UpdateApi {
 
     /**
      * Get an update by id
-     * Updates are notifications sent by the SDI about the status of invoices you sent.
+     * Retrieve an update by its internal id.  **Updates** are status notifications from Italy's SDI (Sistema di Interscambio) about invoices you sent. Multiple updates can exist for the same send item as the invoice progresses through the SDI workflow.  The `state` field is the most important property and can have the following values:  | Value | Name | Description | |-------|------|-------------| | 2 | `Inviato` | Sent to the SDI. | | 5 | `Consegnato` | Delivered to the recipient. | | 6 | `NonConsegnato` | Not delivered to the recipient. Only relevant for public administration entities. | | 7 | `Scartato` | Rejected by the SDI. | | 8 | `AccettatoDalDestinatario` | Accepted by the recipient. Only relevant for public administration entities. | | 9 | `RifiutatoDalDestinatario` | Rejected by the recipient. Only relevant for public administration entities. | | 10 | `ImpossibilitaDiRecapito` | Available on the recipient's tax drawer, but it was not possible to deliver it to the recipient's reception system. | | 11 | `DecorrenzaTermini` | A public administration entity has not responded for more than 15 days. The document is considered delivered. | | 12 | `AttestazioneTrasmissioneFattura` | A public administration entity has received the document, but has not yet processed it. |  **Important:** Always monitor the state of your sent invoices. A state of `Inviato` only means the invoice has been submitted to SDI, not that it has been delivered. A state like `Scartato` indicates that the invoice was **not** successfully delivered and may require corrective action, such as fixing validation errors and resubmitting. In that case, `description` contains the reason for the rejection.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Update} and HTTP response
      */
@@ -155,7 +155,7 @@ export default class UpdateApi {
 
     /**
      * Get an update by id
-     * Updates are notifications sent by the SDI about the status of invoices you sent.
+     * Retrieve an update by its internal id.  **Updates** are status notifications from Italy's SDI (Sistema di Interscambio) about invoices you sent. Multiple updates can exist for the same send item as the invoice progresses through the SDI workflow.  The `state` field is the most important property and can have the following values:  | Value | Name | Description | |-------|------|-------------| | 2 | `Inviato` | Sent to the SDI. | | 5 | `Consegnato` | Delivered to the recipient. | | 6 | `NonConsegnato` | Not delivered to the recipient. Only relevant for public administration entities. | | 7 | `Scartato` | Rejected by the SDI. | | 8 | `AccettatoDalDestinatario` | Accepted by the recipient. Only relevant for public administration entities. | | 9 | `RifiutatoDalDestinatario` | Rejected by the recipient. Only relevant for public administration entities. | | 10 | `ImpossibilitaDiRecapito` | Available on the recipient's tax drawer, but it was not possible to deliver it to the recipient's reception system. | | 11 | `DecorrenzaTermini` | A public administration entity has not responded for more than 15 days. The document is considered delivered. | | 12 | `AttestazioneTrasmissioneFattura` | A public administration entity has received the document, but has not yet processed it. |  **Important:** Always monitor the state of your sent invoices. A state of `Inviato` only means the invoice has been submitted to SDI, not that it has been delivered. A state like `Scartato` indicates that the invoice was **not** successfully delivered and may require corrective action, such as fixing validation errors and resubmitting. In that case, `description` contains the reason for the rejection.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Update}
      */

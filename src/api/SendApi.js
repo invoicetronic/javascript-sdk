@@ -21,7 +21,7 @@ import Send from '../model/Send';
 /**
 * Send service.
 * @module api/SendApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class SendApi {
 
@@ -40,7 +40,7 @@ export default class SendApi {
 
     /**
      * Add an invoice by file
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice by uploading a file. Supported formats are XML (FatturaPA) and P7M (signed). The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {File} file 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
@@ -80,7 +80,7 @@ export default class SendApi {
 
     /**
      * Add an invoice by file
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice by uploading a file. Supported formats are XML (FatturaPA) and P7M (signed). The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {File} file 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
@@ -97,7 +97,7 @@ export default class SendApi {
 
     /**
      * List invoices
-     * test **markdown**.
+     * Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
@@ -159,7 +159,7 @@ export default class SendApi {
 
     /**
      * List invoices
-     * test **markdown**.
+     * Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
@@ -189,7 +189,7 @@ export default class SendApi {
 
     /**
      * Get a invoice by id
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Retrieve a send invoice by its internal id. The `id` is unique and assigned by the system when the invoice is created. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
      * @param {Boolean} [includePayload = false)] Include payload in the response. Defaults to false.
@@ -227,7 +227,7 @@ export default class SendApi {
 
     /**
      * Get a invoice by id
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Retrieve a send invoice by its internal id. The `id` is unique and assigned by the system when the invoice is created. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false. (default to false)
@@ -243,7 +243,7 @@ export default class SendApi {
 
     /**
      * Get a invoice by identifier
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Retrieve a send invoice by its SDI identifier. The `identifier` is assigned by the SDI and becomes available after the invoice has been accepted. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {String} identifier 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [includePayload = false)] Include payload in the response. Defaults to false.
@@ -281,7 +281,7 @@ export default class SendApi {
 
     /**
      * Get a invoice by identifier
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Retrieve a send invoice by its SDI identifier. The `identifier` is assigned by the SDI and becomes available after the invoice has been accepted. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {String} identifier 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false. (default to false)
@@ -297,7 +297,7 @@ export default class SendApi {
 
     /**
      * Add an invoice by json
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice using a FatturaPA JSON representation. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
@@ -336,7 +336,7 @@ export default class SendApi {
 
     /**
      * Add an invoice by json
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice using a FatturaPA JSON representation. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
@@ -353,7 +353,7 @@ export default class SendApi {
 
     /**
      * Add an invoice
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice using a structured Send object. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {module:model/Send} send 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
@@ -392,7 +392,7 @@ export default class SendApi {
 
     /**
      * Add an invoice
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice using a structured Send object. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {module:model/Send} send 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
@@ -409,7 +409,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice file
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate an invoice file without sending it to SDI. Supported formats are XML (FatturaPA) and P7M (signed). Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {File} file 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -443,7 +443,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice file
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate an invoice file without sending it to SDI. Supported formats are XML (FatturaPA) and P7M (signed). Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {File} file 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -457,7 +457,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice by json
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate a JSON invoice without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -490,7 +490,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice by json
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate a JSON invoice without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -504,7 +504,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate an invoice without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {module:model/Send} send 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -537,7 +537,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate an invoice without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {module:model/Send} send 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -551,7 +551,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice by xml
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate an XML invoice document without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -584,7 +584,7 @@ export default class SendApi {
 
     /**
      * Validate an invoice by xml
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Validate an XML invoice document without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -598,7 +598,7 @@ export default class SendApi {
 
     /**
      * Add an invoice by xml
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice using a raw XML document in FatturaPA format. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
@@ -637,7 +637,7 @@ export default class SendApi {
 
     /**
      * Add an invoice by xml
-     * Send invoices are the invoices that are sent to the SDI. They are preserved for two years in the live environment and 15 days in the Sandbox.
+     * Add a new invoice using a raw XML document in FatturaPA format. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)

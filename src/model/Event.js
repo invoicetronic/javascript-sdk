@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Event model module.
  * @module model/Event
- * @version 1.1.6
+ * @version 1.2
  */
 class Event {
     /**
@@ -223,7 +223,7 @@ Event.prototype['error'] = undefined;
 Event.prototype['resource_id'] = undefined;
 
 /**
- * Wether the request was successful.
+ * Whether the request was successful.
  * @member {Boolean} success
  */
 Event.prototype['success'] = undefined;
@@ -235,7 +235,7 @@ Event.prototype['success'] = undefined;
 Event.prototype['query'] = undefined;
 
 /**
- * Response payload. It is guaranteed to be cyphered at rest.
+ * Response payload. It is guaranteed to be encrypted at rest.
  * @member {String} response_body
  */
 Event.prototype['response_body'] = undefined;

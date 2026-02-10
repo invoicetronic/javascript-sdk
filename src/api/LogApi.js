@@ -19,7 +19,7 @@ import ProblemHttpResult from '../model/ProblemHttpResult';
 /**
 * Log service.
 * @module api/LogApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class LogApi {
 
@@ -38,7 +38,7 @@ export default class LogApi {
 
     /**
      * List events
-     * Every API operation is logged and can be retrieved here. Log records are preserved for 15 days.
+     * Retrieve a paginated list of log events. Results can be filtered by various criteria such as endpoint, method, status code, and date ranges.  **Logs** record every API request. They are preserved for 15 days.  You can also view logs in the Events section of the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [endpoint] 
@@ -96,7 +96,7 @@ export default class LogApi {
 
     /**
      * List events
-     * Every API operation is logged and can be retrieved here. Log records are preserved for 15 days.
+     * Retrieve a paginated list of log events. Results can be filtered by various criteria such as endpoint, method, status code, and date ranges.  **Logs** record every API request. They are preserved for 15 days.  You can also view logs in the Events section of the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.endpoint 
@@ -124,7 +124,7 @@ export default class LogApi {
 
     /**
      * Get an event by id
-     * Every API operation is logged and can be retrieved here. Log records are preserved for 15 days.
+     * Retrieve a log event by its internal id.  **Logs** record every API request. They are preserved for 15 days.  You can also view logs in the Events section of the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Event} and HTTP response
      */
@@ -158,7 +158,7 @@ export default class LogApi {
 
     /**
      * Get an event by id
-     * Every API operation is logged and can be retrieved here. Log records are preserved for 15 days.
+     * Retrieve a log event by its internal id.  **Logs** record every API request. They are preserved for 15 days.  You can also view logs in the Events section of the [Dashboard](https://dashboard.invoicetronic.com).
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Event}
      */

@@ -20,7 +20,7 @@ import ProblemHttpResult from '../model/ProblemHttpResult';
 /**
 * Company service.
 * @module api/CompanyApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class CompanyApi {
 
@@ -39,7 +39,7 @@ export default class CompanyApi {
 
     /**
      * List companies
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Retrieve a paginated list of companies.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {Object} opts Optional parameters
      * @param {Number} [page = 1)] Page number.
      * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
@@ -75,7 +75,7 @@ export default class CompanyApi {
 
     /**
      * List companies
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Retrieve a paginated list of companies.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Page number. (default to 1)
      * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
@@ -92,11 +92,14 @@ export default class CompanyApi {
 
     /**
      * Delete a company
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Delete a company by its internal id.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.  **Warning:** Deleting a company will permanently remove all associated data, including sent invoices, received invoices, invoice updates from SDI, logs, and webhooks.  If the company has any linked invoices, you must explicitly confirm deletion by adding `?force=true` to the request. Without this parameter, the API will return `409 Conflict` with details about the linked data.
      * @param {Number} id Item id
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} [force = false)] Force delete including all related data.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
-    companyIdDeleteWithHttpInfo(id) {
+    companyIdDeleteWithHttpInfo(id, opts) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -107,6 +110,7 @@ export default class CompanyApi {
         'id': id
       };
       let queryParams = {
+        'force': opts['force']
       };
       let headerParams = {
       };
@@ -126,12 +130,14 @@ export default class CompanyApi {
 
     /**
      * Delete a company
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Delete a company by its internal id.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.  **Warning:** Deleting a company will permanently remove all associated data, including sent invoices, received invoices, invoice updates from SDI, logs, and webhooks.  If the company has any linked invoices, you must explicitly confirm deletion by adding `?force=true` to the request. Without this parameter, the API will return `409 Conflict` with details about the linked data.
      * @param {Number} id Item id
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.force Force delete including all related data. (default to false)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
-    companyIdDelete(id) {
-      return this.companyIdDeleteWithHttpInfo(id)
+    companyIdDelete(id, opts) {
+      return this.companyIdDeleteWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -140,7 +146,7 @@ export default class CompanyApi {
 
     /**
      * Get a company by id
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Retrieve a company by its internal id.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
@@ -174,7 +180,7 @@ export default class CompanyApi {
 
     /**
      * Get a company by id
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Retrieve a company by its internal id.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
@@ -188,7 +194,7 @@ export default class CompanyApi {
 
     /**
      * Add a company
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Add a new company.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
@@ -221,7 +227,7 @@ export default class CompanyApi {
 
     /**
      * Add a company
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Add a new company.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
@@ -235,7 +241,7 @@ export default class CompanyApi {
 
     /**
      * Update a company
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Update an existing company.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
@@ -268,7 +274,7 @@ export default class CompanyApi {
 
     /**
      * Update a company
-     * Companies are the entities that send and receive invoices. As you send invoices, companies are added as needed (company details are extrapolated). **You can only receive invoices for existing companies, so ensure they exist**.
+     * Update an existing company.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {module:model/Company} company 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DettaglioPagamento model module.
  * @module model/DettaglioPagamento
- * @version 1.1.6
+ * @version 1.2
  */
 class DettaglioPagamento {
     /**

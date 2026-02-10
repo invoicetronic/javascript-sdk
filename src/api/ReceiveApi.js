@@ -19,7 +19,7 @@ import Receive from '../model/Receive';
 /**
 * Receive service.
 * @module api/ReceiveApi
-* @version 1.1.6
+* @version 1.2
 */
 export default class ReceiveApi {
 
@@ -38,7 +38,7 @@ export default class ReceiveApi {
 
     /**
      * List incoming invoices
-     * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+     * Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content. Invoices are marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
@@ -102,7 +102,7 @@ export default class ReceiveApi {
 
     /**
      * List incoming invoices
-     * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+     * Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content. Invoices are marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
@@ -133,7 +133,7 @@ export default class ReceiveApi {
 
     /**
      * Delete an incoming invoice by id
-     * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+     * Permanently delete a receive invoice by its internal id. This action cannot be undone.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receive} and HTTP response
      */
@@ -167,7 +167,7 @@ export default class ReceiveApi {
 
     /**
      * Delete an incoming invoice by id
-     * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+     * Permanently delete a receive invoice by its internal id. This action cannot be undone.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Number} id Item id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receive}
      */
@@ -181,7 +181,7 @@ export default class ReceiveApi {
 
     /**
      * Get an incoming invoice by id
-     * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+     * Retrieve an incoming invoice by its internal id. The `id` is unique and assigned by the system when the invoice is received. Returns invoice metadata; set `include_payload` to true to include the full invoice content. The invoice is marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
      * @param {Boolean} [includePayload = false)] Include payload in the response. Defaults to false.
@@ -219,7 +219,7 @@ export default class ReceiveApi {
 
     /**
      * Get an incoming invoice by id
-     * Receive invoices are the invoices that are received from other companies. They are preserved for two years in the live environment and 24 hours in the Sandbox.
+     * Retrieve an incoming invoice by its internal id. The `id` is unique and assigned by the system when the invoice is received. Returns invoice metadata; set `include_payload` to true to include the full invoice content. The invoice is marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Number} id Item id
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.includePayload Include payload in the response. Defaults to false. (default to false)

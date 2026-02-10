@@ -18,7 +18,7 @@ import SendReduced from './SendReduced';
 /**
  * The Update model module.
  * @module model/Update
- * @version 1.1.6
+ * @version 1.2
  */
 class Update {
     /**
@@ -176,7 +176,7 @@ Update.prototype['send_id'] = undefined;
 Update.prototype['last_update'] = undefined;
 
 /**
- * State of the document. Theses are the possible values, as per the SDI documentation:
+ * State of the document. These are the possible values, as per the SDI documentation:
  * @member {module:model/Update.StateEnum} state
  */
 Update.prototype['state'] = undefined;
@@ -200,7 +200,7 @@ Update.prototype['message_id'] = undefined;
 Update.prototype['errors'] = undefined;
 
 /**
- * Wether the item has been read at least once.
+ * Whether the item has been read at least once.
  * @member {Boolean} is_read
  */
 Update.prototype['is_read'] = undefined;

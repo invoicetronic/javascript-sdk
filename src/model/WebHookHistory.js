@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebHookHistory model module.
  * @module model/WebHookHistory
- * @version 1.1.6
+ * @version 1.2
  */
 class WebHookHistory {
     /**
@@ -147,7 +147,7 @@ WebHookHistory.prototype['status_code'] = undefined;
 WebHookHistory.prototype['date_time'] = undefined;
 
 /**
- * Wether the request was successful.
+ * Whether the request was successful.
  * @member {Boolean} success
  */
 WebHookHistory.prototype['success'] = undefined;
