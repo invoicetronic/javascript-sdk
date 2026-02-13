@@ -21,7 +21,7 @@ import DatiVeicoli from './DatiVeicoli';
 /**
  * The FatturaElettronicaBody model module.
  * @module model/FatturaElettronicaBody
- * @version 1.2
+ * @version 1.3
  */
 class FatturaElettronicaBody {
     /**

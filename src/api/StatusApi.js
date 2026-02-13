@@ -18,7 +18,7 @@ import Status from '../model/Status';
 /**
 * Status service.
 * @module api/StatusApi
-* @version 1.2
+* @version 1.3
 */
 export default class StatusApi {
 

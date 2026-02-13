@@ -74,6 +74,7 @@ import Update from './model/Update';
 import WebHook from './model/WebHook';
 import WebHookHistory from './model/WebHookHistory';
 import CompanyApi from './api/CompanyApi';
+import ExportApi from './api/ExportApi';
 import LogApi from './api/LogApi';
 import ReceiveApi from './api/ReceiveApi';
 import SendApi from './api/SendApi';
@@ -111,7 +112,7 @@ import WebhookApi from './api/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.2
+* @version 1.3
 */
 export {
     /**
@@ -485,6 +486,12 @@ export {
     * @property {module:api/CompanyApi}
     */
     CompanyApi,
+
+    /**
+    * The ExportApi service constructor.
+    * @property {module:api/ExportApi}
+    */
+    ExportApi,
 
     /**
     * The LogApi service constructor.

@@ -40,6 +40,7 @@ docs/DettaglioPagamento.md
 docs/DocumentData.md
 docs/Error.md
 docs/Event.md
+docs/ExportApi.md
 docs/FatturaElettronicaBody.md
 docs/FatturaElettronicaHeader.md
 docs/FatturaOrdinaria.md
@@ -75,6 +76,7 @@ mocha.opts
 package.json
 src/ApiClient.js
 src/api/CompanyApi.js
+src/api/ExportApi.js
 src/api/LogApi.js
 src/api/ReceiveApi.js
 src/api/SendApi.js
@@ -143,6 +145,7 @@ src/model/Update.js
 src/model/WebHook.js
 src/model/WebHookHistory.js
 test/api/CompanyApi.spec.js
+test/api/ExportApi.spec.js
 test/api/LogApi.spec.js
 test/api/ReceiveApi.spec.js
 test/api/SendApi.spec.js

@@ -18,7 +18,7 @@ import IdFiscaleIVA from './IdFiscaleIVA';
 /**
  * The DatiAnagrafici model module.
  * @module model/DatiAnagrafici
- * @version 1.2
+ * @version 1.3
  */
 class DatiAnagrafici {
     /**

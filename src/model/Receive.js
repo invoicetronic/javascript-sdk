@@ -17,7 +17,7 @@ import DocumentData from './DocumentData';
 /**
  * The Receive model module.
  * @module model/Receive
- * @version 1.2
+ * @version 1.3
  */
 class Receive {
     /**

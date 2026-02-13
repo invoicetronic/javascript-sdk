@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CodiceArticolo model module.
  * @module model/CodiceArticolo
- * @version 1.2
+ * @version 1.3
  */
 class CodiceArticolo {
     /**
