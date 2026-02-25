@@ -14,9 +14,14 @@
 
 import ApiClient from './ApiClient';
 import Company from './model/Company';
+import DocumentData from './model/DocumentData';
+import Error from './model/Error';
 import Event from './model/Event';
+import ProblemDetails from './model/ProblemDetails';
+import ProblemHttpResult from './model/ProblemHttpResult';
 import Receive from './model/Receive';
 import Send from './model/Send';
+import SendReduced from './model/SendReduced';
 import Status from './model/Status';
 import Update from './model/Update';
 import WebHook from './model/WebHook';
@@ -76,10 +81,34 @@ export {
     Company,
 
     /**
+     * The DocumentData model constructor.
+     * @property {module:model/DocumentData}
+     */
+    DocumentData,
+
+    /**
+     * The Error model constructor.
+     * @property {module:model/Error}
+     */
+    Error,
+
+    /**
      * The Event model constructor.
      * @property {module:model/Event}
      */
     Event,
+
+    /**
+     * The ProblemDetails model constructor.
+     * @property {module:model/ProblemDetails}
+     */
+    ProblemDetails,
+
+    /**
+     * The ProblemHttpResult model constructor.
+     * @property {module:model/ProblemHttpResult}
+     */
+    ProblemHttpResult,
 
     /**
      * The Receive model constructor.
@@ -92,6 +121,12 @@ export {
      * @property {module:model/Send}
      */
     Send,
+
+    /**
+     * The SendReduced model constructor.
+     * @property {module:model/SendReduced}
+     */
+    SendReduced,
 
     /**
      * The Status model constructor.

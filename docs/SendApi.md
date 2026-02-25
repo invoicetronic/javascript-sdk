@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## sendJsonPost
 
-> Send sendJsonPost(fatturaOrdinaria, opts)
+> Send sendJsonPost(body, opts)
 
 Add an invoice by json
 
@@ -329,12 +329,12 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
-let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let body = {key: null}; // Object | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
-apiInstance.sendJsonPost(fatturaOrdinaria, opts).then((data) => {
+apiInstance.sendJsonPost(body, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -347,7 +347,7 @@ apiInstance.sendJsonPost(fatturaOrdinaria, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+ **body** | **Object**|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
  **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 
@@ -471,7 +471,7 @@ null (empty response body)
 
 ## sendValidateJsonPost
 
-> sendValidateJsonPost(fatturaOrdinaria)
+> sendValidateJsonPost(body)
 
 Validate an invoice by json
 
@@ -488,8 +488,8 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
-let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
-apiInstance.sendValidateJsonPost(fatturaOrdinaria).then(() => {
+let body = {key: null}; // Object | 
+apiInstance.sendValidateJsonPost(body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -502,7 +502,7 @@ apiInstance.sendValidateJsonPost(fatturaOrdinaria).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+ **body** | **Object**|  | 
 
 ### Return type
 
@@ -569,7 +569,7 @@ null (empty response body)
 
 ## sendValidateXmlPost
 
-> sendValidateXmlPost(fatturaOrdinaria)
+> sendValidateXmlPost(body)
 
 Validate an invoice by xml
 
@@ -586,8 +586,8 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
-let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
-apiInstance.sendValidateXmlPost(fatturaOrdinaria).then(() => {
+let body = {key: null}; // Object | 
+apiInstance.sendValidateXmlPost(body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -600,7 +600,7 @@ apiInstance.sendValidateXmlPost(fatturaOrdinaria).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+ **body** | **Object**|  | 
 
 ### Return type
 
@@ -618,7 +618,7 @@ null (empty response body)
 
 ## sendXmlPost
 
-> Send sendXmlPost(fatturaOrdinaria, opts)
+> Send sendXmlPost(body, opts)
 
 Add an invoice by xml
 
@@ -635,12 +635,12 @@ Basic.username = 'YOUR USERNAME';
 Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
-let fatturaOrdinaria = new invoicetronicSdk.FatturaOrdinaria(); // FatturaOrdinaria | 
+let body = {key: null}; // Object | 
 let opts = {
   'validate': false, // Boolean | Validate the document first, and reject it on failure.
   'signature': "'Auto'" // String | Whether to digitally sign the document.
 };
-apiInstance.sendXmlPost(fatturaOrdinaria, opts).then((data) => {
+apiInstance.sendXmlPost(body, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -653,7 +653,7 @@ apiInstance.sendXmlPost(fatturaOrdinaria, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fatturaOrdinaria** | [**FatturaOrdinaria**](FatturaOrdinaria.md)|  | 
+ **body** | **Object**|  | 
  **validate** | **Boolean**| Validate the document first, and reject it on failure. | [optional] [default to false]
  **signature** | **String**| Whether to digitally sign the document. | [optional] [default to &#39;Auto&#39;]
 

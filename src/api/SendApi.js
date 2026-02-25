@@ -13,7 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import FatturaOrdinaria from '../model/FatturaOrdinaria';
 import ProblemDetails from '../model/ProblemDetails';
 import ProblemHttpResult from '../model/ProblemHttpResult';
 import Send from '../model/Send';
@@ -346,18 +345,18 @@ export default class SendApi {
     /**
      * Add an invoice by json
      * Add a new invoice using a FatturaPA JSON representation. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
      * @param {module:model/String} [signature = 'Auto')] Whether to digitally sign the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
-    sendJsonPostWithHttpInfo(fatturaOrdinaria, opts) {
+    sendJsonPostWithHttpInfo(body, opts) {
       opts = opts || {};
-      let postBody = fatturaOrdinaria;
-      // verify the required parameter 'fatturaOrdinaria' is set
-      if (fatturaOrdinaria === undefined || fatturaOrdinaria === null) {
-        throw new Error("Missing the required parameter 'fatturaOrdinaria' when calling sendJsonPost");
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling sendJsonPost");
       }
 
       let pathParams = {
@@ -385,14 +384,14 @@ export default class SendApi {
     /**
      * Add an invoice by json
      * Add a new invoice using a FatturaPA JSON representation. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
      * @param {module:model/String} opts.signature Whether to digitally sign the document. (default to 'Auto')
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
-    sendJsonPost(fatturaOrdinaria, opts) {
-      return this.sendJsonPostWithHttpInfo(fatturaOrdinaria, opts)
+    sendJsonPost(body, opts) {
+      return this.sendJsonPostWithHttpInfo(body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -506,14 +505,14 @@ export default class SendApi {
     /**
      * Validate an invoice by json
      * Validate a JSON invoice without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    sendValidateJsonPostWithHttpInfo(fatturaOrdinaria) {
-      let postBody = fatturaOrdinaria;
-      // verify the required parameter 'fatturaOrdinaria' is set
-      if (fatturaOrdinaria === undefined || fatturaOrdinaria === null) {
-        throw new Error("Missing the required parameter 'fatturaOrdinaria' when calling sendValidateJsonPost");
+    sendValidateJsonPostWithHttpInfo(body) {
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling sendValidateJsonPost");
       }
 
       let pathParams = {
@@ -539,11 +538,11 @@ export default class SendApi {
     /**
      * Validate an invoice by json
      * Validate a JSON invoice without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    sendValidateJsonPost(fatturaOrdinaria) {
-      return this.sendValidateJsonPostWithHttpInfo(fatturaOrdinaria)
+    sendValidateJsonPost(body) {
+      return this.sendValidateJsonPostWithHttpInfo(body)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -600,14 +599,14 @@ export default class SendApi {
     /**
      * Validate an invoice by xml
      * Validate an XML invoice document without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    sendValidateXmlPostWithHttpInfo(fatturaOrdinaria) {
-      let postBody = fatturaOrdinaria;
-      // verify the required parameter 'fatturaOrdinaria' is set
-      if (fatturaOrdinaria === undefined || fatturaOrdinaria === null) {
-        throw new Error("Missing the required parameter 'fatturaOrdinaria' when calling sendValidateXmlPost");
+    sendValidateXmlPostWithHttpInfo(body) {
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling sendValidateXmlPost");
       }
 
       let pathParams = {
@@ -633,11 +632,11 @@ export default class SendApi {
     /**
      * Validate an invoice by xml
      * Validate an XML invoice document without sending it to SDI. Use this to check for errors before actual submission. Returns validation results with any errors found.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    sendValidateXmlPost(fatturaOrdinaria) {
-      return this.sendValidateXmlPostWithHttpInfo(fatturaOrdinaria)
+    sendValidateXmlPost(body) {
+      return this.sendValidateXmlPostWithHttpInfo(body)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -647,18 +646,18 @@ export default class SendApi {
     /**
      * Add an invoice by xml
      * Add a new invoice using a raw XML document in FatturaPA format. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @param {Object} opts Optional parameters
      * @param {Boolean} [validate = false)] Validate the document first, and reject it on failure.
      * @param {module:model/String} [signature = 'Auto')] Whether to digitally sign the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Send} and HTTP response
      */
-    sendXmlPostWithHttpInfo(fatturaOrdinaria, opts) {
+    sendXmlPostWithHttpInfo(body, opts) {
       opts = opts || {};
-      let postBody = fatturaOrdinaria;
-      // verify the required parameter 'fatturaOrdinaria' is set
-      if (fatturaOrdinaria === undefined || fatturaOrdinaria === null) {
-        throw new Error("Missing the required parameter 'fatturaOrdinaria' when calling sendXmlPost");
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling sendXmlPost");
       }
 
       let pathParams = {
@@ -686,14 +685,14 @@ export default class SendApi {
     /**
      * Add an invoice by xml
      * Add a new invoice using a raw XML document in FatturaPA format. The invoice will be signed (if requested), validated (if requested), and queued for delivery to SDI. Status updates from SDI will be available in the `update` endpoint.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).  You can also upload invoices via the [Dashboard](https://dashboard.invoicetronic.com).
-     * @param {module:model/FatturaOrdinaria} fatturaOrdinaria 
+     * @param {Object.<String, Object>} body 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.validate Validate the document first, and reject it on failure. (default to false)
      * @param {module:model/String} opts.signature Whether to digitally sign the document. (default to 'Auto')
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Send}
      */
-    sendXmlPost(fatturaOrdinaria, opts) {
-      return this.sendXmlPostWithHttpInfo(fatturaOrdinaria, opts)
+    sendXmlPost(body, opts) {
+      return this.sendXmlPostWithHttpInfo(body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
