@@ -20,7 +20,7 @@ import ProblemHttpResult from '../model/ProblemHttpResult';
 /**
 * Company service.
 * @module api/CompanyApi
-* @version 1.3
+* @version 1.4
 */
 export default class CompanyApi {
 
@@ -280,6 +280,54 @@ export default class CompanyApi {
      */
     companyPut(company) {
       return this.companyPutWithHttpInfo(company)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get a company by vat number
+     * Retrieve a company by its VAT number.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
+     * @param {String} vat 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
+     */
+    companyVatGetWithHttpInfo(vat) {
+      let postBody = null;
+      // verify the required parameter 'vat' is set
+      if (vat === undefined || vat === null) {
+        throw new Error("Missing the required parameter 'vat' when calling companyVatGet");
+      }
+
+      let pathParams = {
+        'vat': vat
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Company;
+      return this.apiClient.callApi(
+        '/company/{vat}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get a company by vat number
+     * Retrieve a company by its VAT number.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
+     * @param {String} vat 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
+     */
+    companyVatGet(vat) {
+      return this.companyVatGetWithHttpInfo(vat)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

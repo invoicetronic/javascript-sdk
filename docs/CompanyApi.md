@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**companyIdGet**](CompanyApi.md#companyIdGet) | **GET** /company/{id} | Get a company by id
 [**companyPost**](CompanyApi.md#companyPost) | **POST** /company | Add a company
 [**companyPut**](CompanyApi.md#companyPut) | **PUT** /company | Update a company
+[**companyVatGet**](CompanyApi.md#companyVatGet) | **GET** /company/{vat} | Get a company by vat number
 
 
 
@@ -264,5 +265,54 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## companyVatGet
+
+> Company companyVatGet(vat)
+
+Get a company by vat number
+
+Retrieve a company by its VAT number.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
+
+### Example
+
+```javascript
+import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoicetronicSdk.CompanyApi();
+let vat = "vat_example"; // String | 
+apiInstance.companyVatGet(vat).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vat** | **String**|  | 
+
+### Return type
+
+[**Company**](Company.md)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 

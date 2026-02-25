@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('receiveIdPayloadGet', function() {
+      it('should call receiveIdPayloadGet successfully', function(done) {
+        //uncomment below and update the code to test receiveIdPayloadGet
+        //instance.receiveIdPayloadGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

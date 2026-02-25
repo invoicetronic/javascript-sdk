@@ -16,11 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The Event model module.
  * @module model/Event
- * @version 1.3
+ * @version 1.4
  */
 class Event {
     /**
      * Constructs a new <code>Event</code>.
+     * An API request log entry.
      * @alias module:model/Event
      * @param method {String} Request method.
      * @param endpoint {String} API endpoint.

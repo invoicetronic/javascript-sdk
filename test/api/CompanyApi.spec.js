@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('companyVatGet', function() {
+      it('should call companyVatGet successfully', function(done) {
+        //uncomment below and update the code to test companyVatGet
+        //instance.companyVatGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

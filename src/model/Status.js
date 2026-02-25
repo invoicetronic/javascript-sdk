@@ -16,11 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The Status model module.
  * @module model/Status
- * @version 1.3
+ * @version 1.4
  */
 class Status {
     /**
      * Constructs a new <code>Status</code>.
+     * Account status with remaining operations and signatures.
      * @alias module:model/Status
      */
     constructor() { 

@@ -13,13 +13,14 @@
 
 
 import ApiClient from "../ApiClient";
+import ProblemDetails from '../model/ProblemDetails';
 import ProblemHttpResult from '../model/ProblemHttpResult';
 import Receive from '../model/Receive';
 
 /**
 * Receive service.
 * @module api/ReceiveApi
-* @version 1.3
+* @version 1.4
 */
 export default class ReceiveApi {
 
@@ -227,6 +228,54 @@ export default class ReceiveApi {
      */
     receiveIdGet(id, opts) {
       return this.receiveIdGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get a receive invoice payload by id
+     * Retrieve only the payload of a receive invoice, without the full invoice metadata. This is useful when you already have the invoice metadata and only need the XML content.  The response is a `text/plain` string, identical to the `payload` field returned by the standard GET endpoint with `include_payload=true`.  The invoice is marked as read (`is_read` = true) and counted as an operation, same as when retrieving the full invoice with `include_payload=true`. 
+     * @param {Number} id Item id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    receiveIdPayloadGetWithHttpInfo(id) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling receiveIdPayloadGet");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = [];
+      let accepts = ['application/problem+json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/receive/{id}/payload', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get a receive invoice payload by id
+     * Retrieve only the payload of a receive invoice, without the full invoice metadata. This is useful when you already have the invoice metadata and only need the XML content.  The response is a `text/plain` string, identical to the `payload` field returned by the standard GET endpoint with `include_payload=true`.  The invoice is marked as read (`is_read` = true) and counted as an operation, same as when retrieving the full invoice with `include_payload=true`. 
+     * @param {Number} id Item id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    receiveIdPayloadGet(id) {
+      return this.receiveIdPayloadGetWithHttpInfo(id)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

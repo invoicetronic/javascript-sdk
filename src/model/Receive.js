@@ -17,11 +17,12 @@ import DocumentData from './DocumentData';
 /**
  * The Receive model module.
  * @module model/Receive
- * @version 1.3
+ * @version 1.4
  */
 class Receive {
     /**
      * Constructs a new <code>Receive</code>.
+     * A received invoice.
      * @alias module:model/Receive
      * @param payload {String} Xml payload. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be encrypted at rest.
      */

@@ -21,7 +21,7 @@ import Send from '../model/Send';
 /**
 * Send service.
 * @module api/SendApi
-* @version 1.3
+* @version 1.4
 */
 export default class SendApi {
 
@@ -235,6 +235,54 @@ export default class SendApi {
      */
     sendIdGet(id, opts) {
       return this.sendIdGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get a send invoice payload by id
+     * Retrieve only the payload of a send invoice, without the full invoice metadata. This is useful when you already have the invoice metadata and only need the XML content.  The response is a `text/plain` string, identical to the `payload` field returned by the standard GET endpoint with `include_payload=true`. Depending on how the invoice was originally submitted, the payload may be Base64-encoded or plain XML. 
+     * @param {Number} id Item id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    sendIdPayloadGetWithHttpInfo(id) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendIdPayloadGet");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = [];
+      let accepts = ['application/problem+json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/send/{id}/payload', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get a send invoice payload by id
+     * Retrieve only the payload of a send invoice, without the full invoice metadata. This is useful when you already have the invoice metadata and only need the XML content.  The response is a `text/plain` string, identical to the `payload` field returned by the standard GET endpoint with `include_payload=true`. Depending on how the invoice was originally submitted, the payload may be Base64-encoded or plain XML. 
+     * @param {Number} id Item id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    sendIdPayloadGet(id) {
+      return this.sendIdPayloadGetWithHttpInfo(id)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -16,11 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The WebHook model module.
  * @module model/WebHook
- * @version 1.3
+ * @version 1.4
  */
 class WebHook {
     /**
      * Constructs a new <code>WebHook</code>.
+     * A webhook subscription.
      * @alias module:model/WebHook
      * @param url {String} The url of your application's endpoint that will receive a POST request when the webhook is fired.
      */

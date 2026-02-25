@@ -18,7 +18,7 @@ import ProblemDetails from '../model/ProblemDetails';
 /**
 * Export service.
 * @module api/ExportApi
-* @version 1.3
+* @version 1.4
 */
 export default class ExportApi {
 

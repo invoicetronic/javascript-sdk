@@ -18,11 +18,12 @@ import DocumentData from './DocumentData';
 /**
  * The Send model module.
  * @module model/Send
- * @version 1.3
+ * @version 1.4
  */
 class Send {
     /**
      * Constructs a new <code>Send</code>.
+     * A sent invoice.
      * @alias module:model/Send
      * @param payload {String} Xml payload. This is the actual xml content, as string. On send, it can be base64 encoded. If it's not, it will be encoded before sending. It is guaranteed to be encrypted at rest.
      */

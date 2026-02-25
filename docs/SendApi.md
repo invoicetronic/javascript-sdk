@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**sendFilePost**](SendApi.md#sendFilePost) | **POST** /send/file | Add an invoice by file
 [**sendGet**](SendApi.md#sendGet) | **GET** /send | List invoices
 [**sendIdGet**](SendApi.md#sendIdGet) | **GET** /send/{id} | Get a invoice by id
+[**sendIdPayloadGet**](SendApi.md#sendIdPayloadGet) | **GET** /send/{id}/payload | Get a send invoice payload by id
 [**sendIdentifierGet**](SendApi.md#sendIdentifierGet) | **GET** /send/{identifier} | Get a invoice by identifier
 [**sendJsonPost**](SendApi.md#sendJsonPost) | **POST** /send/json | Add an invoice by json
 [**sendPost**](SendApi.md#sendPost) | **POST** /send | Add an invoice
@@ -205,6 +206,55 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
+
+## sendIdPayloadGet
+
+> sendIdPayloadGet(id)
+
+Get a send invoice payload by id
+
+Retrieve only the payload of a send invoice, without the full invoice metadata. This is useful when you already have the invoice metadata and only need the XML content.  The response is a &#x60;text/plain&#x60; string, identical to the &#x60;payload&#x60; field returned by the standard GET endpoint with &#x60;include_payload&#x3D;true&#x60;. Depending on how the invoice was originally submitted, the payload may be Base64-encoded or plain XML. 
+
+### Example
+
+```javascript
+import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
+
+let apiInstance = new invoicetronicSdk.SendApi();
+let id = 56; // Number | Item id
+apiInstance.sendIdPayloadGet(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Item id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/problem+json
 
 
 ## sendIdentifierGet

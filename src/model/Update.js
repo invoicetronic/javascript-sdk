@@ -18,11 +18,12 @@ import SendReduced from './SendReduced';
 /**
  * The Update model module.
  * @module model/Update
- * @version 1.3
+ * @version 1.4
  */
 class Update {
     /**
      * Constructs a new <code>Update</code>.
+     * An SDI status update for a sent invoice.
      * @alias module:model/Update
      */
     constructor() { 
