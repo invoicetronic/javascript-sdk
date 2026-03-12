@@ -18,7 +18,7 @@ import DocumentData from './DocumentData';
 /**
  * The Send model module.
  * @module model/Send
- * @version 1.4
+ * @version 1.5
  */
 class Send {
     /**
@@ -97,6 +97,9 @@ class Send {
             if (data.hasOwnProperty('encoding')) {
                 obj['encoding'] = ApiClient.convertToType(data['encoding'], 'String');
             }
+            if (data.hasOwnProperty('nome_committente')) {
+                obj['nome_committente'] = ApiClient.convertToType(data['nome_committente'], 'String');
+            }
             if (data.hasOwnProperty('meta_data')) {
                 obj['meta_data'] = ApiClient.convertToType(data['meta_data'], {'String': 'String'});
             }
@@ -156,6 +159,10 @@ class Send {
         // ensure the json data is a string
         if (data['encoding'] && !(typeof data['encoding'] === 'string' || data['encoding'] instanceof String)) {
             throw new Error("Expected the field `encoding` to be a primitive type in the JSON string but got " + data['encoding']);
+        }
+        // ensure the json data is a string
+        if (data['nome_committente'] && !(typeof data['nome_committente'] === 'string' || data['nome_committente'] instanceof String)) {
+            throw new Error("Expected the field `nome_committente` to be a primitive type in the JSON string but got " + data['nome_committente']);
         }
         // validate the optional field `company`
         if (data['company']) { // data not null
@@ -259,6 +266,12 @@ Send.prototype['documents'] = undefined;
  * @member {module:model/Send.EncodingEnum} encoding
  */
 Send.prototype['encoding'] = undefined;
+
+/**
+ * Business name of the committente (client/buyer) extracted from the invoice XML.
+ * @member {String} nome_committente
+ */
+Send.prototype['nome_committente'] = undefined;
 
 /**
  * Optional metadata, as json.

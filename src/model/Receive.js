@@ -17,7 +17,7 @@ import DocumentData from './DocumentData';
 /**
  * The Receive model module.
  * @module model/Receive
- * @version 1.4
+ * @version 1.5
  */
 class Receive {
     /**
@@ -96,6 +96,9 @@ class Receive {
             if (data.hasOwnProperty('encoding')) {
                 obj['encoding'] = ApiClient.convertToType(data['encoding'], 'String');
             }
+            if (data.hasOwnProperty('nome_prestatore')) {
+                obj['nome_prestatore'] = ApiClient.convertToType(data['nome_prestatore'], 'String');
+            }
             if (data.hasOwnProperty('is_read')) {
                 obj['is_read'] = ApiClient.convertToType(data['is_read'], 'Boolean');
             }
@@ -155,6 +158,10 @@ class Receive {
         // ensure the json data is a string
         if (data['encoding'] && !(typeof data['encoding'] === 'string' || data['encoding'] instanceof String)) {
             throw new Error("Expected the field `encoding` to be a primitive type in the JSON string but got " + data['encoding']);
+        }
+        // ensure the json data is a string
+        if (data['nome_prestatore'] && !(typeof data['nome_prestatore'] === 'string' || data['nome_prestatore'] instanceof String)) {
+            throw new Error("Expected the field `nome_prestatore` to be a primitive type in the JSON string but got " + data['nome_prestatore']);
         }
         // ensure the json data is a string
         if (data['message_id'] && !(typeof data['message_id'] === 'string' || data['message_id'] instanceof String)) {
@@ -258,6 +265,12 @@ Receive.prototype['documents'] = undefined;
  * @member {module:model/Receive.EncodingEnum} encoding
  */
 Receive.prototype['encoding'] = undefined;
+
+/**
+ * Business name of the prestatore (supplier/seller) extracted from the invoice XML.
+ * @member {String} nome_prestatore
+ */
+Receive.prototype['nome_prestatore'] = undefined;
 
 /**
  * Whether the invoice has been read at least once. Set to true only when the invoice is requested with include_payload=true.

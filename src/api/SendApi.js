@@ -20,7 +20,7 @@ import Send from '../model/Send';
 /**
 * Send service.
 * @module api/SendApi
-* @version 1.4
+* @version 1.5
 */
 export default class SendApi {
 
@@ -96,7 +96,7 @@ export default class SendApi {
 
     /**
      * List invoices
-     * Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
+     * Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, document number, and free-text search (`q`). Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
@@ -114,6 +114,7 @@ export default class SendApi {
      * @param {Number} [page = 1)] Page number.
      * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
+     * @param {String} [q] Full-text search across committente, prestatore, identifier, and file name.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Send>} and HTTP response
      */
     sendGetWithHttpInfo(opts) {
@@ -138,7 +139,8 @@ export default class SendApi {
         'include_payload': opts['includePayload'],
         'page': opts['page'],
         'page_size': opts['pageSize'],
-        'sort': opts['sort']
+        'sort': opts['sort'],
+        'q': opts['q']
       };
       let headerParams = {
       };
@@ -158,7 +160,7 @@ export default class SendApi {
 
     /**
      * List invoices
-     * Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
+     * Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, document number, and free-text search (`q`). Returns invoice metadata; set `include_payload` to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
@@ -176,6 +178,7 @@ export default class SendApi {
      * @param {Number} opts.page Page number. (default to 1)
      * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
+     * @param {String} opts.q Full-text search across committente, prestatore, identifier, and file name.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Send>}
      */
     sendGet(opts) {

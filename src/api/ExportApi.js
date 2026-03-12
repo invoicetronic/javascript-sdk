@@ -18,7 +18,7 @@ import ProblemDetails from '../model/ProblemDetails';
 /**
 * Export service.
 * @module api/ExportApi
-* @version 1.4
+* @version 1.5
 */
 export default class ExportApi {
 
@@ -39,7 +39,7 @@ export default class ExportApi {
      * Export invoices as a ZIP archive
      * Export invoices as a ZIP archive of FatturaPA XML files, suitable for import into accounting software (TeamSystem, Zucchetti, etc.).  **Sent invoices** are only included when they have reached a definitive state (e.g., `Consegnato` for private recipients, `AccettatoDalDestinatario`, `DecorrenzaTermini`, etc.). Invoices still being processed by SDI are excluded.  **Received invoices** are always included. Unread invoices are automatically marked as read and counted as operations.  ### Period filters  You can filter by period using either: - `year` + `month` (e.g., `year=2026&month=3` for March 2026) - `year` + `quarter` (e.g., `year=2026&quarter=1` for Q1 Jan-Mar) - `document_date_from` / `document_date_to` for a custom date range  These options are mutually exclusive. The `year` parameter alone is not valid and requires either `month` or `quarter`.  ### Response  Returns `200` with a ZIP archive, or `204 No Content` if no invoices match the given filters. Files in the archive are organized by company VAT number (`{vat}/send/`, `{vat}/receive/`).  ### Rate limiting  This endpoint has a dedicated rate limit: only one export request per user can be processed at a time. Concurrent requests will receive a `429 Too Many Requests` response.
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} [type = 'Both')] 
+     * @param {String} [type] 
      * @param {Number} [companyId] Company id
      * @param {Number} [year] 
      * @param {Number} [month] 
@@ -83,7 +83,7 @@ export default class ExportApi {
      * Export invoices as a ZIP archive
      * Export invoices as a ZIP archive of FatturaPA XML files, suitable for import into accounting software (TeamSystem, Zucchetti, etc.).  **Sent invoices** are only included when they have reached a definitive state (e.g., `Consegnato` for private recipients, `AccettatoDalDestinatario`, `DecorrenzaTermini`, etc.). Invoices still being processed by SDI are excluded.  **Received invoices** are always included. Unread invoices are automatically marked as read and counted as operations.  ### Period filters  You can filter by period using either: - `year` + `month` (e.g., `year=2026&month=3` for March 2026) - `year` + `quarter` (e.g., `year=2026&quarter=1` for Q1 Jan-Mar) - `document_date_from` / `document_date_to` for a custom date range  These options are mutually exclusive. The `year` parameter alone is not valid and requires either `month` or `quarter`.  ### Response  Returns `200` with a ZIP archive, or `204 No Content` if no invoices match the given filters. Files in the archive are organized by company VAT number (`{vat}/send/`, `{vat}/receive/`).  ### Rate limiting  This endpoint has a dedicated rate limit: only one export request per user can be processed at a time. Concurrent requests will receive a `429 Too Many Requests` response.
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.type  (default to 'Both')
+     * @param {String} opts.type 
      * @param {Number} opts.companyId Company id
      * @param {Number} opts.year 
      * @param {Number} opts.month 

@@ -9,6 +9,7 @@ docs/DocumentData.md
 docs/Error.md
 docs/Event.md
 docs/ExportApi.md
+docs/HealthApi.md
 docs/LogApi.md
 docs/ProblemDetails.md
 docs/ProblemHttpResult.md
@@ -30,6 +31,7 @@ package.json
 src/ApiClient.js
 src/api/CompanyApi.js
 src/api/ExportApi.js
+src/api/HealthApi.js
 src/api/LogApi.js
 src/api/ReceiveApi.js
 src/api/SendApi.js
@@ -52,6 +54,7 @@ src/model/WebHook.js
 src/model/WebHookHistory.js
 test/api/CompanyApi.spec.js
 test/api/ExportApi.spec.js
+test/api/HealthApi.spec.js
 test/api/LogApi.spec.js
 test/api/ReceiveApi.spec.js
 test/api/SendApi.spec.js

@@ -20,7 +20,7 @@ import Receive from '../model/Receive';
 /**
 * Receive service.
 * @module api/ReceiveApi
-* @version 1.4
+* @version 1.5
 */
 export default class ReceiveApi {
 
@@ -39,7 +39,7 @@ export default class ReceiveApi {
 
     /**
      * List incoming invoices
-     * Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content. Invoices are marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
+     * Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, document number, and free-text search (`q`). Returns invoice metadata; set `include_payload` to true to include the full invoice content. Invoices are marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} [companyId] Company id
      * @param {String} [identifier] SDI identifier.
@@ -58,6 +58,7 @@ export default class ReceiveApi {
      * @param {Number} [page = 1)] Page number.
      * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
+     * @param {String} [q] Full-text search across committente, prestatore, identifier, and file name.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Receive>} and HTTP response
      */
     receiveGetWithHttpInfo(opts) {
@@ -83,7 +84,8 @@ export default class ReceiveApi {
         'include_payload': opts['includePayload'],
         'page': opts['page'],
         'page_size': opts['pageSize'],
-        'sort': opts['sort']
+        'sort': opts['sort'],
+        'q': opts['q']
       };
       let headerParams = {
       };
@@ -103,7 +105,7 @@ export default class ReceiveApi {
 
     /**
      * List incoming invoices
-     * Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, and document number. Returns invoice metadata; set `include_payload` to true to include the full invoice content. Invoices are marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
+     * Retrieve a paginated list of receive invoices. Results can be filtered by various criteria such as company, date ranges, sender, document number, and free-text search (`q`). Returns invoice metadata; set `include_payload` to true to include the full invoice content. Invoices are marked as read (`is_read` = true) only when `include_payload` is true.  **Receive** invoices are inbound purchase invoices received from suppliers through Italy's SDI (Sistema di Interscambio). Preserved for two years in the live environment and 24 hours in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.companyId Company id
      * @param {String} opts.identifier SDI identifier.
@@ -122,6 +124,7 @@ export default class ReceiveApi {
      * @param {Number} opts.page Page number. (default to 1)
      * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
+     * @param {String} opts.q Full-text search across committente, prestatore, identifier, and file name.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Receive>}
      */
     receiveGet(opts) {

@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 List invoices
 
-Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, and document number. Returns invoice metadata; set &#x60;include_payload&#x60; to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
+Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, document number, and free-text search (&#x60;q&#x60;). Returns invoice metadata; set &#x60;include_payload&#x60; to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
 
 ### Example
 
@@ -109,7 +109,8 @@ let opts = {
   'includePayload': true, // Boolean | Include payload in the response. Defaults to false.
   'page': 1, // Number | Page number.
   'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
-  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
+  'sort': "sort_example", // String | Sort by field. Prefix with '-' for descending order.
+  'q': "q_example" // String | Full-text search across committente, prestatore, identifier, and file name.
 };
 apiInstance.sendGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -140,6 +141,7 @@ Name | Type | Description  | Notes
  **page** | **Number**| Page number. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
  **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
+ **q** | **String**| Full-text search across committente, prestatore, identifier, and file name. | [optional] 
 
 ### Return type
 

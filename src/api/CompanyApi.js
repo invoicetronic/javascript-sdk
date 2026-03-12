@@ -20,7 +20,7 @@ import ProblemHttpResult from '../model/ProblemHttpResult';
 /**
 * Company service.
 * @module api/CompanyApi
-* @version 1.4
+* @version 1.5
 */
 export default class CompanyApi {
 
@@ -39,11 +39,12 @@ export default class CompanyApi {
 
     /**
      * List companies
-     * Retrieve a paginated list of companies.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
+     * Retrieve a paginated list of companies. Results can be filtered by free-text search (`q`) across name, VAT number, and fiscal code.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {Object} opts Optional parameters
      * @param {Number} [page = 1)] Page number.
      * @param {Number} [pageSize = 100)] Items per page. Cannot be greater than 200.
      * @param {String} [sort] Sort by field. Prefix with '-' for descending order.
+     * @param {String} [q] Full-text search across committente, prestatore, identifier, and file name.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Company>} and HTTP response
      */
     companyGetWithHttpInfo(opts) {
@@ -55,7 +56,8 @@ export default class CompanyApi {
       let queryParams = {
         'page': opts['page'],
         'page_size': opts['pageSize'],
-        'sort': opts['sort']
+        'sort': opts['sort'],
+        'q': opts['q']
       };
       let headerParams = {
       };
@@ -75,11 +77,12 @@ export default class CompanyApi {
 
     /**
      * List companies
-     * Retrieve a paginated list of companies.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
+     * Retrieve a paginated list of companies. Results can be filtered by free-text search (`q`) across name, VAT number, and fiscal code.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Page number. (default to 1)
      * @param {Number} opts.pageSize Items per page. Cannot be greater than 200. (default to 100)
      * @param {String} opts.sort Sort by field. Prefix with '-' for descending order.
+     * @param {String} opts.q Full-text search across committente, prestatore, identifier, and file name.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Company>}
      */
     companyGet(opts) {

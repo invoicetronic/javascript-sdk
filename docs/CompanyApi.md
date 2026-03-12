@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 List companies
 
-Retrieve a paginated list of companies.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
+Retrieve a paginated list of companies. Results can be filtered by free-text search (&#x60;q&#x60;) across name, VAT number, and fiscal code.  **Companies** are the entities that send and receive invoices. They are automatically created from invoice data when invoices are sent or received.
 
 ### Example
 
@@ -35,7 +35,8 @@ let apiInstance = new invoicetronicSdk.CompanyApi();
 let opts = {
   'page': 1, // Number | Page number.
   'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
-  'sort': "sort_example" // String | Sort by field. Prefix with '-' for descending order.
+  'sort': "sort_example", // String | Sort by field. Prefix with '-' for descending order.
+  'q': "q_example" // String | Full-text search across committente, prestatore, identifier, and file name.
 };
 apiInstance.companyGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
  **page** | **Number**| Page number. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
  **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
+ **q** | **String**| Full-text search across committente, prestatore, identifier, and file name. | [optional] 
 
 ### Return type
 

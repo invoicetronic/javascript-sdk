@@ -144,6 +144,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property nomeCommittente (base name: "nome_committente")', function() {
+      // uncomment below and update the code to test the property nomeCommittente
+      //var instance = new invoicetronicSdk.Send();
+      //expect(instance).to.be();
+    });
+
     it('should have the property metaData (base name: "meta_data")', function() {
       // uncomment below and update the code to test the property metaData
       //var instance = new invoicetronicSdk.Send();

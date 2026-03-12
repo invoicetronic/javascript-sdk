@@ -144,6 +144,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property nomePrestatore (base name: "nome_prestatore")', function() {
+      // uncomment below and update the code to test the property nomePrestatore
+      //var instance = new invoicetronicSdk.Receive();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isRead (base name: "is_read")', function() {
       // uncomment below and update the code to test the property isRead
       //var instance = new invoicetronicSdk.Receive();

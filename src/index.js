@@ -28,6 +28,7 @@ import WebHook from './model/WebHook';
 import WebHookHistory from './model/WebHookHistory';
 import CompanyApi from './api/CompanyApi';
 import ExportApi from './api/ExportApi';
+import HealthApi from './api/HealthApi';
 import LogApi from './api/LogApi';
 import ReceiveApi from './api/ReceiveApi';
 import SendApi from './api/SendApi';
@@ -65,7 +66,7 @@ import WebhookApi from './api/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.4
+* @version 1.5
 */
 export {
     /**
@@ -163,6 +164,12 @@ export {
     * @property {module:api/ExportApi}
     */
     ExportApi,
+
+    /**
+    * The HealthApi service constructor.
+    * @property {module:api/HealthApi}
+    */
+    HealthApi,
 
     /**
     * The LogApi service constructor.

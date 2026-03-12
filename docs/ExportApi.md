@@ -28,7 +28,7 @@ Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.ExportApi();
 let opts = {
-  'type': "'Both'", // String | 
+  'type': "type_example", // String | 
   'companyId': 56, // Number | Company id
   'year': 56, // Number | 
   'month': 56, // Number | 
@@ -49,7 +49,7 @@ apiInstance.exportGet(opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**|  | [optional] [default to &#39;Both&#39;]
+ **type** | **String**|  | [optional] 
  **companyId** | **Number**| Company id | [optional] 
  **year** | **Number**|  | [optional] 
  **month** | **Number**|  | [optional] 
