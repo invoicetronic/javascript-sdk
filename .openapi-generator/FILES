@@ -12,7 +12,6 @@ docs/ExportApi.md
 docs/HealthApi.md
 docs/LogApi.md
 docs/ProblemDetails.md
-docs/ProblemHttpResult.md
 docs/Receive.md
 docs/ReceiveApi.md
 docs/Send.md
@@ -44,7 +43,6 @@ src/model/DocumentData.js
 src/model/Error.js
 src/model/Event.js
 src/model/ProblemDetails.js
-src/model/ProblemHttpResult.js
 src/model/Receive.js
 src/model/Send.js
 src/model/SendReduced.js
@@ -66,7 +64,6 @@ test/model/DocumentData.spec.js
 test/model/Error.spec.js
 test/model/Event.spec.js
 test/model/ProblemDetails.spec.js
-test/model/ProblemHttpResult.spec.js
 test/model/Receive.spec.js
 test/model/Send.spec.js
 test/model/SendReduced.spec.js

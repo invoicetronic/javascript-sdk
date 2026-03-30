@@ -21,11 +21,6 @@ Retrieve a paginated list of log events. Results can be filtered by various crit
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.LogApi();
 let opts = {
@@ -42,7 +37,8 @@ let opts = {
   'query': "query_example", // String | 
   'success': true, // Boolean | 
   'dateTimeFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | Date and time of the event
-  'dateTimeTo': new Date("2013-10-20T19:20:30+01:00") // Date | Date and time of the event
+  'dateTimeTo': new Date("2013-10-20T19:20:30+01:00"), // Date | Date and time of the event
+  'userAgent': "userAgent_example" // String | 
 };
 apiInstance.logGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -71,6 +67,7 @@ Name | Type | Description  | Notes
  **success** | **Boolean**|  | [optional] 
  **dateTimeFrom** | **Date**| Date and time of the event | [optional] 
  **dateTimeTo** | **Date**| Date and time of the event | [optional] 
+ **userAgent** | **String**|  | [optional] 
 
 ### Return type
 
@@ -78,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -98,11 +95,6 @@ Retrieve a log event by its internal id.  **Logs** record every API request. The
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.LogApi();
 let id = 56; // Number | Item id
@@ -127,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

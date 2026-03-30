@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **dateTime** | **Date** | Date and time of the request. | [optional] 
 **error** | **String** | Response error. | [optional] 
 **resourceId** | **Number** | ID of the resource created or modified by this request. | [optional] 
+**userAgent** | **String** | User-Agent header from the HTTP request. | [optional] 
 **success** | **Boolean** | Whether the request was successful. | [optional] [readonly] 
 **query** | **String** | Request query. Only used for internal logging, not sent to webhooks. | [optional] 
 **responseBody** | **String** | Response payload. It is guaranteed to be encrypted at rest. | [optional] 

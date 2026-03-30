@@ -21,11 +21,6 @@ Retrieve a paginated list of updates. Results can be filtered by various criteri
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.UpdateApi();
 let opts = {
@@ -76,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -96,11 +91,6 @@ Retrieve an update by its internal id.  **Updates** are status notifications fro
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.UpdateApi();
 let id = 56; // Number | Item id
@@ -125,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

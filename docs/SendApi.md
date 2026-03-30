@@ -31,11 +31,6 @@ Add a new invoice by uploading a file. Supported formats are XML (FatturaPA) and
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let file = "/path/to/file"; // File | 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -86,11 +81,6 @@ Retrieve a paginated list of send invoices. Results can be filtered by various c
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let opts = {
@@ -149,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -169,11 +159,6 @@ Retrieve a send invoice by its internal id. The &#x60;id&#x60; is unique and ass
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let id = 56; // Number | Item id
@@ -202,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -222,11 +207,6 @@ Retrieve only the payload of a send invoice, without the full invoice metadata. 
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let id = 56; // Number | Item id
@@ -251,7 +231,7 @@ null (empty response body)
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -271,11 +251,6 @@ Retrieve a send invoice by its SDI identifier. The &#x60;identifier&#x60; is ass
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let identifier = "identifier_example"; // String | 
@@ -304,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -324,11 +299,6 @@ Add a new invoice using a FatturaPA JSON representation. The invoice will be sig
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let body = {key: null}; // Object | 
@@ -359,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -379,11 +349,6 @@ Add a new invoice using a structured Send object. The invoice will be signed (if
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let send = new invoicetronicSdk.Send(); // Send | 
@@ -414,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -434,11 +399,6 @@ Validate an invoice file without sending it to SDI. Supported formats are XML (F
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let file = "/path/to/file"; // File | 
@@ -463,7 +423,7 @@ null (empty response body)
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -483,11 +443,6 @@ Validate a JSON invoice without sending it to SDI. Use this to check for errors 
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let body = {key: null}; // Object | 
@@ -512,7 +467,7 @@ null (empty response body)
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -532,11 +487,6 @@ Validate an invoice without sending it to SDI. Use this to check for errors befo
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let send = new invoicetronicSdk.Send(); // Send | 
@@ -561,7 +511,7 @@ null (empty response body)
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -581,11 +531,6 @@ Validate an XML invoice document without sending it to SDI. Use this to check fo
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let body = {key: null}; // Object | 
@@ -610,7 +555,7 @@ null (empty response body)
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -630,11 +575,6 @@ Add a new invoice using a raw XML document in FatturaPA format. The invoice will
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
-let defaultClient = invoicetronicSdk.ApiClient.instance;
-// Configure HTTP basic authorization: Basic
-let Basic = defaultClient.authentications['Basic'];
-Basic.username = 'YOUR USERNAME';
-Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.SendApi();
 let body = {key: null}; // Object | 
@@ -665,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
