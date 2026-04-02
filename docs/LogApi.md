@@ -21,6 +21,11 @@ Retrieve a paginated list of log events. Results can be filtered by various crit
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.LogApi();
 let opts = {
@@ -75,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -95,6 +100,11 @@ Retrieve a log event by its internal id.  **Logs** record every API request. The
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.LogApi();
 let id = 56; // Number | Item id
@@ -119,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 

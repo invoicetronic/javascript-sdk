@@ -25,6 +25,11 @@ Retrieve a paginated list of companies. Results can be filtered by free-text sea
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let opts = {
@@ -57,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -77,6 +82,11 @@ Delete a company by its internal id.  **Companies** are the entities that send a
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let id = 56; // Number | Item id
@@ -105,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -125,6 +135,11 @@ Retrieve a company by its internal id.  **Companies** are the entities that send
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let id = 56; // Number | Item id
@@ -149,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -169,6 +184,11 @@ Add a new company.  **Companies** are the entities that send and receive invoice
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let company = new invoicetronicSdk.Company(); // Company | 
@@ -193,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -213,6 +233,11 @@ Update an existing company.  **Companies** are the entities that send and receiv
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let company = new invoicetronicSdk.Company(); // Company | 
@@ -237,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -257,6 +282,11 @@ Retrieve a company by its VAT number.  **Companies** are the entities that send 
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.CompanyApi();
 let vat = "vat_example"; // String | 
@@ -281,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 

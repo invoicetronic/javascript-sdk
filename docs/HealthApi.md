@@ -20,6 +20,11 @@ Returns the health status of the API and its dependencies. No authentication req
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.HealthApi();
 apiInstance.healthGet().then(() => {
@@ -40,7 +45,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 

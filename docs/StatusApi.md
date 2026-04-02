@@ -20,6 +20,11 @@ Retrieve the number of operations (invoices + validations) and signatures left o
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.StatusApi();
 apiInstance.statusGet().then((data) => {
@@ -40,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 

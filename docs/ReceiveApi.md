@@ -23,6 +23,11 @@ Retrieve a paginated list of receive invoices. Results can be filtered by variou
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.ReceiveApi();
 let opts = {
@@ -83,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -103,6 +108,11 @@ Permanently delete a receive invoice by its internal id. This action cannot be u
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
@@ -127,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -147,6 +157,11 @@ Retrieve an incoming invoice by its internal id. The &#x60;id&#x60; is unique an
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
@@ -175,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -195,6 +210,11 @@ Retrieve only the payload of a receive invoice, without the full invoice metadat
 
 ```javascript
 import invoicetronicSdk from '@invoicetronic/js-sdk';
+let defaultClient = invoicetronicSdk.ApiClient.instance;
+// Configure HTTP basic authorization: Basic
+let Basic = defaultClient.authentications['Basic'];
+Basic.username = 'YOUR USERNAME';
+Basic.password = 'YOUR PASSWORD';
 
 let apiInstance = new invoicetronicSdk.ReceiveApi();
 let id = 56; // Number | Item id
@@ -219,7 +239,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
