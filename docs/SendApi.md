@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 List invoices
 
-Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, document number, and free-text search (&#x60;q&#x60;). Returns invoice metadata; set &#x60;include_payload&#x60; to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
+Retrieve a paginated list of send invoices. Results can be filtered by various criteria such as company, date ranges, document number, and free-text search (&#x60;q&#x60;). Use &#x60;ids&#x60; to fetch specific Send records in a single call (comma-separated, up to 100). Returns invoice metadata; set &#x60;include_payload&#x60; to true to include the full invoice content.  **Send** invoices are outbound sales invoices transmitted to customers through Italy&#39;s SDI (Sistema di Interscambio). Preserved for two years in the live environment and 15 days in the [Sandbox](https://invoicetronic.com/en/docs/sandbox/).
 
 ### Example
 
@@ -107,6 +107,7 @@ let opts = {
   'documentDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | UTC ISO 8601 (2024-11-29T12:34:56Z)
   'documentNumber': "documentNumber_example", // String | Document number.
   'includePayload': true, // Boolean | Include payload in the response. Defaults to false.
+  'ids': "ids_example", // String | Comma-separated list of Send ids (max 100). Filters the collection to the matching rows; unknown or unauthorized ids are silently skipped.
   'page': 1, // Number | Page number.
   'pageSize': 100, // Number | Items per page. Cannot be greater than 200.
   'sort': "sort_example", // String | Sort by field. Prefix with '-' for descending order.
@@ -138,6 +139,7 @@ Name | Type | Description  | Notes
  **documentDateTo** | **Date**| UTC ISO 8601 (2024-11-29T12:34:56Z) | [optional] 
  **documentNumber** | **String**| Document number. | [optional] 
  **includePayload** | **Boolean**| Include payload in the response. Defaults to false. | [optional] 
+ **ids** | **String**| Comma-separated list of Send ids (max 100). Filters the collection to the matching rows; unknown or unauthorized ids are silently skipped. | [optional] 
  **page** | **Number**| Page number. | [optional] [default to 1]
  **pageSize** | **Number**| Items per page. Cannot be greater than 200. | [optional] [default to 100]
  **sort** | **String**| Sort by field. Prefix with &#39;-&#39; for descending order. | [optional] 
